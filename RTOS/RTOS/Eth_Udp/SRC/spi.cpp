@@ -41,13 +41,13 @@ void spi_init(void)
 	// initialize SPI interface
 	// master mode and Fosc/2 clock:
     SPCR = (1<<SPE)|(1<<MSTR);  
-    SPCR &= 0xFC; // SPR1=0, SPR0 = 0  this is ori
+   // SPCR &= 0xFC; // SPR1=0, SPR0 = 0  this is ori
      //SPCR &= 0x7B;
    // master mode and Fosc/128 clock:
    //SPCR &= 0xFB;
   
-	SPSR = 0x00;
-   // SPSR |= (1<<SPI2X); 
+	//SPSR = 0x00;
+    SPSR |= (1<<SPI2X); 
 
 } 
 

@@ -63,6 +63,29 @@ enum
 	ERROR_CNT,
 	GOAL_CNT,
     MACHINE_STATES,
+	UDP_DATA0, //start
+	UDP_DATA1,
+	UDP_DATA2,
+	UDP_DATA3,
+	UDP_DATA4,
+	UDP_DATA5, //serial
+	UDP_DATA6, //start
+	UDP_DATA7,
+	UDP_DATA8,
+	UDP_DATA9,
+	UDP_DATA10,
+	UDP_DATA11,
+	UDP_DATA12,
+	UDP_DATA13,  // product
+	UDP_DATA14,  //cnt
+	UDP_DATA15,  //cnt
+    WARNING_LOW,
+	WARNING_HIGH,
+	TARGET_GOAL_CNT,
+	TARGET_MIN,
+	TARGET_MAX,
+	TEST,
+	TEST1,
 	#if USE_SYSTEM_SEC
 		SYSTEM_SEC_CLOCK,
 	#endif
@@ -380,6 +403,12 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 						PORTG = 0x00;
 					}
 					GetFucc10Data(buf1,&func10,mem4); //데이터 파싱
+					/*if(func10.registerValueLo == GOAL_CNT)
+					{
+						mem4[TARGET_MAX] = mem4[GOAL_CNT];
+						mem4[TARGET_GOAL_CNT] = mem4[GOAL_CNT];
+						mem4[WARNING_HIGH] = mem4[GOAL_CNT];
+					}*/
 					ResponseFucc10Data(buf1,&rsp10); //리스폰스 데이터를 만듬.
 					sb->SerialWrite((char*)&rsp10,sizeof(rsp10)); //리스폰스 데이터 쓰기.
 					//sb->SerialWrite((char*)&rsp10,sizeof(rsp10));
@@ -441,6 +470,8 @@ static void proc2(void* pvParam)
 	static uint8_t myip[4] = {192,168,0,108};
 	static uint8_t buf[BUFFER_SIZE+1];
 	uint16_t plen;
+	DDRB = 0xff;
+	PORTB = 0xff;
     char str[30];
 	 enc28j60Init(mymac);
 	 enc28j60clkout(2); // change clkout from 6.25MHz to 12.5MHz
@@ -455,7 +486,7 @@ static void proc2(void* pvParam)
 		 plen = enc28j60PacketReceive(BUFFER_SIZE, buf);
 		 if(plen==0)
 		 {
-				continue;
+				goto UDP_SEND;
 		 }
 		 if(eth_type_is_arp_and_my_ip(buf,plen))
 		 {
@@ -471,14 +502,44 @@ static void proc2(void* pvParam)
 			make_echo_reply_from_request(buf,plen);
 			continue;
 		 }
-		 else//(mem4[SEC] % 5 == 0)
+		 if(buf[UDP_DATA_P] == 0x01 + '0')
 		 {
-			 static int data[3] = {0};
+			 char temp[29] = {0};
+			 char loop = buf[UDP_DATA_P + 1];
+			 loop = loop - '0';
+			 char start = 2;
+			 char num = 0;
+			 for(char i=1;i<loop+1;i++)
+			 {
+				 temp[i-1] = buf[UDP_DATA_P + (start + (i-1))];
+				 if(i % 2 == 0)
+				 {
+					mem4[UDP_DATA0 + num] =  (( 0xff00 & temp[i-1] << 8)) | (0x00ff & temp[i-2]);
+					num++;
+				 }
+			 }
+			 mem4[GOAL_CNT] = mem4[UDP_DATA14];
+			 mem4[TARGET_MAX] = mem4[GOAL_CNT];
+			 mem4[TARGET_GOAL_CNT] = mem4[GOAL_CNT];
+			 mem4[WARNING_HIGH] = mem4[GOAL_CNT];
+			//mem4[UDP_DATA0] = (( 0xffff & temp[UDP_DATA1 -10] << 8)) | (0xffff & temp[UDP_DATA0 - 10]);
+			//uint16_t temps = mem4[UDP_DATA14];
+			//mem4[TEST] =  mem4[UDP_DATA14];//(( 0xffff & temp[UDP_DATA14] << 8)) | (0xffff & temp[UDP_DATA15]);
+			//mem4[TEST] = mem4[TEST] - '0';
+			 goto UDP_SEND;
+		 }
+		 UDP_SEND:
+			 PORTB = ~PORTB;
+			 static int data[8] = {0};
 			 data[0] = mem4[TEMP];
 			 data[1] = mem4[COUNT];
 			 data[2] = mem4[PRESSURE];
+			 data[3] = mem4[GOAL_CNT];
+			 data[4] = mem4[MACHINE_STATES];
+			 data[5] = mem4[SEC];
+			 data[6] = mem4[MIN];
+			 data[7] = mem4[HOUR];
 			 make_udp_reply_from_request(buf,(char*)&data,sizeof(data),MYUDPPORT);
-		 }
 	  }
 }
 #endif
