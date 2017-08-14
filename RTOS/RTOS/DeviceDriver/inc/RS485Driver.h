@@ -33,13 +33,13 @@ class RS485Driver : public DeviceDriveInterFace
 	void UART_Putchar(const char data);
 	void UART_PutString(const char *str);
 	public:
-	RS485Driver();
+	explicit RS485Driver();
 	void Device_Init();
 	void* operator new(size_t size);
 	void operator delete(void* ptr);
 	void Device_Writes(const char* data);
 	void Device_Write(char data);
-	static RS485Driver* getInstance();
+	static const RS485Driver* const getInstance();
 	
 };
 

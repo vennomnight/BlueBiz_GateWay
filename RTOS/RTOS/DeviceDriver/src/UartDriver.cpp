@@ -13,7 +13,7 @@ UartDriver::UartDriver()
 	if (inst == nullptr)
 		inst = this;		
 }
-UartDriver* UartDriver::getInstance()
+const UartDriver* const UartDriver::getInstance()
 {
 	if (inst == nullptr)
 	  inst = new UartDriver();
@@ -24,15 +24,26 @@ UartDriver* UartDriver::getInstance()
 void UartDriver::Device_Init()
 {
 	/*Data : 8bit,Parity : None ,Stopbit:1bit Baudrate:9600bps*/
-	UCSR0B = 0x98;
-	UCSR0C = 0x06;
-	//UBRR0H=0x00;
-	//UBRR0L=0x67;
-	UBRR0H = (uint8_t)(UBRR_VALUE>>8);
-	UBRR0L = (uint8_t) UBRR_VALUE;
-
+	if(UX1)
+	{
+		UCSR0B = 0x98;
+		UCSR0C = 0x06;
+		UCSR0A = 0x02;
+		UBRR0H = (uint8_t)(UBRR_VALUE_UX>>8);
+		UBRR0L = (uint8_t) UBRR_VALUE_UX;
+	}
+	else
+	{
+		UCSR0B = 0x98;
+		UCSR0C = 0x06;
+			//UBRR0H=0x00;
+			//UBRR0L=0x67;
+		UBRR0H = (uint8_t)(UBRR_VALUE>>8);
+		UBRR0L = (uint8_t) UBRR_VALUE;
+	}
 	Uart_Mutex = xSemaphoreCreateMutex();
 	char_Mutex= xSemaphoreCreateMutex();
+
 }
 
 void UartDriver::operator delete(void* ptr)

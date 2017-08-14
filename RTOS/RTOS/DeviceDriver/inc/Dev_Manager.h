@@ -40,20 +40,20 @@ class Dev_Manager
 	DeviceDriveInterFace *interface[MAX] = {nullptr};
 	public:
 	ISR_Handle isr_handle[MAX] = {nullptr};
-	DeviceDriveInterFace* getInterfaceAddr(Dev_type Device);
-	Dev_Manager();
+	const DeviceDriveInterFace* getInterfaceAddr(Dev_type Device) const;
+	explicit Dev_Manager();
 	~Dev_Manager();
-	void Open_Handle(Dev_type Device,ISR_Handle _isr_handle);
+	void Open_Handle(Dev_type Device,const ISR_Handle _isr_handle);
 	void Close_Handle(Dev_type Device);
 	void* operator new(size_t size);
 	void operator delete(void* ptr);
-	void Register_Dev(DeviceDriveInterFace *_interface,Dev_type Dev);
+	void Register_Dev(DeviceDriveInterFace * const _interface,Dev_type Dev);
 	void Device_Init(Dev_type Device);
 	void Write(Dev_type Device,char data);
-	void Writes(Dev_type Device,char* data);
+	void Writes(Dev_type Device,const char* data);
 	char Driver_Check(Dev_type Device);
 
-	static Dev_Manager* getInstance();
+	static Dev_Manager* const getInstance();
 
 	
 };

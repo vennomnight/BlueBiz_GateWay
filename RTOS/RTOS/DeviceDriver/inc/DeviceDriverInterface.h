@@ -13,7 +13,7 @@ class DeviceDriveInterFace
 {
 	public:
 	virtual void Device_Init() = 0;
-	virtual char Device_Read(){}
+	virtual char Device_Read() const{}
 	virtual void Device_Writes(const char* data){}
 	virtual void Device_Write(char data){}
 };

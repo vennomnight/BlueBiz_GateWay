@@ -11,6 +11,8 @@
 #include <avr/pgmspace.h>
 #include <avr/sfr_defs.h>
 #include <avr/wdt.h>
+#include <avr/eeprom.h>
+
 
 #include "ip_arp_udp_tcp.h"
 #include "enc28j60.h"
@@ -84,7 +86,11 @@ enum
 	TARGET_GOAL_CNT,
 	TARGET_MIN,
 	TARGET_MAX,
-	TEST,
+	TARGET_CMP,
+	IPV4_0,
+	IPV4_1,
+	IPV4_2,
+	IPV4_3,
 	TEST1,
 	#if USE_SYSTEM_SEC
 		SYSTEM_SEC_CLOCK,
@@ -129,6 +135,8 @@ void RS485_ISR(Dev_type Device,uint16_t Arg);
 void Timer_ISR(Dev_type Device,uint16_t Arg);
 
 
+static void System_Init();
+
 //Global Var
 
 GetFunctionCode01 func01;
@@ -149,12 +157,12 @@ int current_temp = 0;
 int current_pressure = 0;
 
 int mem4[MAX_ENUM] = {0};
-
+char cmp_mem[4] = {0};
 int main( void )
 {
+	System_Init();
 	cli();  //인터럽트 금지 
 	Init_Dev(); //dev 매니저 초기화
-	
 	
 	
 	dev->Open_Handle(UART0,Uart_ISR);  //드라이버 매니져에 인터럽트 루틴 등록
@@ -245,7 +253,19 @@ int main( void )
 	vTaskStartScheduler();//스케줄러 실행 
 	return 0;
 }
-
+static void System_Init()
+{
+	PORTB = 0xff;
+	mem4[IPV4_0] = eeprom_read_byte((const uint8_t*)0);  //read ip address
+	mem4[IPV4_1] = eeprom_read_byte((const uint8_t*)1);
+	mem4[IPV4_2] = eeprom_read_byte((const uint8_t*)2);
+	mem4[IPV4_3] = eeprom_read_byte((const uint8_t*)3);
+	cmp_mem[0] = mem4[IPV4_0];
+	cmp_mem[1] = mem4[IPV4_1];
+	cmp_mem[2] = mem4[IPV4_2];
+	cmp_mem[3] = mem4[IPV4_3];
+	
+}
 void Init_Dev()
 {
 	dev = new Dev_Manager();
@@ -264,6 +284,7 @@ void Uart_ISR(Dev_type Device,uint16_t Arg)
 	uint8_t data = Arg;
 	SerialBuffer *sb = (SerialBuffer*)DataStruct[UART0];
 	sb->Serialstore(data);
+	sbi(PORTB,5);
 
 }
 void RS485_ISR(Dev_type Device,uint16_t Arg)
@@ -271,10 +292,13 @@ void RS485_ISR(Dev_type Device,uint16_t Arg)
 	uint8_t data = Arg;
 	SerialBuffer *sb = (SerialBuffer*)DataStruct[RS485];
 	sb->Serialstore(data);
+	sbi(PORTB,6);
 }
 void Timer_ISR(Dev_type Device,uint16_t Arg)
 {
 	mem4[SEC]++;
+	cbi(PORTB,5);
+	cbi(PORTB,6);
 	#if USE_SYSTEM_SEC
 		mem4[SYSTEM_SEC_CLOCK]++;
 	#endif
@@ -284,9 +308,8 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 	char read_Flag = 0;
 	char function_code;
 	char buf1[10];
-	DDRG = 0xff;
-	SerialBuffer *sb = (SerialBuffer*)pvParam;
-		
+	//SerialBuffer *sb = (SerialBuffer*)pvParam;
+	SerialBuffer *sb = static_cast<SerialBuffer*>(pvParam);	
 	while(1)
 	{
 		if(mem4[SEC] >= 60)
@@ -305,9 +328,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 			{
 				for(int i=0;i<2;i++)
 				{
-					PORTG = 0xff;
 					buf1[i] = sb->SerialRead();
-				    PORTG = 0x00;
 				}
 				if(buf1[0] != 0x01)
 				{
@@ -338,9 +359,16 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 					#if CHECK_ERROR
 						mem4[ERROR_CNT]++;
 					#endif
-					GetExceptionCode(&exception,0x01,0x01);                                                                                                                                                                                                                  
+					GetExceptionCode(&exception,0x01,0x01);  
+					//dev->Close_Handle(UART0);
+					//PORTB = 0x00;
+					cbi(PORTB,7);
+					cbi(UCSR0B,RXCIE0);                                                                                                                                                                                                                
 					sb->SerialFlush();
+					sbi(UCSR0B,RXCIE0);
+					//dev->Open_Handle(UART0,Uart_ISR);
 					sb->SerialWrite((char*)&exception,sizeof(exception));
+					sbi(PORTB,7);
 					read_Flag = 0;	
 				}
 			}
@@ -354,9 +382,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 				{
 					for(int i=2;i<8;i++)
 					{
-						PORTG = 0xff;
 						buf1[i] = sb->SerialRead();
-						PORTG = 0x00;
 					}
 
 				}
@@ -367,9 +393,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 				{
 					for(int i=2;i<8;i++)
 					{
-						PORTG = 0xff;
 						buf1[i] = sb->SerialRead();
-						PORTG = 0x00;
 					}
 					GetFunc04Data(buf1,&func04,mem4);
 					sb->SerialWrite((char*)&func04,sizeof(func04));
@@ -382,9 +406,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 				{
 					for(int i=2;i<8;i++)
 					{
-						PORTG = 0xff;
 						buf1[i] = sb->SerialRead();
-						PORTG = 0x00;
 					}
 					GetFunc05Data(buf1,&func05);
 					sb->SerialWrite((char*)&func05,sizeof(func05));
@@ -397,21 +419,11 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 				{
 					for(int i=2;i<11;i++)
 					{
-						PORTG = 0xff;
 						buf1[i] = sb->SerialRead();
-						//sb->SerialWrite(buf1[i]);
-						PORTG = 0x00;
 					}
 					GetFucc10Data(buf1,&func10,mem4); //데이터 파싱
-					/*if(func10.registerValueLo == GOAL_CNT)
-					{
-						mem4[TARGET_MAX] = mem4[GOAL_CNT];
-						mem4[TARGET_GOAL_CNT] = mem4[GOAL_CNT];
-						mem4[WARNING_HIGH] = mem4[GOAL_CNT];
-					}*/
 					ResponseFucc10Data(buf1,&rsp10); //리스폰스 데이터를 만듬.
 					sb->SerialWrite((char*)&rsp10,sizeof(rsp10)); //리스폰스 데이터 쓰기.
-					//sb->SerialWrite((char*)&rsp10,sizeof(rsp10));
 					read_Flag = 0;
 				}
 						
@@ -424,11 +436,19 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 static void proc1(void* pvParam) 
 {
 	//UART1 
-	SerialBuffer *sb = (SerialBuffer*)pvParam;
-	SerialBuffer *sb1 = (SerialBuffer*)DataStruct[UART0];
+	SerialBuffer *sb = static_cast<SerialBuffer*>(pvParam);
+	//SerialBuffer *sb = (SerialBuffer*)pvParam;
+	//SerialBuffer *sb1 = (SerialBuffer*)DataStruct[UART0];
 	uint8_t proc1_buff[15] = {0};
 	while(1)
 	{
+	   if(mem4[TARGET_CMP] != mem4[GOAL_CNT])
+	   {
+		   mem4[TARGET_MAX] = mem4[GOAL_CNT];
+		   mem4[TARGET_GOAL_CNT] = mem4[GOAL_CNT];
+		   mem4[WARNING_HIGH] = mem4[GOAL_CNT];
+		   mem4[TARGET_CMP] = mem4[GOAL_CNT];
+		}
 		if(sb->SerialAvailable() >= 15)
 		{
 			for(uint8_t i=0;i<15;i++)
@@ -451,11 +471,13 @@ static void proc1(void* pvParam)
 			}
 			else
 			{
+				cbi(PORTB,7);
 				GetExceptionCode(&exception,0x01,0x06);
 				sb->SerialWrite((char*)&exception,sizeof(exception)); //리스폰스 데이터 쓰기.
 				cbi(UCSR1B,RXCIE0);
 				sb->SerialFlush();
 				sbi(UCSR1B,RXCIE0);
+				sbi(PORTB,7);
 				
 			}
 		}
@@ -466,8 +488,11 @@ static void proc1(void* pvParam)
 #if USE_ETH
 static void proc2(void* pvParam)
 {
+RESET_ETH:
+    char led_flag = 0;
 	static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x24};
-	static uint8_t myip[4] = {192,168,0,108};
+	static uint8_t myip[4] = {0,0,0,0};
+	memcpy(myip,cmp_mem,sizeof(cmp_mem));		
 	static uint8_t buf[BUFFER_SIZE+1];
 	uint16_t plen;
 	DDRB = 0xff;
@@ -483,10 +508,34 @@ static void proc2(void* pvParam)
 
 	 while(1)
 	 {
+		 if(cmp_mem[0] != mem4[IPV4_0] | cmp_mem[1] != mem4[IPV4_1] | cmp_mem[2] != mem4[IPV4_2] | cmp_mem[3] != mem4[IPV4_3])
+		 {
+			 if(cmp_mem[0] != mem4[IPV4_0])
+			 {
+				  eeprom_update_byte((uint8_t*)0,mem4[IPV4_0]);
+				  cmp_mem[0] = mem4[IPV4_0];
+			 }
+			 if(cmp_mem[1] != mem4[IPV4_1])
+			 {
+				  eeprom_update_byte((uint8_t*)1,mem4[IPV4_1]);
+				  cmp_mem[1] = mem4[IPV4_1];
+			 }
+			 if(cmp_mem[2] != mem4[IPV4_2])
+			 {
+				  eeprom_update_byte((uint8_t*)2,mem4[IPV4_2]);
+				  cmp_mem[2] = mem4[IPV4_2];
+			 }
+			 if(cmp_mem[3] != mem4[IPV4_3])
+			 {
+				  eeprom_update_byte((uint8_t*)3,mem4[IPV4_3]);
+				  cmp_mem[3] = mem4[IPV4_3];
+			 }
+			 goto RESET_ETH;
+		 }
 		 plen = enc28j60PacketReceive(BUFFER_SIZE, buf);
 		 if(plen==0)
 		 {
-				goto UDP_SEND;
+			 goto UDP_SEND;
 		 }
 		 if(eth_type_is_arp_and_my_ip(buf,plen))
 		 {
@@ -522,14 +571,19 @@ static void proc2(void* pvParam)
 			 mem4[TARGET_MAX] = mem4[GOAL_CNT];
 			 mem4[TARGET_GOAL_CNT] = mem4[GOAL_CNT];
 			 mem4[WARNING_HIGH] = mem4[GOAL_CNT];
-			//mem4[UDP_DATA0] = (( 0xffff & temp[UDP_DATA1 -10] << 8)) | (0xffff & temp[UDP_DATA0 - 10]);
-			//uint16_t temps = mem4[UDP_DATA14];
-			//mem4[TEST] =  mem4[UDP_DATA14];//(( 0xffff & temp[UDP_DATA14] << 8)) | (0xffff & temp[UDP_DATA15]);
-			//mem4[TEST] = mem4[TEST] - '0';
+			 mem4[TARGET_CMP] = mem4[GOAL_CNT];
 			 goto UDP_SEND;
 		 }
 		 UDP_SEND:
-			 PORTB = ~PORTB;
+			 led_flag = ~led_flag;
+			 if(led_flag)
+			 {
+				 PORTB = sbi(PORTB,4);
+			 }
+			 else
+			 {
+				 PORTB = cbi(PORTB,4); 
+			 }
 			 static int data[8] = {0};
 			 data[0] = mem4[TEMP];
 			 data[1] = mem4[COUNT];
@@ -540,7 +594,9 @@ static void proc2(void* pvParam)
 			 data[6] = mem4[MIN];
 			 data[7] = mem4[HOUR];
 			 make_udp_reply_from_request(buf,(char*)&data,sizeof(data),MYUDPPORT);
-	  }
+			 vTaskDelay(100);
+	}
+	  
 }
 #endif
 

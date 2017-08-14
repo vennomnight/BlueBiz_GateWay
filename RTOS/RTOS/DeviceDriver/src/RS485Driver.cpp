@@ -67,7 +67,7 @@ void RS485Driver::Device_Writes(const char* data)
 	UART_PutString(data);
 }
 
-RS485Driver* RS485Driver::getInstance()
+const RS485Driver* const RS485Driver::getInstance()
 {
 	if (inst == nullptr)
 		inst = new RS485Driver();

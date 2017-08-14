@@ -20,13 +20,13 @@ Dev_Manager::~Dev_Manager()
 		interface[i] = nullptr;
 	}
 }
-Dev_Manager* Dev_Manager::getInstance()
+Dev_Manager* const Dev_Manager::getInstance()
 {
 	if (inst == nullptr)
-	inst = new Dev_Manager();
+		inst = new Dev_Manager();
 	return inst;
 }
-void Dev_Manager::Register_Dev(DeviceDriveInterFace *_interface,Dev_type Dev)
+void Dev_Manager::Register_Dev(DeviceDriveInterFace * const _interface,Dev_type Dev)
 {
 	interface[Dev] = _interface;
 }
@@ -45,7 +45,7 @@ void Dev_Manager::Write(Dev_type Device,char data)
 		interface[Device]->Device_Write(data);
 	}
 }
-void Dev_Manager::Writes(Dev_type Device,char* data)
+void Dev_Manager::Writes(Dev_type Device,const char* data)
 {
 	if(interface[Device])
 	{
@@ -59,7 +59,7 @@ void Dev_Manager::Device_Init(Dev_type Device)
 		interface[Device]->Device_Init();
 	}
 }
-void Dev_Manager::Open_Handle(Dev_type Device,ISR_Handle _isr_handle)
+void Dev_Manager::Open_Handle(Dev_type Device,const ISR_Handle _isr_handle)
 {
 	if(interface[Device])
 	{
@@ -82,7 +82,7 @@ void Dev_Manager::Close_Handle(Dev_type Device)
 		isr_handle[Device] = nullptr;
 	}
 }
-DeviceDriveInterFace* Dev_Manager::getInterfaceAddr(Dev_type Device)
+const DeviceDriveInterFace* Dev_Manager::getInterfaceAddr(Dev_type Device) const
 {
 	if(interface[Device])
 	{

@@ -19,7 +19,7 @@
 class Timer : public DeviceDriveInterFace
 {
 public:
-	Timer();
+	explicit Timer();
 	void Device_Init();
 	void* operator new(size_t size);
 	void operator delete(void* ptr);
