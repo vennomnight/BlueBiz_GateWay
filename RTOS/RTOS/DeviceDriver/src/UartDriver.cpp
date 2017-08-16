@@ -4,14 +4,20 @@
  * Created: 2016-12-02 오후 9:19:54
  *  Author: kimkisu
  */ 
+
 #include "UartDriver.h"
 #include "avr/interrupt.h"
 #include "Dev_Manager.h"
+#include "DeviceDriverInterface.h"
 UartDriver* UartDriver::inst = nullptr;
 UartDriver::UartDriver()
 {
 	if (inst == nullptr)
 		inst = this;		
+}
+UartDriver::UartDriver(uint16_t Uart_baudrate)
+{
+	this->Uart_baudrate = Uart_baudrate;
 }
 const UartDriver* const UartDriver::getInstance()
 {
@@ -29,23 +35,25 @@ void UartDriver::Device_Init()
 		UCSR0B = 0x98;
 		UCSR0C = 0x06;
 		UCSR0A = 0x02;
-		UBRR0H = (uint8_t)(UBRR_VALUE_UX>>8);
-		UBRR0L = (uint8_t) UBRR_VALUE_UX;
+		//UBRR0H = (uint8_t)(UBRR_VALUE_UX>>8);
+		//UBRR0L = (uint8_t) UBRR_VALUE_UX;
 	}
 	else
 	{
 		UCSR0B = 0x98;
 		UCSR0C = 0x06;
-			//UBRR0H=0x00;
-			//UBRR0L=0x67;
-		UBRR0H = (uint8_t)(UBRR_VALUE>>8);
-		UBRR0L = (uint8_t) UBRR_VALUE;
+		uint16_t UBRR_VALUE = Ubbr_Value(Uart_baudrate);
+		UBRR0H = UBRR_VALUE << 8;
+		UBRR0L = UBRR_VALUE >> 8;
 	}
 	Uart_Mutex = xSemaphoreCreateMutex();
 	char_Mutex= xSemaphoreCreateMutex();
 
 }
-
+uint16_t UartDriver::Ubbr_Value(const uint16_t &_Uart_baudrate)
+{
+	return Ubbr::Ubbr_Value(_Uart_baudrate);
+}
 void UartDriver::operator delete(void* ptr)
 {
 	free(ptr);

@@ -31,7 +31,7 @@ main.d main.o: .././main.cpp \
  ../inc/Channel.h ../inc/Request.h ../inc/Request.h \
  ../DeviceDriver/inc/UartDriver.h \
  ../DeviceDriver/inc/DeviceDriverInterface.h \
- ../DeviceDriver/inc/Dev_Manager.h \
+ ../DeviceDriver/inc/Ubbr_Calculate.h ../DeviceDriver/inc/Dev_Manager.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  ../Datastructure/inc/SerialBuffer.h ../DeviceDriver/inc/RS485Driver.h \
  ../DeviceDriver/inc/per_sec_timer.h ../DeviceDriver/inc/Dev_Manager.h \
@@ -124,6 +124,8 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../DeviceDriver/inc/UartDriver.h:
 
 ../DeviceDriver/inc/DeviceDriverInterface.h:
+
+../DeviceDriver/inc/Ubbr_Calculate.h:
 
 ../DeviceDriver/inc/Dev_Manager.h:
 

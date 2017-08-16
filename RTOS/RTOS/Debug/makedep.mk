@@ -14,6 +14,8 @@ DeviceDriver\src\RS485Driver.cpp
 
 DeviceDriver\src\UartDriver.cpp
 
+DeviceDriver\src\Ubbr_Calculate.cpp
+
 Eth_Udp\SRC\enc28j60.cpp
 
 Eth_Udp\SRC\ip_arp_udp_tcp.cpp

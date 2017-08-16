@@ -17,12 +17,9 @@ DeviceDriver/src/RS485Driver.d DeviceDriver/src/RS485Driver.o: \
  ../../Source/include/projdefs.h ../../Source/include/portable.h \
  ../../Source/include/deprecated_definitions.h \
  ../../Source/include/portmacro.h ../../Source/include/mpu_wrappers.h \
- ../../Source/include/task.h ../../Source/include/list.h \
- ../DeviceDriver/inc/DeviceDriverInterface.h \
  ../../Source/include/semphr.h ../../Source/include/queue.h \
- ../../Source/include/queue.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
- ../DeviceDriver/inc/Dev_Manager.h
+ ../DeviceDriver/inc/DeviceDriverInterface.h \
+ ../DeviceDriver/inc/Ubbr_Calculate.h
 
 ../DeviceDriver/inc/RS485Driver.h:
 
@@ -64,18 +61,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 
 ../../Source/include/mpu_wrappers.h:
 
-../../Source/include/task.h:
-
-../../Source/include/list.h:
-
-../DeviceDriver/inc/DeviceDriverInterface.h:
-
 ../../Source/include/semphr.h:
 
 ../../Source/include/queue.h:
 
-../../Source/include/queue.h:
+../DeviceDriver/inc/DeviceDriverInterface.h:
 
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h:
-
-../DeviceDriver/inc/Dev_Manager.h:
+../DeviceDriver/inc/Ubbr_Calculate.h:

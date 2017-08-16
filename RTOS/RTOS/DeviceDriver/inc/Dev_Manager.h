@@ -12,13 +12,12 @@
 #include <avr/interrupt.h>
 #include "FreeRTOS.h"
 #include "task.h"
-#include "DeviceDriverInterface.h"
 #include "semphr.h"
 #include "queue.h"
 #define malloc(size) pvPortMalloc(size)
 #define free(ptr) vPortFree(ptr)
-#define sbi(PORTX, BitX) PORTX |= (1 <<BitX)
-#define cbi(PORTX, BitX) PORTX &= ~(1 << BitX)
+//#define sbi(PORTX, BitX) PORTX |= (1 <<BitX)
+//#define cbi(PORTX, BitX) PORTX &= ~(1 << BitX)
 
 
 typedef enum

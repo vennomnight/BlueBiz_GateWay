@@ -10,30 +10,30 @@
 #define UARTDRIVER_H_
 #include "FreeRTOS.h"
 #include "task.h"
-#include "DeviceDriverInterface.h"
 #include "semphr.h"
 #include "queue.h"
+#include "DeviceDriverInterface.h"
+#include "Ubbr_Calculate.h"
 #define malloc(size) pvPortMalloc(size)
 #define free(ptr) vPortFree(ptr)
-#define F_CPU 16000000UL
-#define UBRR_VALUE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
-#define UBRR_VALUE_UX (((F_CPU / (USART_BAUDRATE * 8UL))) - 1)
-#define USART_BAUDRATE 4800
-//#define USART_BAUDRATE 115200
 
 class DeviceDriveInterFace;
 
-class UartDriver : public DeviceDriveInterFace
+class UartDriver : public DeviceDriveInterFace, private Ubbr
 {
+	using Ubbr::Ubbr_Value;
 	private:
 	static const uint8_t UX1 = 0;
+	uint16_t Uart_baudrate = 4800;
 	SemaphoreHandle_t char_Mutex;
 	SemaphoreHandle_t Uart_Mutex;
 	static UartDriver* inst;
+	uint16_t Ubbr_Value(const uint16_t &Uart_baudrate);
 	void UART_Putchar(const char data);
 	void UART_PutString(const char *str);
 	public:
 	explicit UartDriver();
+	explicit UartDriver(uint16_t Uart_baudrate);
 	void Device_Init();
 	void* operator new(size_t size);
 	void operator delete(void* ptr);

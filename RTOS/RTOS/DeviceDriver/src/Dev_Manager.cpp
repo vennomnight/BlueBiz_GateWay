@@ -15,7 +15,7 @@ Dev_Manager::Dev_Manager()
 Dev_Manager::~Dev_Manager()
 {
 	inst = nullptr;
-	for(char i =0; i< MAX ; i++)
+	for(uint8_t i =0; i< MAX ; i++)
 	{
 		interface[i] = nullptr;
 	}

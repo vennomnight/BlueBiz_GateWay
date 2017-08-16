@@ -62,6 +62,7 @@ C_SRCS +=  \
 ../DeviceDriver/src/per_sec_timer.cpp \
 ../DeviceDriver/src/RS485Driver.cpp \
 ../DeviceDriver/src/UartDriver.cpp \
+../DeviceDriver/src/Ubbr_Calculate.cpp \
 ../Eth_Udp/SRC/enc28j60.cpp \
 ../Eth_Udp/SRC/ip_arp_udp_tcp.cpp \
 ../Eth_Udp/SRC/spi.cpp \
@@ -91,6 +92,7 @@ DeviceDriver/src/Dev_Manager.o \
 DeviceDriver/src/per_sec_timer.o \
 DeviceDriver/src/RS485Driver.o \
 DeviceDriver/src/UartDriver.o \
+DeviceDriver/src/Ubbr_Calculate.o \
 Eth_Udp/SRC/enc28j60.o \
 Eth_Udp/SRC/ip_arp_udp_tcp.o \
 Eth_Udp/SRC/spi.o \
@@ -113,6 +115,7 @@ DeviceDriver/src/Dev_Manager.o \
 DeviceDriver/src/per_sec_timer.o \
 DeviceDriver/src/RS485Driver.o \
 DeviceDriver/src/UartDriver.o \
+DeviceDriver/src/Ubbr_Calculate.o \
 Eth_Udp/SRC/enc28j60.o \
 Eth_Udp/SRC/ip_arp_udp_tcp.o \
 Eth_Udp/SRC/spi.o \
@@ -135,6 +138,7 @@ DeviceDriver/src/Dev_Manager.d \
 DeviceDriver/src/per_sec_timer.d \
 DeviceDriver/src/RS485Driver.d \
 DeviceDriver/src/UartDriver.d \
+DeviceDriver/src/Ubbr_Calculate.d \
 Eth_Udp/SRC/enc28j60.d \
 Eth_Udp/SRC/ip_arp_udp_tcp.d \
 Eth_Udp/SRC/spi.d \
@@ -157,6 +161,7 @@ DeviceDriver/src/Dev_Manager.d \
 DeviceDriver/src/per_sec_timer.d \
 DeviceDriver/src/RS485Driver.d \
 DeviceDriver/src/UartDriver.d \
+DeviceDriver/src/Ubbr_Calculate.d \
 Eth_Udp/SRC/enc28j60.d \
 Eth_Udp/SRC/ip_arp_udp_tcp.d \
 Eth_Udp/SRC/spi.d \
@@ -186,6 +191,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

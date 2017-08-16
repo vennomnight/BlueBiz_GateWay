@@ -209,6 +209,9 @@
     <Compile Include="DeviceDriver\inc\UartDriver.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="DeviceDriver\inc\Ubbr_Calculate.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DeviceDriver\src\Dev_Manager.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -219,6 +222,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\src\UartDriver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\src\Ubbr_Calculate.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Eth_Udp\INC\avr_compat.h">

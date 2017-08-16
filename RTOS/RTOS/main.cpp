@@ -43,8 +43,8 @@
 #define CHECK_ERROR 0 //에러 디버깅용
 #define USE_SYSTEM_SEC 0
 
-#define sbi(PORTX, BitX) PORTX |= (1 <<BitX)
-#define cbi(PORTX, BitX) PORTX &= ~(1 << BitX)
+//#define sbi(PORTX, BitX) PORTX |= (1 <<BitX)
+//#define cbi(PORTX, BitX) PORTX &= ~(1 << BitX)
 
 
 #if USE_ETH
@@ -110,8 +110,6 @@ typedef enum
 }MACHINE_STATE_SUB_TITLE;
 
 
-static void vTask1(void *pvParam);
-static void vTask2(void *pvParam);
 static void proc(void* pvParam);
 static void proc1(void* pvParam);
 static void proc2(void* pvParam);
@@ -255,7 +253,6 @@ int main( void )
 }
 static void System_Init()
 {
-	PORTB = 0xff;
 	mem4[IPV4_0] = eeprom_read_byte((const uint8_t*)0);  //read ip address
 	mem4[IPV4_1] = eeprom_read_byte((const uint8_t*)1);
 	mem4[IPV4_2] = eeprom_read_byte((const uint8_t*)2);
@@ -497,7 +494,6 @@ RESET_ETH:
 	uint16_t plen;
 	DDRB = 0xff;
 	PORTB = 0xff;
-    char str[30];
 	 enc28j60Init(mymac);
 	 enc28j60clkout(2); // change clkout from 6.25MHz to 12.5MHz
 	 vTaskDelay(10);
@@ -508,7 +504,7 @@ RESET_ETH:
 
 	 while(1)
 	 {
-		 if(cmp_mem[0] != mem4[IPV4_0] | cmp_mem[1] != mem4[IPV4_1] | cmp_mem[2] != mem4[IPV4_2] | cmp_mem[3] != mem4[IPV4_3])
+		 if((cmp_mem[0] != mem4[IPV4_0]) | (cmp_mem[1] != mem4[IPV4_1]) | (cmp_mem[2] != mem4[IPV4_2]) | (cmp_mem[3] != mem4[IPV4_3]))
 		 {
 			 if(cmp_mem[0] != mem4[IPV4_0])
 			 {

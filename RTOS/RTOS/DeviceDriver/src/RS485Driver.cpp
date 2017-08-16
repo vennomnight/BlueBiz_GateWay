@@ -5,8 +5,7 @@
  *  Author: kimkisu
  */ 
 #include "RS485Driver.h"
-#include "avr/interrupt.h"
-#include "Dev_Manager.h"
+
 RS485Driver* RS485Driver::inst = nullptr;
 
 RS485Driver::RS485Driver()
@@ -14,22 +13,27 @@ RS485Driver::RS485Driver()
 	if(inst == nullptr)
 		inst = this;
 }
+uint16_t RS485Driver::Ubbr_Value(const uint16_t &_Uart_baudrate) 
+{
+	return Ubbr::Ubbr_Value(_Uart_baudrate);
+}
+
 void RS485Driver::Device_Init()
 {
 	/*Data : 8bit,Parity : None ,Stopbit:1bit Baudrate:9600bps*/
 	UCSR1A=0x00;
     UCSR1B = 0x98;
 	UCSR1C = 0x06;
-	UBRR1H = (uint8_t)(UBRR_VALUE>>8);
-	UBRR1L = (uint8_t) UBRR_VALUE;
-    //UBRR1H=0x00;
-    //UBRR1L=0x67;
+	uint16_t reg = Ubbr_Value(this->Uart_baudrate);
+	UBRR1H = reg << 8;
+	UBRR1L = reg >> 8;
 	Uart_Mutex = xSemaphoreCreateMutex();
 	char_Mutex= xSemaphoreCreateMutex();
-	//DDRF=0X80; //TX or RX Enable Pin
-	//PORTF=0X00;	//RS485 rx Enable
 }
-
+RS485Driver::RS485Driver(uint16_t _Uart_baudrate)
+{
+	this->Uart_baudrate = _Uart_baudrate;
+}
 void RS485Driver::operator delete(void* ptr)
 {
 	free(ptr);

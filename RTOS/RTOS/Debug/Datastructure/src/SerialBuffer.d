@@ -21,10 +21,8 @@ Datastructure/src/SerialBuffer.d Datastructure/src/SerialBuffer.o: \
  ../../Source/include/deprecated_definitions.h \
  ../../Source/include/portmacro.h ../../Source/include/mpu_wrappers.h \
  ../../Source/include/task.h ../../Source/include/list.h \
- ../DeviceDriver/inc/Dev_Manager.h \
- ../DeviceDriver/inc/DeviceDriverInterface.h \
- ../../Source/include/semphr.h ../../Source/include/queue.h \
- ../../Source/include/queue.h
+ ../DeviceDriver/inc/Dev_Manager.h ../../Source/include/semphr.h \
+ ../../Source/include/queue.h ../../Source/include/queue.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdio.h:
 
@@ -77,8 +75,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../../Source/include/list.h:
 
 ../DeviceDriver/inc/Dev_Manager.h:
-
-../DeviceDriver/inc/DeviceDriverInterface.h:
 
 ../../Source/include/semphr.h:
 

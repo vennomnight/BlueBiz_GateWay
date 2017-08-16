@@ -8,25 +8,20 @@
 
 #ifndef RS485DRIVER_H_
 #define RS485DRIVER_H_
-
 #include "FreeRTOS.h"
-#include "task.h"
-#include "DeviceDriverInterface.h"
 #include "semphr.h"
-#include "queue.h"
+#include "DeviceDriverInterface.h"
+#include "Ubbr_Calculate.h"
 
 #define malloc(size) pvPortMalloc(size)
 #define free(ptr) vPortFree(ptr)
-#define F_CPU 16000000UL
-#define UBRR_VALUE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
-#define USART_BAUDRATE 9600
 
-
-class DeviceDriveInterFace;
-
-class RS485Driver : public DeviceDriveInterFace
+class RS485Driver : public DeviceDriveInterFace , private Ubbr
 {
+	using Ubbr::Ubbr_Value;
 	private:
+	uint16_t Uart_baudrate = 9600;
+	uint16_t Ubbr_Value(const uint16_t &Uart_baudrate);
 	SemaphoreHandle_t char_Mutex;
 	SemaphoreHandle_t Uart_Mutex;
 	static RS485Driver* inst;
@@ -34,6 +29,7 @@ class RS485Driver : public DeviceDriveInterFace
 	void UART_PutString(const char *str);
 	public:
 	explicit RS485Driver();
+	explicit RS485Driver(uint16_t Uart_baudrate);
 	void Device_Init();
 	void* operator new(size_t size);
 	void operator delete(void* ptr);
