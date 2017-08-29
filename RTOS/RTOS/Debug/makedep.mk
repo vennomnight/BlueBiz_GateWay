@@ -6,11 +6,17 @@ CommunicateProtocols\src\Modbus_rtu.cpp
 
 Datastructure\src\SerialBuffer.cpp
 
+DeviceDriver\src\Alarm.cpp
+
+DeviceDriver\src\Count_Sensor.cpp
+
 DeviceDriver\src\Dev_Manager.cpp
 
 DeviceDriver\src\per_sec_timer.cpp
 
 DeviceDriver\src\RS485Driver.cpp
+
+DeviceDriver\src\Timer_Alarm.cpp
 
 DeviceDriver\src\UartDriver.cpp
 

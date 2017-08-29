@@ -194,6 +194,12 @@
     <Compile Include="Datastructure\src\SerialBuffer.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="DeviceDriver\inc\Alarm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\inc\Count_Sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DeviceDriver\inc\DeviceDriverInterface.h">
       <SubType>compile</SubType>
     </Compile>
@@ -203,7 +209,13 @@
     <Compile Include="DeviceDriver\inc\per_sec_timer.h">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="DeviceDriver\inc\PortD_Io.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="DeviceDriver\inc\RS485Driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\inc\Timer_Alarm.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\inc\UartDriver.h">
@@ -212,13 +224,25 @@
     <Compile Include="DeviceDriver\inc\Ubbr_Calculate.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="DeviceDriver\src\Alarm.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\src\Count_Sensor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DeviceDriver\src\Dev_Manager.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\src\per_sec_timer.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="DeviceDriver\src\PortD_Io.cpp">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="DeviceDriver\src\RS485Driver.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\src\Timer_Alarm.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\src\UartDriver.cpp">

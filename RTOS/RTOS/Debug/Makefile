@@ -58,9 +58,12 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../CommunicateProtocols/src/Modbus_rtu.cpp \
 ../Datastructure/src/SerialBuffer.cpp \
+../DeviceDriver/src/Alarm.cpp \
+../DeviceDriver/src/Count_Sensor.cpp \
 ../DeviceDriver/src/Dev_Manager.cpp \
 ../DeviceDriver/src/per_sec_timer.cpp \
 ../DeviceDriver/src/RS485Driver.cpp \
+../DeviceDriver/src/Timer_Alarm.cpp \
 ../DeviceDriver/src/UartDriver.cpp \
 ../DeviceDriver/src/Ubbr_Calculate.cpp \
 ../Eth_Udp/SRC/enc28j60.cpp \
@@ -88,9 +91,12 @@ ASM_SRCS +=
 OBJS +=  \
 CommunicateProtocols/src/Modbus_rtu.o \
 Datastructure/src/SerialBuffer.o \
+DeviceDriver/src/Alarm.o \
+DeviceDriver/src/Count_Sensor.o \
 DeviceDriver/src/Dev_Manager.o \
 DeviceDriver/src/per_sec_timer.o \
 DeviceDriver/src/RS485Driver.o \
+DeviceDriver/src/Timer_Alarm.o \
 DeviceDriver/src/UartDriver.o \
 DeviceDriver/src/Ubbr_Calculate.o \
 Eth_Udp/SRC/enc28j60.o \
@@ -111,9 +117,12 @@ RTOS/SRC/timers.o
 OBJS_AS_ARGS +=  \
 CommunicateProtocols/src/Modbus_rtu.o \
 Datastructure/src/SerialBuffer.o \
+DeviceDriver/src/Alarm.o \
+DeviceDriver/src/Count_Sensor.o \
 DeviceDriver/src/Dev_Manager.o \
 DeviceDriver/src/per_sec_timer.o \
 DeviceDriver/src/RS485Driver.o \
+DeviceDriver/src/Timer_Alarm.o \
 DeviceDriver/src/UartDriver.o \
 DeviceDriver/src/Ubbr_Calculate.o \
 Eth_Udp/SRC/enc28j60.o \
@@ -134,9 +143,12 @@ RTOS/SRC/timers.o
 C_DEPS +=  \
 CommunicateProtocols/src/Modbus_rtu.d \
 Datastructure/src/SerialBuffer.d \
+DeviceDriver/src/Alarm.d \
+DeviceDriver/src/Count_Sensor.d \
 DeviceDriver/src/Dev_Manager.d \
 DeviceDriver/src/per_sec_timer.d \
 DeviceDriver/src/RS485Driver.d \
+DeviceDriver/src/Timer_Alarm.d \
 DeviceDriver/src/UartDriver.d \
 DeviceDriver/src/Ubbr_Calculate.d \
 Eth_Udp/SRC/enc28j60.d \
@@ -157,9 +169,12 @@ RTOS/SRC/timers.d
 C_DEPS_AS_ARGS +=  \
 CommunicateProtocols/src/Modbus_rtu.d \
 Datastructure/src/SerialBuffer.d \
+DeviceDriver/src/Alarm.d \
+DeviceDriver/src/Count_Sensor.d \
 DeviceDriver/src/Dev_Manager.d \
 DeviceDriver/src/per_sec_timer.d \
 DeviceDriver/src/RS485Driver.d \
+DeviceDriver/src/Timer_Alarm.d \
 DeviceDriver/src/UartDriver.d \
 DeviceDriver/src/Ubbr_Calculate.d \
 Eth_Udp/SRC/enc28j60.d \
@@ -191,6 +206,12 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 

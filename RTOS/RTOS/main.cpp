@@ -34,14 +34,18 @@
 #include "RS485Driver.h"
 #include "per_sec_timer.h"
 #include "Modbus_rtu.h"
-
+#include "Count_Sensor.h"
+#include "Alarm.h"
+#include "Timer_Alarm.h"
 //////////////////
 
 
-#define DEBUG 0 //처음 부팅 디버깅용 
+const char debug = 0; //처음 부팅 디버깅용 
 #define USE_ETH 1 //이더넷 사용
 #define CHECK_ERROR 0 //에러 디버깅용
-#define USE_SYSTEM_SEC 0
+#define USE_SYSTEM_SEC 0 //총 시스템 초
+//#define EXTERNAL_COUNT_SENSOR 1 // 외부 센서 사용시
+
 
 //#define sbi(PORTX, BitX) PORTX |= (1 <<BitX)
 //#define cbi(PORTX, BitX) PORTX &= ~(1 << BitX)
@@ -91,6 +95,7 @@ enum
 	IPV4_1,
 	IPV4_2,
 	IPV4_3,
+	TARGET_COUNT_SENSOR,  //0 PLC 1 LOCAL
 	TEST1,
 	#if USE_SYSTEM_SEC
 		SYSTEM_SEC_CLOCK,
@@ -131,7 +136,9 @@ void Init_Dev();
 void Uart_ISR(Dev_type Device,uint16_t Arg);
 void RS485_ISR(Dev_type Device,uint16_t Arg);
 void Timer_ISR(Dev_type Device,uint16_t Arg);
+void Count_Sensor_ISR(Dev_type Device,uint16_t Arg);
 
+void Set_Alarm();
 
 static void System_Init();
 
@@ -154,8 +161,12 @@ int current_temp = 0;
 //현재압력
 int current_pressure = 0;
 
-int mem4[MAX_ENUM] = {0};
-char cmp_mem[4] = {0};
+int mem4[MAX_ENUM] = {0};  //function 10 메모리 공간
+char cmp_mem[4] = {0};  //IP 주소 비교 메모리 
+
+uint8_t chatter_flag = 0; //채터링 방지 플래그 변수
+//uint8_t use_external_count_sensor = 0; // 0 PLC  1 EXTERNAL COUTN SENSOR
+
 int main( void )
 {
 	System_Init();
@@ -166,33 +177,38 @@ int main( void )
 	dev->Open_Handle(UART0,Uart_ISR);  //드라이버 매니져에 인터럽트 루틴 등록
 	dev->Open_Handle(RS485,RS485_ISR); //드라이버 매니져에 인터럽트 루틴 등록
 	dev->Open_Handle(SEC_TIMER,Timer_ISR);
+	dev->Open_Handle(COUNT_SENSOR,Count_Sensor_ISR);
 	SerialBuffer *sb = new SerialBuffer(dev,UART0); //링 버퍼 
 	if(sb == nullptr)
 	{
-		#if DEBUG 
+		if(debug)
+		{ 
 			dev->Writes(UART0,"RingBuffer Error\r\n");
-		#endif
+		}
 		exit(1);
 	}
 	else
 	{
-		#if DEBUG
+		if(debug)
+		{
 			dev->Writes(UART0,"RingBuffer UART0 SUCCESS\r\n");
-		#endif
+		}
 	}
 	SerialBuffer *sb1 = new SerialBuffer(dev,RS485); //링 버퍼 
 	if(sb1 == nullptr)
 	{
-		#if DEBUG
+		if(debug)
+		{
 			dev->Writes(UART0,"RingBuffer Error\r\n");
-		#endif
+		}
 		exit(1);
 	}
 	else
 	{
-		#if DEBUG
+		if(debug)
+		{
 			dev->Writes(UART0,"RingBuffer UART1 SUCCESS\r\n");
-		#endif
+		}
 	}
 	DataStruct[UART0] = sb;
 	DataStruct[RS485] = sb1;
@@ -200,24 +216,28 @@ int main( void )
 	{
 		if(DataStruct[i] == nullptr)
 		{
-			#if DEBUG
+			if(debug)
+			{
 				if(i == UART0)
 					dev->Writes(UART0,"DataStruct UART0 Address Faile\r\n");
 				else if(i == RS485)
 					dev->Writes(UART0,"DataStruct UART1 Address Faile\r\n");
-			#endif
+			}
 		}
 		else
 		{
-			#if DEBUG
+			if(debug)
+			{
 				if(i == UART0)
 					dev->Writes(UART0,"DataStruct UART0 Address SUCCESS\r\n");
 				else if(i == RS485)
 					dev->Writes(UART0,"DataStruct UART1 Address SUCCESS\r\n");
-			#endif
+			}
 		}
 	}
-
+	Alarm_Init(); //알람 초기화
+	////Timer_Alarm al;
+	
 	sei(); //인터럽트 사용 
 	
 	xTaskCreate(proc,                //테스크 실행할 함수 포인터
@@ -241,7 +261,7 @@ int main( void )
 				"Task3",      //테스크 이름
 				240,                   //스택의 크기
 				NULL,       // 테스크 매개 변수
-				2,                     //테스크 우선 순위
+				2,                     //테스크 우선 순위0.
 				NULL                   //태스크 핸들
 				);
 		#endif
@@ -269,9 +289,11 @@ void Init_Dev()
 	dev->Register_Dev(new UartDriver,UART0);
 	dev->Register_Dev(new RS485Driver,RS485);
 	dev->Register_Dev(new Timer,SEC_TIMER);
+	dev->Register_Dev(new Count_Sensor,COUNT_SENSOR);
 	dev->Device_Init(UART0);
 	dev->Device_Init(RS485);
 	dev->Device_Init(SEC_TIMER);
+	dev->Device_Init(COUNT_SENSOR);
 	dev->Writes(UART0,"Uart Init SUCCESS boadrate 9600bps \r\n");
 	dev->Writes(RS485,"RS485 Init SUCCESS boadrate 9600bps \r\n");
 }
@@ -300,6 +322,17 @@ void Timer_ISR(Dev_type Device,uint16_t Arg)
 		mem4[SYSTEM_SEC_CLOCK]++;
 	#endif
 }
+void Count_Sensor_ISR(Dev_type Device,uint16_t Arg)
+{
+	Alarm_Open(ALARM0,20,Set_Alarm);
+}
+void Set_Alarm()
+{
+	if(chatter_flag == 0)
+	{
+		chatter_flag = 1;
+	}
+}
 static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 {
 	char read_Flag = 0;
@@ -307,8 +340,20 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 	char buf1[10];
 	//SerialBuffer *sb = (SerialBuffer*)pvParam;
 	SerialBuffer *sb = static_cast<SerialBuffer*>(pvParam);	
+	register uint16_t i;
 	while(1)
 	{
+		//mem4[COUNT] = PIND;
+		if(PIND == 0xfe && chatter_flag == 1)//
+		{
+			mem4[COUNT]++;                // Remove Chattering 
+			chatter_flag = 2;
+		}
+		if(PIND == 0xff && chatter_flag == 2)//
+		{
+			vTaskDelay(20);
+			chatter_flag = 0;
+		}
 		if(mem4[SEC] >= 60)
 		{
 			mem4[SEC] = 0;
@@ -323,7 +368,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 		{
 			if(sb->SerialAvailable() >= 2)
 			{
-				for(int i=0;i<2;i++)
+				for(i=0;i<2;i++)
 				{
 					buf1[i] = sb->SerialRead();
 				}
@@ -357,13 +402,10 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 						mem4[ERROR_CNT]++;
 					#endif
 					GetExceptionCode(&exception,0x01,0x01);  
-					//dev->Close_Handle(UART0);
-					//PORTB = 0x00;
 					cbi(PORTB,7);
 					cbi(UCSR0B,RXCIE0);                                                                                                                                                                                                                
 					sb->SerialFlush();
 					sbi(UCSR0B,RXCIE0);
-					//dev->Open_Handle(UART0,Uart_ISR);
 					sb->SerialWrite((char*)&exception,sizeof(exception));
 					sbi(PORTB,7);
 					read_Flag = 0;	
@@ -377,7 +419,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 			{
 				if(sb->SerialAvailable() >= 6)
 				{
-					for(int i=2;i<8;i++)
+					for(i=2;i<8;i++)
 					{
 						buf1[i] = sb->SerialRead();
 					}
@@ -388,7 +430,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 			{
 				if(sb->SerialAvailable() >= 6)
 				{
-					for(int i=2;i<8;i++)
+					for(i=2;i<8;i++)
 					{
 						buf1[i] = sb->SerialRead();
 					}
@@ -401,7 +443,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 			{
 				if(sb->SerialAvailable() >= 6)
 				{
-					for(int i=2;i<8;i++)
+					for(i=2;i<8;i++)
 					{
 						buf1[i] = sb->SerialRead();
 					}
@@ -414,7 +456,7 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 			{
 				if(sb->SerialAvailable() >= 9)
 				{
-					for(int i=2;i<11;i++)
+					for(i=2;i<11;i++)
 					{
 						buf1[i] = sb->SerialRead();
 					}
@@ -434,8 +476,6 @@ static void proc1(void* pvParam)
 {
 	//UART1 
 	SerialBuffer *sb = static_cast<SerialBuffer*>(pvParam);
-	//SerialBuffer *sb = (SerialBuffer*)pvParam;
-	//SerialBuffer *sb1 = (SerialBuffer*)DataStruct[UART0];
 	uint8_t proc1_buff[15] = {0};
 	while(1)
 	{
@@ -459,7 +499,15 @@ static void proc1(void* pvParam)
 				current_temp = ((0xff & proc1_buff[9]) << 8) | (0xff & proc1_buff[10]);
 				current_pressure = ((0xff & proc1_buff[11]) << 8) | (0xff & proc1_buff[12]);
 				mem4[TEMP] = current_temp;
-				mem4[COUNT] = count_number;
+				if(mem4[TARGET_COUNT_SENSOR]) //LOCAL SENSOR 
+				{
+					Alarm_Start();
+				}
+				else //PLC
+				{
+					Alarm_Stop();
+					mem4[COUNT] = count_number;
+				}
 				mem4[PRESSURE] = current_pressure;
 				if((mem4[GOAL_CNT] == mem4[COUNT])&& mem4[MACHINE_STATES] == NORMAL)
 				{

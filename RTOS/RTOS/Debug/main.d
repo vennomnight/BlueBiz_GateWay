@@ -35,7 +35,9 @@ main.d main.o: .././main.cpp \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  ../Datastructure/inc/SerialBuffer.h ../DeviceDriver/inc/RS485Driver.h \
  ../DeviceDriver/inc/per_sec_timer.h ../DeviceDriver/inc/Dev_Manager.h \
- ../CommunicateProtocols/inc/Modbus_rtu.h
+ ../CommunicateProtocols/inc/Modbus_rtu.h \
+ ../DeviceDriver/inc/Count_Sensor.h ../DeviceDriver/inc/Alarm.h \
+ ../DeviceDriver/inc/Timer_Alarm.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
 
@@ -140,3 +142,9 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../DeviceDriver/inc/Dev_Manager.h:
 
 ../CommunicateProtocols/inc/Modbus_rtu.h:
+
+../DeviceDriver/inc/Count_Sensor.h:
+
+../DeviceDriver/inc/Alarm.h:
+
+../DeviceDriver/inc/Timer_Alarm.h:

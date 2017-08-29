@@ -5,7 +5,7 @@
  *  Author: bluebiz
  */ 
 #include "per_sec_timer.h"
-Dev_Manager dev1;
+
 Timer::Timer()
 {
 	

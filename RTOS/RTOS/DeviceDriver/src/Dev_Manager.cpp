@@ -101,5 +101,9 @@ ISR(USART1_RX_vect)
 }
 ISR(TIMER3_COMPC_vect)
 {
-	Dev_Manager::getInstance()->isr_handle[SEC_TIMER](SEC_TIMER,0);
+	Dev_Manager::getInstance()->isr_handle[SEC_TIMER](SEC_TIMER,NULL);
+}
+ISR(INT0_vect)
+{
+	Dev_Manager::getInstance()->isr_handle[COUNT_SENSOR](COUNT_SENSOR,NULL);
 }

@@ -25,6 +25,7 @@ typedef enum
 	UART0,
 	RS485,
 	SEC_TIMER,
+	COUNT_SENSOR,
 	MAX
 }Dev_type;
 
