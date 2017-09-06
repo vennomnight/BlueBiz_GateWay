@@ -42,6 +42,12 @@
 
 const char debug = 0; //처음 부팅 디버깅용 
 #define USE_ETH 1 //이더넷 사용
+#define USE_HMI 1 //HMI 사용
+
+#define PACKET_DEBUG 0 // PLC 0 으로 하고 해야함,, 
+#define USE_PLC 1 //PLC 사용 
+
+
 #define CHECK_ERROR 0 //에러 디버깅용
 #define USE_SYSTEM_SEC 0 //총 시스템 초
 //#define EXTERNAL_COUNT_SENSOR 1 // 외부 센서 사용시
@@ -338,7 +344,9 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 	char read_Flag = 0;
 	char function_code;
 	char buf1[10];
-	//SerialBuffer *sb = (SerialBuffer*)pvParam;
+	#if PACKET_DEBUG
+		SerialBuffer *sb1 = (SerialBuffer*)DataStruct[RS485];
+	#endif
 	SerialBuffer *sb = static_cast<SerialBuffer*>(pvParam);	
 	register uint16_t i;
 	while(1)
@@ -371,10 +379,14 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 				for(i=0;i<2;i++)
 				{
 					buf1[i] = sb->SerialRead();
+					#if PACKET_DEBUG
+						sb1->SerialWrite(buf1[i]);
+					#endif
 				}
 				if(buf1[0] != 0x01)
 				{
-					read_Flag = 0;
+				//	read_Flag = 0;
+					goto FREAM_ERROR;
 				}
 				if(buf1[1] == 0x01)
 				{
@@ -398,13 +410,16 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 				}
 				else
 				{
+					FREAM_ERROR:
 					#if CHECK_ERROR
 						mem4[ERROR_CNT]++;
 					#endif
 					GetExceptionCode(&exception,0x01,0x01);  
 					cbi(PORTB,7);
-					cbi(UCSR0B,RXCIE0);                                                                                                                                                                                                                
+					cbi(UCSR0B,RXCIE0);
+					dev->getInterfaceAddr(UART0)->Stop_Device();                                                                                                                                                                                                                
 					sb->SerialFlush();
+					dev->getInterfaceAddr(UART0)->Start_Device();
 					sbi(UCSR0B,RXCIE0);
 					sb->SerialWrite((char*)&exception,sizeof(exception));
 					sbi(PORTB,7);
@@ -422,6 +437,9 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 					for(i=2;i<8;i++)
 					{
 						buf1[i] = sb->SerialRead();
+						#if PACKET_DEBUG
+							sb1->SerialWrite(buf1[i]);
+						#endif
 					}
 
 				}
@@ -433,10 +451,23 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 					for(i=2;i<8;i++)
 					{
 						buf1[i] = sb->SerialRead();
+						#if PACKET_DEBUG
+							sb1->SerialWrite(buf1[i]);
+						#endif
 					}
-					GetFunc04Data(buf1,&func04,mem4);
-					sb->SerialWrite((char*)&func04,sizeof(func04));
-					read_Flag = 0;
+					int tempadr =((0xff & buf1[2] << 8) | 0xff & buf1[3]);
+					if(tempadr > MAX_ENUM)  //주소 사이즈 체크 
+					{
+							GetExceptionCode(&exception,0x01,0x02);
+							sb->SerialWrite((char*)&exception,sizeof(exception));
+					}
+					else
+					{
+							GetFunc04Data(buf1,&func04,mem4);
+							sb->SerialWrite((char*)&func04,sizeof(func04));
+							read_Flag = 0;
+					}
+
 				}
 			}
 			else if(function_code == 0x05) //터치 버튼 
@@ -446,6 +477,9 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 					for(i=2;i<8;i++)
 					{
 						buf1[i] = sb->SerialRead();
+						#if PACKET_DEBUG
+						sb1->SerialWrite(buf1[i]);
+						#endif
 					}
 					GetFunc05Data(buf1,&func05);
 					sb->SerialWrite((char*)&func05,sizeof(func05));
@@ -459,6 +493,9 @@ static void proc(void* pvParam) //터치패널 HMI RS232 쓰레드
 					for(i=2;i<11;i++)
 					{
 						buf1[i] = sb->SerialRead();
+						#if PACKET_DEBUG
+						sb1->SerialWrite(buf1[i]);
+						#endif
 					}
 					GetFucc10Data(buf1,&func10,mem4); //데이터 파싱
 					ResponseFucc10Data(buf1,&rsp10); //리스폰스 데이터를 만듬.

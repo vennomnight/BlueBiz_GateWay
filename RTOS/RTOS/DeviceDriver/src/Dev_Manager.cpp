@@ -82,7 +82,7 @@ void Dev_Manager::Close_Handle(Dev_type Device)
 		isr_handle[Device] = nullptr;
 	}
 }
-const DeviceDriveInterFace* Dev_Manager::getInterfaceAddr(Dev_type Device) const
+DeviceDriveInterFace* const Dev_Manager::getInterfaceAddr(Dev_type Device) const
 {
 	if(interface[Device])
 	{

@@ -39,6 +39,8 @@ class UartDriver : public DeviceDriveInterFace, private Ubbr
 	void operator delete(void* ptr);
 	void Device_Writes(const char* data);
 	void Device_Write(char data);
+	void Stop_Device(void) const;
+	void Start_Device(void) const;
 	static const UartDriver* const getInstance();
 	
 };

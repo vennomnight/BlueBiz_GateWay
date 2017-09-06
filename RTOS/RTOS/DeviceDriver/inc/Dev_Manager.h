@@ -40,7 +40,7 @@ class Dev_Manager
 	DeviceDriveInterFace *interface[MAX] = {nullptr};
 	public:
 	ISR_Handle isr_handle[MAX] = {nullptr};
-	const DeviceDriveInterFace* getInterfaceAddr(Dev_type Device) const;
+	DeviceDriveInterFace* const getInterfaceAddr(Dev_type Device) const;
 	explicit Dev_Manager();
 	~Dev_Manager();
 	void Open_Handle(Dev_type Device,const ISR_Handle _isr_handle);

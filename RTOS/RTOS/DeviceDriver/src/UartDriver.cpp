@@ -9,6 +9,9 @@
 #include "avr/interrupt.h"
 #include "Dev_Manager.h"
 #include "DeviceDriverInterface.h"
+#define sbi(PORTX, BitX) PORTX |= (1 <<BitX)
+#define cbi(PORTX, BitX) PORTX &= ~(1 << BitX)
+
 UartDriver* UartDriver::inst = nullptr;
 UartDriver::UartDriver()
 {
@@ -89,4 +92,14 @@ void UartDriver::Device_Write(char data)
 void UartDriver::Device_Writes(const char* data)
 {
 	UART_PutString(data);
+}
+void UartDriver::Stop_Device() const
+{
+	cbi(UCSR0B,RXEN0); //Stop RX
+	cbi(UCSR0B,TXEN0); //Stop TX
+}
+void UartDriver::Start_Device() const
+{
+	sbi(UCSR0B,RXEN0);
+	sbi(UCSR0B,TXEN0);
 }

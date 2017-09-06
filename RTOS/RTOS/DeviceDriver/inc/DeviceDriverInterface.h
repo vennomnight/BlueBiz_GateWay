@@ -16,6 +16,8 @@ class DeviceDriveInterFace
 	virtual char Device_Read() const{return 0;}
 	virtual void Device_Writes(const char* data){}
 	virtual void Device_Write(char data){}
+	virtual void Stop_Device(void){}
+	virtual void Start_Device(void){}
 };
 
 
