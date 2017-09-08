@@ -58,7 +58,7 @@ const char debug = 0; //처음 부팅 디버깅용
 
 
 #if USE_ETH
-#define	BUFFER_SIZE 512
+#define	BUFFER_SIZE 200
 #define MYWWWPORT 80
 #define MYUDPPORT 9999
 #endif
@@ -265,7 +265,7 @@ int main( void )
 		#if USE_ETH
 				xTaskCreate(proc2,                //테스크 실행할 함수 포인터
 				"Task3",      //테스크 이름
-				240,                   //스택의 크기
+				500,                   //스택의 크기
 				NULL,       // 테스크 매개 변수
 				2,                     //테스크 우선 순위0.
 				NULL                   //태스크 핸들
@@ -675,7 +675,13 @@ RESET_ETH:
 			 data[6] = mem4[MIN];
 			 data[7] = mem4[HOUR];
 			 make_udp_reply_from_request(buf,(char*)&data,sizeof(data),MYUDPPORT);
-			 vTaskDelay(100);
+			// memcpy(buf,data,sizeof(data));
+			 //enc28j60PacketSend(UDP_HEADER_LEN+IP_HEADER_LEN+ETH_HEADER_LEN+sizeof(data),buf);
+			 //vTaskDelay(500);
+			 //memset(buf,0,sizeof(buf));
+			// vTaskDelay(100);
+			taskYIELD();
+			 
 	}
 	  
 }
