@@ -8,6 +8,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include <avr/pgmspace.h>
 #include <avr/sfr_defs.h>
 #include <avr/wdt.h>
@@ -37,6 +38,7 @@
 #include "Count_Sensor.h"
 #include "Alarm.h"
 #include "Timer_Alarm.h"
+#include "Char_LCD2004A.h"
 //////////////////
 
 
@@ -136,6 +138,8 @@ extern "C"
 
 }
 Dev_Manager *dev;
+Char_LCD2004A *lcd;
+
 
 void *DataStruct[MAX] = {nullptr}; //Dev_Manager Enum Using
 void Init_Dev();
@@ -178,6 +182,7 @@ int main( void )
 	System_Init();
 	cli();  //인터럽트 금지 
 	Init_Dev(); //dev 매니저 초기화
+	
 	
 	
 	dev->Open_Handle(UART0,Uart_ISR);  //드라이버 매니져에 인터럽트 루틴 등록
@@ -292,6 +297,7 @@ static void System_Init()
 void Init_Dev()
 {
 	dev = new Dev_Manager();
+	lcd = new Char_LCD2004A();
 	dev->Register_Dev(new UartDriver,UART0);
 	dev->Register_Dev(new RS485Driver,RS485);
 	dev->Register_Dev(new Timer,SEC_TIMER);
@@ -585,8 +591,49 @@ RESET_ETH:
 	 enc28j60PhyWrite(PHLCON,0x476);
 	 vTaskDelay(20);
 	 //init the ethernet/ip layer:
+	 char ip_adr1[12];
+	 //char ip_adr2[3];
+	 //char ip_adr3[3];
+	 //char ip_adr4[3];
+	 lcd->Clear_Lcd();
+	 lcd->Device_Writes("IP :");
+	 sprintf(ip_adr1,"%d",myip[0]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(".");
+	 sprintf(ip_adr1,"%d",myip[1]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(".");
+	 sprintf(ip_adr1,"%d",myip[2]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(".");
+	 sprintf(ip_adr1,"%d",myip[3]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Set_Cursor_Print(0,1,"MAC:");
+	 
+	 sprintf(ip_adr1,"%x",mymac[0]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(":");
+	 sprintf(ip_adr1,"%x",mymac[1]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(":");
+	 sprintf(ip_adr1,"%x",mymac[2]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(":");
+	 sprintf(ip_adr1,"%x",mymac[3]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(":");
+	 sprintf(ip_adr1,"%x",mymac[4]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(":");
+	 sprintf(ip_adr1,"%x",mymac[5]);
+	 lcd->Device_Writes(ip_adr1);
+	 lcd->Device_Writes(":");
+	 lcd->Set_Cursor_Print(0,2,"  Sensor Gateway");
+	 lcd->Set_Cursor_Print(0,3,"  BLUE-BIZ.CO.LTD");
 	 init_ip_arp_udp_tcp(mymac,myip,MYWWWPORT);
-
+	 
+	 
+	
 	 while(1)
 	 {
 		 if((cmp_mem[0] != mem4[IPV4_0]) | (cmp_mem[1] != mem4[IPV4_1]) | (cmp_mem[2] != mem4[IPV4_2]) | (cmp_mem[3] != mem4[IPV4_3]))

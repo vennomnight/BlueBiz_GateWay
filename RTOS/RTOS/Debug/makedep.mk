@@ -8,6 +8,8 @@ Datastructure\src\SerialBuffer.cpp
 
 DeviceDriver\src\Alarm.cpp
 
+DeviceDriver\src\Char_LCD2004A.cpp
+
 DeviceDriver\src\Count_Sensor.cpp
 
 DeviceDriver\src\Dev_Manager.cpp

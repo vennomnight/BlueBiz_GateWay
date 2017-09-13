@@ -59,6 +59,7 @@ C_SRCS +=  \
 ../CommunicateProtocols/src/Modbus_rtu.cpp \
 ../Datastructure/src/SerialBuffer.cpp \
 ../DeviceDriver/src/Alarm.cpp \
+../DeviceDriver/src/Char_LCD2004A.cpp \
 ../DeviceDriver/src/Count_Sensor.cpp \
 ../DeviceDriver/src/Dev_Manager.cpp \
 ../DeviceDriver/src/per_sec_timer.cpp \
@@ -92,6 +93,7 @@ OBJS +=  \
 CommunicateProtocols/src/Modbus_rtu.o \
 Datastructure/src/SerialBuffer.o \
 DeviceDriver/src/Alarm.o \
+DeviceDriver/src/Char_LCD2004A.o \
 DeviceDriver/src/Count_Sensor.o \
 DeviceDriver/src/Dev_Manager.o \
 DeviceDriver/src/per_sec_timer.o \
@@ -118,6 +120,7 @@ OBJS_AS_ARGS +=  \
 CommunicateProtocols/src/Modbus_rtu.o \
 Datastructure/src/SerialBuffer.o \
 DeviceDriver/src/Alarm.o \
+DeviceDriver/src/Char_LCD2004A.o \
 DeviceDriver/src/Count_Sensor.o \
 DeviceDriver/src/Dev_Manager.o \
 DeviceDriver/src/per_sec_timer.o \
@@ -144,6 +147,7 @@ C_DEPS +=  \
 CommunicateProtocols/src/Modbus_rtu.d \
 Datastructure/src/SerialBuffer.d \
 DeviceDriver/src/Alarm.d \
+DeviceDriver/src/Char_LCD2004A.d \
 DeviceDriver/src/Count_Sensor.d \
 DeviceDriver/src/Dev_Manager.d \
 DeviceDriver/src/per_sec_timer.d \
@@ -170,6 +174,7 @@ C_DEPS_AS_ARGS +=  \
 CommunicateProtocols/src/Modbus_rtu.d \
 Datastructure/src/SerialBuffer.d \
 DeviceDriver/src/Alarm.d \
+DeviceDriver/src/Char_LCD2004A.d \
 DeviceDriver/src/Count_Sensor.d \
 DeviceDriver/src/Dev_Manager.d \
 DeviceDriver/src/per_sec_timer.d \
@@ -206,6 +211,8 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
 
 
 

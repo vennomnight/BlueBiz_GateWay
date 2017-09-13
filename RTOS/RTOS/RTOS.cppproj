@@ -197,6 +197,9 @@
     <Compile Include="DeviceDriver\inc\Alarm.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="DeviceDriver\inc\Char_LCD2004A.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DeviceDriver\inc\Count_Sensor.h">
       <SubType>compile</SubType>
     </Compile>
@@ -225,6 +228,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\src\Alarm.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\src\Char_LCD2004A.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\src\Count_Sensor.cpp">
