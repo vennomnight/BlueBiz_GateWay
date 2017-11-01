@@ -1,13 +1,23 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
-                              DeviceDriver/src/Ubbr_Calculate.o (__addsf3)
+                              Sensors/src/DFRobotHighTemperatureSensor.o (__subsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3.o) (__addsf3x)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+                              Sensors/src/DFRobotHighTemperatureSensor.o (__nesf2)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+                              Sensors/src/DFRobotHighTemperatureSensor.o (__divsf3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o) (__divsf3x)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+                              main.o (__fixsfsi)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
                               DeviceDriver/src/Ubbr_Calculate.o (__fixunssfsi)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
-                              DeviceDriver/src/Ubbr_Calculate.o (__floatunsisf)
+                              Sensors/src/DFRobotHighTemperatureSensor.o (__floatunsisf)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o) (__fp_cmp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_inf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
@@ -22,6 +32,12 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_split3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o) (__fp_zero)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+                              Sensors/src/DFRobotHighTemperatureSensor.o (__gtsf2)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+                              Sensors/src/DFRobotHighTemperatureSensor.o (__mulsf3)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
                               Datastructure/src/SerialBuffer.o (__divmodhi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodsi4.o)
@@ -32,6 +48,8 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               Datastructure/src/SerialBuffer.o (__do_copy_data)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
                               DeviceDriver/src/Alarm.o (__do_clear_bss)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+                              main.o (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
@@ -85,6 +103,24 @@ Discarded input sections
                 0x00000000       0xf0 Datastructure/src/SerialBuffer.o
  .rodata._ZL10HexaString
                 0x00000000       0x11 Datastructure/src/SerialBuffer.o
+ .text          0x00000000        0x0 Sensors/src/DFRobotHighTemperatureSensor.o
+ .data          0x00000000        0x0 Sensors/src/DFRobotHighTemperatureSensor.o
+ .bss           0x00000000        0x0 Sensors/src/DFRobotHighTemperatureSensor.o
+ .text._ZN22DFRobotHighTemperatureC2Ev
+                0x00000000       0x14 Sensors/src/DFRobotHighTemperatureSensor.o
+ .text._ZN22DFRobotHighTemperatureD2Ev
+                0x00000000        0x2 Sensors/src/DFRobotHighTemperatureSensor.o
+ .group         0x00000000        0x8 DeviceDriver/src/Adc.o
+ .group         0x00000000        0x8 DeviceDriver/src/Adc.o
+ .group         0x00000000        0x8 DeviceDriver/src/Adc.o
+ .group         0x00000000        0x8 DeviceDriver/src/Adc.o
+ .text          0x00000000        0x0 DeviceDriver/src/Adc.o
+ .data          0x00000000        0x0 DeviceDriver/src/Adc.o
+ .bss           0x00000000        0x0 DeviceDriver/src/Adc.o
+ .text._ZN3Adc8Read_SetEv
+                0x00000000        0x6 DeviceDriver/src/Adc.o
+ .text._ZN3AdcdlEPv
+                0x00000000        0x6 DeviceDriver/src/Adc.o
  .text          0x00000000        0x0 DeviceDriver/src/Alarm.o
  .data          0x00000000        0x0 DeviceDriver/src/Alarm.o
  .bss           0x00000000        0x0 DeviceDriver/src/Alarm.o
@@ -99,8 +135,12 @@ Discarded input sections
  .text          0x00000000        0x0 DeviceDriver/src/Char_LCD2004A.o
  .data          0x00000000        0x0 DeviceDriver/src/Char_LCD2004A.o
  .bss           0x00000000        0x0 DeviceDriver/src/Char_LCD2004A.o
- .text._ZN13Char_LCD2004A11Cursor_HomeEv
-                0x00000000       0x1a DeviceDriver/src/Char_LCD2004A.o
+ .text._ZN20DeviceDriveInterFace13Device_WritesEPKc
+                0x00000000        0x2 DeviceDriver/src/Char_LCD2004A.o
+ .text._ZN20DeviceDriveInterFace12Device_WriteEc
+                0x00000000        0x2 DeviceDriver/src/Char_LCD2004A.o
+ .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
+                0x00000000        0x2 DeviceDriver/src/Char_LCD2004A.o
  .text._ZN13Char_LCD2004A12Move_DisplayEc
                 0x00000000       0x18 DeviceDriver/src/Char_LCD2004A.o
  .text._ZN13Char_LCD2004A11Move_CursorEc
@@ -109,10 +149,6 @@ Discarded input sections
                 0x00000000       0x24 DeviceDriver/src/Char_LCD2004A.o
  .text._ZN13Char_LCD2004A14Display_On_OffEhhh
                 0x00000000       0x2e DeviceDriver/src/Char_LCD2004A.o
- .text._ZN13Char_LCD2004A13Register_FontEcPKh
-                0x00000000       0x52 DeviceDriver/src/Char_LCD2004A.o
- .text._ZN13Char_LCD2004A10Font_PrintEc
-                0x00000000        0xa DeviceDriver/src/Char_LCD2004A.o
  .text._ZN13Char_LCD2004AdlEPv
                 0x00000000        0x6 DeviceDriver/src/Char_LCD2004A.o
  .group         0x00000000        0x8 DeviceDriver/src/Count_Sensor.o
@@ -132,7 +168,7 @@ Discarded input sections
                 0x00000000        0x2 DeviceDriver/src/Count_Sensor.o
  .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
                 0x00000000        0x2 DeviceDriver/src/Count_Sensor.o
- .text._ZN20DeviceDriveInterFace12Start_DeviceEv
+ .text._ZN20DeviceDriveInterFace12Start_DeviceEh
                 0x00000000        0x2 DeviceDriver/src/Count_Sensor.o
  .text._ZN12Count_SensordlEPv
                 0x00000000        0x6 DeviceDriver/src/Count_Sensor.o
@@ -162,7 +198,7 @@ Discarded input sections
                 0x00000000        0x2 DeviceDriver/src/per_sec_timer.o
  .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
                 0x00000000        0x2 DeviceDriver/src/per_sec_timer.o
- .text._ZN20DeviceDriveInterFace12Start_DeviceEv
+ .text._ZN20DeviceDriveInterFace12Start_DeviceEh
                 0x00000000        0x2 DeviceDriver/src/per_sec_timer.o
  .text._ZN5TimerdlEPv
                 0x00000000        0x6 DeviceDriver/src/per_sec_timer.o
@@ -183,7 +219,7 @@ Discarded input sections
                 0x00000000        0x2 DeviceDriver/src/RS485Driver.o
  .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
                 0x00000000        0x2 DeviceDriver/src/RS485Driver.o
- .text._ZN20DeviceDriveInterFace12Start_DeviceEv
+ .text._ZN20DeviceDriveInterFace12Start_DeviceEh
                 0x00000000        0x2 DeviceDriver/src/RS485Driver.o
  .text._ZN11RS485Driver10Ubbr_ValueERKj
                 0x00000000        0x6 DeviceDriver/src/RS485Driver.o
@@ -215,7 +251,7 @@ Discarded input sections
                 0x00000000        0x2 DeviceDriver/src/UartDriver.o
  .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
                 0x00000000        0x2 DeviceDriver/src/UartDriver.o
- .text._ZN20DeviceDriveInterFace12Start_DeviceEv
+ .text._ZN20DeviceDriveInterFace12Start_DeviceEh
                 0x00000000        0x2 DeviceDriver/src/UartDriver.o
  .text._ZN10UartDriverC2Ej
                 0x00000000       0x10 DeviceDriver/src/UartDriver.o
@@ -227,7 +263,7 @@ Discarded input sections
                 0x00000000        0x6 DeviceDriver/src/UartDriver.o
  .text._ZNK10UartDriver11Stop_DeviceEv
                 0x00000000        0x6 DeviceDriver/src/UartDriver.o
- .text._ZNK10UartDriver12Start_DeviceEv
+ .text._ZNK10UartDriver12Start_DeviceEh
                 0x00000000        0x6 DeviceDriver/src/UartDriver.o
  .text          0x00000000        0x0 DeviceDriver/src/Ubbr_Calculate.o
  .data          0x00000000        0x0 DeviceDriver/src/Ubbr_Calculate.o
@@ -292,8 +328,10 @@ Discarded input sections
                 0x00000000        0x2 main.o
  .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
                 0x00000000        0x2 main.o
- .text._ZN20DeviceDriveInterFace12Start_DeviceEv
+ .text._ZN20DeviceDriveInterFace12Start_DeviceEh
                 0x00000000        0x2 main.o
+ .bss.Adc_check_flag
+                0x00000000        0x8 main.o
  .bss.func01    0x00000000        0x7 main.o
  .text          0x00000000        0x0 MiddleWare/SRC/MiddleWare.o
  .data          0x00000000        0x0 MiddleWare/SRC/MiddleWare.o
@@ -498,12 +536,27 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
@@ -525,6 +578,15 @@ Discarded input sections
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_divmodhi4.o)
@@ -603,6 +665,20 @@ Discarded input sections
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.div
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc   0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodhi4.o)
@@ -665,6 +741,8 @@ Address of section .data set to 0x800100
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
 LOAD CommunicateProtocols/src/Modbus_rtu.o
 LOAD Datastructure/src/SerialBuffer.o
+LOAD Sensors/src/DFRobotHighTemperatureSensor.o
+LOAD DeviceDriver/src/Adc.o
 LOAD DeviceDriver/src/Alarm.o
 LOAD DeviceDriver/src/Char_LCD2004A.o
 LOAD DeviceDriver/src/Count_Sensor.o
@@ -797,7 +875,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3ba6
+.text           0x00000000     0x5546
  *(.vectors)
  .vectors       0x00000000       0x8c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
                 0x00000000                __vector_default
@@ -813,35 +891,41 @@ END GROUP
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
-                0x0000008c                . = ALIGN (0x2)
+ .progmem.data._ZL8PT100Tab
+                0x0000008c      0x640 Sensors/src/DFRobotHighTemperatureSensor.o
+ .progmem.data._ZL8g_adTemp
+                0x000006cc      0x142 main.o
+ .progmem.data._ZL9g_alfVolt
+                0x0000080e      0x284 main.o
+                0x00000a92                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000008c                __ctors_start = .
+                0x00000a92                __ctors_start = .
  *(.ctors)
-                0x0000008c                __ctors_end = .
-                0x0000008c                __dtors_start = .
+                0x00000a92                __ctors_end = .
+                0x00000a92                __dtors_start = .
  *(.dtors)
-                0x0000008c                __dtors_end = .
+                0x00000a92                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000008c        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
-                0x0000008c                __init
+ .init0         0x00000a92        0x0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
+                0x00000a92                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000008c        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
+ .init2         0x00000a92        0xc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000098       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
-                0x00000098                __do_copy_data
- .init4         0x000000b2       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
-                0x000000b2                __do_clear_bss
+ .init4         0x00000a9e       0x1a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_copy_data.o)
+                0x00000a9e                __do_copy_data
+ .init4         0x00000ab8       0x10 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_clear_bss.o)
+                0x00000ab8                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -852,532 +936,612 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000000c2        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
+ .init9         0x00000ac8        0x8 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  *(.init9)
  *(.text)
- .text          0x000000ca        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
-                0x000000ca                __vector_22
-                0x000000ca                __vector_32
-                0x000000ca                __vector_34
-                0x000000ca                __vector_24
-                0x000000ca                __bad_interrupt
-                0x000000ca                __vector_6
-                0x000000ca                __vector_31
-                0x000000ca                __vector_3
-                0x000000ca                __vector_23
-                0x000000ca                __vector_25
-                0x000000ca                __vector_11
-                0x000000ca                __vector_13
-                0x000000ca                __vector_17
-                0x000000ca                __vector_19
-                0x000000ca                __vector_7
-                0x000000ca                __vector_27
-                0x000000ca                __vector_5
-                0x000000ca                __vector_33
-                0x000000ca                __vector_4
-                0x000000ca                __vector_2
-                0x000000ca                __vector_21
-                0x000000ca                __vector_29
-                0x000000ca                __vector_8
-                0x000000ca                __vector_26
-                0x000000ca                __vector_14
-                0x000000ca                __vector_10
-                0x000000ca                __vector_16
-                0x000000ca                __vector_20
-                0x000000cc                . = ALIGN (0x2)
+ .text          0x00000ad0        0x2 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
+                0x00000ad0                __vector_22
+                0x00000ad0                __vector_32
+                0x00000ad0                __vector_34
+                0x00000ad0                __vector_24
+                0x00000ad0                __bad_interrupt
+                0x00000ad0                __vector_6
+                0x00000ad0                __vector_31
+                0x00000ad0                __vector_3
+                0x00000ad0                __vector_23
+                0x00000ad0                __vector_25
+                0x00000ad0                __vector_11
+                0x00000ad0                __vector_13
+                0x00000ad0                __vector_17
+                0x00000ad0                __vector_19
+                0x00000ad0                __vector_7
+                0x00000ad0                __vector_27
+                0x00000ad0                __vector_5
+                0x00000ad0                __vector_33
+                0x00000ad0                __vector_4
+                0x00000ad0                __vector_2
+                0x00000ad0                __vector_29
+                0x00000ad0                __vector_8
+                0x00000ad0                __vector_26
+                0x00000ad0                __vector_14
+                0x00000ad0                __vector_10
+                0x00000ad0                __vector_16
+                0x00000ad0                __vector_20
+                0x00000ad2                . = ALIGN (0x2)
  *(.text.*)
  .text._Z5CRC16Phi
-                0x000000cc       0x38 CommunicateProtocols/src/Modbus_rtu.o
-                0x000000cc                _Z5CRC16Phi
+                0x00000ad2       0x38 CommunicateProtocols/src/Modbus_rtu.o
+                0x00000ad2                _Z5CRC16Phi
  .text._Z13GetFunc04DataPcP17GetFunctionCode04Pi
-                0x00000104       0x42 CommunicateProtocols/src/Modbus_rtu.o
-                0x00000104                _Z13GetFunc04DataPcP17GetFunctionCode04Pi
+                0x00000b0a       0x42 CommunicateProtocols/src/Modbus_rtu.o
+                0x00000b0a                _Z13GetFunc04DataPcP17GetFunctionCode04Pi
  .text._Z13GetFunc05DataPcP17GetFunctionCode05
-                0x00000146       0x32 CommunicateProtocols/src/Modbus_rtu.o
-                0x00000146                _Z13GetFunc05DataPcP17GetFunctionCode05
+                0x00000b4c       0x32 CommunicateProtocols/src/Modbus_rtu.o
+                0x00000b4c                _Z13GetFunc05DataPcP17GetFunctionCode05
  .text._Z13GetFucc10DataPcP17GetFunctionCode10Pi
-                0x00000178       0x54 CommunicateProtocols/src/Modbus_rtu.o
-                0x00000178                _Z13GetFucc10DataPcP17GetFunctionCode10Pi
+                0x00000b7e       0x54 CommunicateProtocols/src/Modbus_rtu.o
+                0x00000b7e                _Z13GetFucc10DataPcP17GetFunctionCode10Pi
  .text._Z18ResponseFucc10DataPcP22ResponseFunctionCode10
-                0x000001cc       0x32 CommunicateProtocols/src/Modbus_rtu.o
-                0x000001cc                _Z18ResponseFucc10DataPcP22ResponseFunctionCode10
+                0x00000bd2       0x32 CommunicateProtocols/src/Modbus_rtu.o
+                0x00000bd2                _Z18ResponseFucc10DataPcP22ResponseFunctionCode10
  .text._Z16GetExceptionCodeP16RspExceptionCodecc
-                0x000001fe       0x20 CommunicateProtocols/src/Modbus_rtu.o
-                0x000001fe                _Z16GetExceptionCodeP16RspExceptionCodecc
+                0x00000c04       0x20 CommunicateProtocols/src/Modbus_rtu.o
+                0x00000c04                _Z16GetExceptionCodeP16RspExceptionCodecc
  .text._ZN12SerialBufferC2EP11Dev_Manager8Dev_type
-                0x0000021e       0x4a Datastructure/src/SerialBuffer.o
-                0x0000021e                _ZN12SerialBufferC2EP11Dev_Manager8Dev_type
-                0x0000021e                _ZN12SerialBufferC1EP11Dev_Manager8Dev_type
+                0x00000c24       0x4a Datastructure/src/SerialBuffer.o
+                0x00000c24                _ZN12SerialBufferC2EP11Dev_Manager8Dev_type
+                0x00000c24                _ZN12SerialBufferC1EP11Dev_Manager8Dev_type
  .text._ZN12SerialBuffernwEj
-                0x00000268        0x6 Datastructure/src/SerialBuffer.o
-                0x00000268                _ZN12SerialBuffernwEj
+                0x00000c6e        0x6 Datastructure/src/SerialBuffer.o
+                0x00000c6e                _ZN12SerialBuffernwEj
  .text._ZN12SerialBuffer11SerialstoreEc
-                0x0000026e       0x4a Datastructure/src/SerialBuffer.o
-                0x0000026e                _ZN12SerialBuffer11SerialstoreEc
+                0x00000c74       0x4a Datastructure/src/SerialBuffer.o
+                0x00000c74                _ZN12SerialBuffer11SerialstoreEc
  .text._ZN12SerialBuffer11SerialWriteEPKci
-                0x000002b8       0x78 Datastructure/src/SerialBuffer.o
-                0x000002b8                _ZN12SerialBuffer11SerialWriteEPKci
+                0x00000cbe       0x78 Datastructure/src/SerialBuffer.o
+                0x00000cbe                _ZN12SerialBuffer11SerialWriteEPKci
  .text._ZN12SerialBuffer10SerialReadEv
-                0x00000330       0x58 Datastructure/src/SerialBuffer.o
-                0x00000330                _ZN12SerialBuffer10SerialReadEv
+                0x00000d36       0x58 Datastructure/src/SerialBuffer.o
+                0x00000d36                _ZN12SerialBuffer10SerialReadEv
  .text._ZN12SerialBuffer15SerialAvailableEv
-                0x00000388       0x16 Datastructure/src/SerialBuffer.o
-                0x00000388                _ZN12SerialBuffer15SerialAvailableEv
+                0x00000d8e       0x16 Datastructure/src/SerialBuffer.o
+                0x00000d8e                _ZN12SerialBuffer15SerialAvailableEv
  .text._ZN12SerialBuffer11SerialFlushEv
-                0x0000039e       0x16 Datastructure/src/SerialBuffer.o
-                0x0000039e                _ZN12SerialBuffer11SerialFlushEv
- .text.Alarm_Init
-                0x000003b4       0x10 DeviceDriver/src/Alarm.o
-                0x000003b4                Alarm_Init
- .text.Alarm_Stop
-                0x000003c4        0x8 DeviceDriver/src/Alarm.o
-                0x000003c4                Alarm_Stop
- .text.Alarm_Start
-                0x000003cc        0x8 DeviceDriver/src/Alarm.o
-                0x000003cc                Alarm_Start
- .text.Alarm_Open
-                0x000003d4       0x2c DeviceDriver/src/Alarm.o
-                0x000003d4                Alarm_Open
- .text.__vector_15
-                0x00000400       0xa2 DeviceDriver/src/Alarm.o
-                0x00000400                __vector_15
- .text._ZNK20DeviceDriveInterFace11Device_ReadEv
-                0x000004a2        0x4 DeviceDriver/src/Char_LCD2004A.o
-                0x000004a2                _ZNK20DeviceDriveInterFace11Device_ReadEv
+                0x00000da4       0x16 Datastructure/src/SerialBuffer.o
+                0x00000da4                _ZN12SerialBuffer11SerialFlushEv
+ .text._ZN22DFRobotHighTemperatureC2Ef
+                0x00000dba        0xc Sensors/src/DFRobotHighTemperatureSensor.o
+                0x00000dba                _ZN22DFRobotHighTemperatureC1Ef
+                0x00000dba                _ZN22DFRobotHighTemperatureC2Ef
+ .text._ZN22DFRobotHighTemperature4compEfi
+                0x00000dc6       0xba Sensors/src/DFRobotHighTemperatureSensor.o
+                0x00000dc6                _ZN22DFRobotHighTemperature4compEfi
+ .text._ZN22DFRobotHighTemperature15readTemperatureEj
+                0x00000e80      0x186 Sensors/src/DFRobotHighTemperatureSensor.o
+                0x00000e80                _ZN22DFRobotHighTemperature15readTemperatureEj
  .text._ZN20DeviceDriveInterFace13Device_WritesEPKc
-                0x000004a6        0x2 DeviceDriver/src/Char_LCD2004A.o
-                0x000004a6                _ZN20DeviceDriveInterFace13Device_WritesEPKc
+                0x00001006        0x2 DeviceDriver/src/Adc.o
+                0x00001006                _ZN20DeviceDriveInterFace13Device_WritesEPKc
  .text._ZN20DeviceDriveInterFace12Device_WriteEc
-                0x000004a8        0x2 DeviceDriver/src/Char_LCD2004A.o
-                0x000004a8                _ZN20DeviceDriveInterFace12Device_WriteEc
+                0x00001008        0x2 DeviceDriver/src/Adc.o
+                0x00001008                _ZN20DeviceDriveInterFace12Device_WriteEc
  .text._ZN20DeviceDriveInterFace11Stop_DeviceEv
-                0x000004aa        0x2 DeviceDriver/src/Char_LCD2004A.o
-                0x000004aa                _ZN20DeviceDriveInterFace11Stop_DeviceEv
- .text._ZN20DeviceDriveInterFace12Start_DeviceEv
-                0x000004ac        0x2 DeviceDriver/src/Char_LCD2004A.o
-                0x000004ac                _ZN20DeviceDriveInterFace12Start_DeviceEv
+                0x0000100a        0x2 DeviceDriver/src/Adc.o
+                0x0000100a                _ZN20DeviceDriveInterFace11Stop_DeviceEv
+ .text._ZN3Adc11Device_InitEv
+                0x0000100c        0xa DeviceDriver/src/Adc.o
+                0x0000100c                _ZN3Adc11Device_InitEv
+ .text._ZN3Adc12Start_DeviceEh
+                0x00001016       0x10 DeviceDriver/src/Adc.o
+                0x00001016                _ZN3Adc12Start_DeviceEh
+ .text._ZNK3Adc11Device_ReadEv
+                0x00001026        0x6 DeviceDriver/src/Adc.o
+                0x00001026                _ZNK3Adc11Device_ReadEv
+ .text._ZN3AdcnwEj
+                0x0000102c        0x6 DeviceDriver/src/Adc.o
+                0x0000102c                _ZN3AdcnwEj
+ .text.Alarm_Init
+                0x00001032       0x10 DeviceDriver/src/Alarm.o
+                0x00001032                Alarm_Init
+ .text.Alarm_Stop
+                0x00001042        0x8 DeviceDriver/src/Alarm.o
+                0x00001042                Alarm_Stop
+ .text.Alarm_Start
+                0x0000104a        0x8 DeviceDriver/src/Alarm.o
+                0x0000104a                Alarm_Start
+ .text.Alarm_Open
+                0x00001052       0x2c DeviceDriver/src/Alarm.o
+                0x00001052                Alarm_Open
+ .text.__vector_15
+                0x0000107e       0xa2 DeviceDriver/src/Alarm.o
+                0x0000107e                __vector_15
+ .text._ZNK20DeviceDriveInterFace11Device_ReadEv
+                0x00001120        0x4 DeviceDriver/src/Char_LCD2004A.o
+                0x00001120                _ZNK20DeviceDriveInterFace11Device_ReadEv
+ .text._ZN20DeviceDriveInterFace12Start_DeviceEh
+                0x00001124        0x2 DeviceDriver/src/Char_LCD2004A.o
+                0x00001124                _ZN20DeviceDriveInterFace12Start_DeviceEh
  .text._ZN13Char_LCD2004A5delayEc
-                0x000004ae       0x1a DeviceDriver/src/Char_LCD2004A.o
-                0x000004ae                _ZN13Char_LCD2004A5delayEc
+                0x00001126       0x1a DeviceDriver/src/Char_LCD2004A.o
+                0x00001126                _ZN13Char_LCD2004A5delayEc
  .text._ZN13Char_LCD2004A11Command_SetEc
-                0x000004c8       0x34 DeviceDriver/src/Char_LCD2004A.o
-                0x000004c8                _ZN13Char_LCD2004A11Command_SetEc
+                0x00001140       0x34 DeviceDriver/src/Char_LCD2004A.o
+                0x00001140                _ZN13Char_LCD2004A11Command_SetEc
  .text._ZN13Char_LCD2004A8Data_setEc
-                0x000004fc       0x3c DeviceDriver/src/Char_LCD2004A.o
-                0x000004fc                _ZN13Char_LCD2004A8Data_setEc
+                0x00001174       0x3c DeviceDriver/src/Char_LCD2004A.o
+                0x00001174                _ZN13Char_LCD2004A8Data_setEc
  .text._ZN13Char_LCD2004A13Device_WritesEPKc
-                0x00000538       0x28 DeviceDriver/src/Char_LCD2004A.o
-                0x00000538                _ZN13Char_LCD2004A13Device_WritesEPKc
+                0x000011b0       0x28 DeviceDriver/src/Char_LCD2004A.o
+                0x000011b0                _ZN13Char_LCD2004A13Device_WritesEPKc
  .text._ZN13Char_LCD2004A9Clear_LcdEv
-                0x00000560       0x16 DeviceDriver/src/Char_LCD2004A.o
-                0x00000560                _ZN13Char_LCD2004A9Clear_LcdEv
+                0x000011d8       0x16 DeviceDriver/src/Char_LCD2004A.o
+                0x000011d8                _ZN13Char_LCD2004A9Clear_LcdEv
  .text._ZN13Char_LCD2004A11Device_InitEv
-                0x00000576       0x26 DeviceDriver/src/Char_LCD2004A.o
-                0x00000576                _ZN13Char_LCD2004A11Device_InitEv
+                0x000011ee       0x26 DeviceDriver/src/Char_LCD2004A.o
+                0x000011ee                _ZN13Char_LCD2004A11Device_InitEv
  .text._ZN13Char_LCD2004AC2Ev
-                0x0000059c       0x12 DeviceDriver/src/Char_LCD2004A.o
-                0x0000059c                _ZN13Char_LCD2004AC2Ev
-                0x0000059c                _ZN13Char_LCD2004AC1Ev
+                0x00001214       0x12 DeviceDriver/src/Char_LCD2004A.o
+                0x00001214                _ZN13Char_LCD2004AC2Ev
+                0x00001214                _ZN13Char_LCD2004AC1Ev
  .text._ZN13Char_LCD2004A10Cursor_SetEcc
-                0x000005ae       0x24 DeviceDriver/src/Char_LCD2004A.o
-                0x000005ae                _ZN13Char_LCD2004A10Cursor_SetEcc
+                0x00001226       0x24 DeviceDriver/src/Char_LCD2004A.o
+                0x00001226                _ZN13Char_LCD2004A10Cursor_SetEcc
  .text._ZN13Char_LCD2004A16Set_Cursor_PrintEccPKc
-                0x000005d2       0x2a DeviceDriver/src/Char_LCD2004A.o
-                0x000005d2                _ZN13Char_LCD2004A16Set_Cursor_PrintEccPKc
+                0x0000124a       0x2a DeviceDriver/src/Char_LCD2004A.o
+                0x0000124a                _ZN13Char_LCD2004A16Set_Cursor_PrintEccPKc
+ .text._ZN13Char_LCD2004A9Lcd_PrintEPKc
+                0x00001274       0x28 DeviceDriver/src/Char_LCD2004A.o
+                0x00001274                _ZN13Char_LCD2004A9Lcd_PrintEPKc
+ .text._ZN13Char_LCD2004A11Cursor_HomeEv
+                0x0000129c       0x16 DeviceDriver/src/Char_LCD2004A.o
+                0x0000129c                _ZN13Char_LCD2004A11Cursor_HomeEv
+ .text._ZN13Char_LCD2004A13Register_FontEcPKh
+                0x000012b2       0x4c DeviceDriver/src/Char_LCD2004A.o
+                0x000012b2                _ZN13Char_LCD2004A13Register_FontEcPKh
+ .text._ZN13Char_LCD2004A10Font_PrintEc
+                0x000012fe        0x8 DeviceDriver/src/Char_LCD2004A.o
+                0x000012fe                _ZN13Char_LCD2004A10Font_PrintEc
  .text._ZN13Char_LCD2004AnwEj
-                0x000005fc        0x6 DeviceDriver/src/Char_LCD2004A.o
-                0x000005fc                _ZN13Char_LCD2004AnwEj
+                0x00001306        0x6 DeviceDriver/src/Char_LCD2004A.o
+                0x00001306                _ZN13Char_LCD2004AnwEj
  .text._ZN12Count_Sensor11Device_InitEv
-                0x00000602       0x1e DeviceDriver/src/Count_Sensor.o
-                0x00000602                _ZN12Count_Sensor11Device_InitEv
+                0x0000130c       0x1e DeviceDriver/src/Count_Sensor.o
+                0x0000130c                _ZN12Count_Sensor11Device_InitEv
  .text._ZN12Count_SensornwEj
-                0x00000620        0x6 DeviceDriver/src/Count_Sensor.o
-                0x00000620                _ZN12Count_SensornwEj
+                0x0000132a        0x6 DeviceDriver/src/Count_Sensor.o
+                0x0000132a                _ZN12Count_SensornwEj
  .text._ZN11Dev_ManagerC2Ev
-                0x00000626       0x22 DeviceDriver/src/Dev_Manager.o
-                0x00000626                _ZN11Dev_ManagerC2Ev
-                0x00000626                _ZN11Dev_ManagerC1Ev
+                0x00001330       0x22 DeviceDriver/src/Dev_Manager.o
+                0x00001330                _ZN11Dev_ManagerC2Ev
+                0x00001330                _ZN11Dev_ManagerC1Ev
  .text._ZN11Dev_Manager11getInstanceEv
-                0x00000648       0x32 DeviceDriver/src/Dev_Manager.o
-                0x00000648                _ZN11Dev_Manager11getInstanceEv
+                0x00001352       0x32 DeviceDriver/src/Dev_Manager.o
+                0x00001352                _ZN11Dev_Manager11getInstanceEv
  .text._ZN11Dev_Manager12Register_DevEP20DeviceDriveInterFace8Dev_type
-                0x0000067a       0x12 DeviceDriver/src/Dev_Manager.o
-                0x0000067a                _ZN11Dev_Manager12Register_DevEP20DeviceDriveInterFace8Dev_type
+                0x00001384       0x12 DeviceDriver/src/Dev_Manager.o
+                0x00001384                _ZN11Dev_Manager12Register_DevEP20DeviceDriveInterFace8Dev_type
  .text._ZN11Dev_ManagernwEj
-                0x0000068c        0x6 DeviceDriver/src/Dev_Manager.o
-                0x0000068c                _ZN11Dev_ManagernwEj
+                0x00001396        0x6 DeviceDriver/src/Dev_Manager.o
+                0x00001396                _ZN11Dev_ManagernwEj
  .text._ZN11Dev_Manager5WriteE8Dev_typec
-                0x00000692       0x28 DeviceDriver/src/Dev_Manager.o
-                0x00000692                _ZN11Dev_Manager5WriteE8Dev_typec
+                0x0000139c       0x28 DeviceDriver/src/Dev_Manager.o
+                0x0000139c                _ZN11Dev_Manager5WriteE8Dev_typec
  .text._ZN11Dev_Manager6WritesE8Dev_typePKc
-                0x000006ba       0x28 DeviceDriver/src/Dev_Manager.o
-                0x000006ba                _ZN11Dev_Manager6WritesE8Dev_typePKc
+                0x000013c4       0x28 DeviceDriver/src/Dev_Manager.o
+                0x000013c4                _ZN11Dev_Manager6WritesE8Dev_typePKc
  .text._ZN11Dev_Manager11Device_InitE8Dev_type
-                0x000006e2       0x24 DeviceDriver/src/Dev_Manager.o
-                0x000006e2                _ZN11Dev_Manager11Device_InitE8Dev_type
+                0x000013ec       0x24 DeviceDriver/src/Dev_Manager.o
+                0x000013ec                _ZN11Dev_Manager11Device_InitE8Dev_type
  .text._ZN11Dev_Manager11Open_HandleE8Dev_typePFvS0_jE
-                0x00000706       0x1a DeviceDriver/src/Dev_Manager.o
-                0x00000706                _ZN11Dev_Manager11Open_HandleE8Dev_typePFvS0_jE
+                0x00001410       0x1a DeviceDriver/src/Dev_Manager.o
+                0x00001410                _ZN11Dev_Manager11Open_HandleE8Dev_typePFvS0_jE
  .text._ZN11Dev_Manager12Driver_CheckE8Dev_type
-                0x00000720       0x1a DeviceDriver/src/Dev_Manager.o
-                0x00000720                _ZN11Dev_Manager12Driver_CheckE8Dev_type
+                0x0000142a       0x1a DeviceDriver/src/Dev_Manager.o
+                0x0000142a                _ZN11Dev_Manager12Driver_CheckE8Dev_type
  .text._ZNK11Dev_Manager16getInterfaceAddrE8Dev_type
-                0x0000073a       0x12 DeviceDriver/src/Dev_Manager.o
-                0x0000073a                _ZNK11Dev_Manager16getInterfaceAddrE8Dev_type
+                0x00001444       0x12 DeviceDriver/src/Dev_Manager.o
+                0x00001444                _ZNK11Dev_Manager16getInterfaceAddrE8Dev_type
  .text.__vector_18
-                0x0000074c       0x60 DeviceDriver/src/Dev_Manager.o
-                0x0000074c                __vector_18
+                0x00001456       0x60 DeviceDriver/src/Dev_Manager.o
+                0x00001456                __vector_18
  .text.__vector_30
-                0x000007ac       0x62 DeviceDriver/src/Dev_Manager.o
-                0x000007ac                __vector_30
+                0x000014b6       0x62 DeviceDriver/src/Dev_Manager.o
+                0x000014b6                __vector_30
  .text.__vector_28
-                0x0000080e       0x60 DeviceDriver/src/Dev_Manager.o
-                0x0000080e                __vector_28
+                0x00001518       0x60 DeviceDriver/src/Dev_Manager.o
+                0x00001518                __vector_28
  .text.__vector_1
-                0x0000086e       0x60 DeviceDriver/src/Dev_Manager.o
-                0x0000086e                __vector_1
+                0x00001578       0x60 DeviceDriver/src/Dev_Manager.o
+                0x00001578                __vector_1
+ .text.__vector_21
+                0x000015d8       0x6a DeviceDriver/src/Dev_Manager.o
+                0x000015d8                __vector_21
  .text._ZN5Timer11Device_InitEv
-                0x000008ce       0x20 DeviceDriver/src/per_sec_timer.o
-                0x000008ce                _ZN5Timer11Device_InitEv
+                0x00001642       0x20 DeviceDriver/src/per_sec_timer.o
+                0x00001642                _ZN5Timer11Device_InitEv
  .text._ZN5TimerC2Ev
-                0x000008ee        0xc DeviceDriver/src/per_sec_timer.o
-                0x000008ee                _ZN5TimerC2Ev
-                0x000008ee                _ZN5TimerC1Ev
+                0x00001662        0xc DeviceDriver/src/per_sec_timer.o
+                0x00001662                _ZN5TimerC2Ev
+                0x00001662                _ZN5TimerC1Ev
  .text._ZN5TimernwEj
-                0x000008fa        0x6 DeviceDriver/src/per_sec_timer.o
-                0x000008fa                _ZN5TimernwEj
+                0x0000166e        0x6 DeviceDriver/src/per_sec_timer.o
+                0x0000166e                _ZN5TimernwEj
  .text._ZN11RS485Driver11Device_InitEv
-                0x00000900       0x42 DeviceDriver/src/RS485Driver.o
-                0x00000900                _ZN11RS485Driver11Device_InitEv
+                0x00001674       0x42 DeviceDriver/src/RS485Driver.o
+                0x00001674                _ZN11RS485Driver11Device_InitEv
  .text._ZN11RS485DriverC2Ev
-                0x00000942       0x28 DeviceDriver/src/RS485Driver.o
-                0x00000942                _ZN11RS485DriverC1Ev
-                0x00000942                _ZN11RS485DriverC2Ev
+                0x000016b6       0x28 DeviceDriver/src/RS485Driver.o
+                0x000016b6                _ZN11RS485DriverC1Ev
+                0x000016b6                _ZN11RS485DriverC2Ev
  .text._ZN11RS485DrivernwEj
-                0x0000096a        0x6 DeviceDriver/src/RS485Driver.o
-                0x0000096a                _ZN11RS485DrivernwEj
+                0x000016de        0x6 DeviceDriver/src/RS485Driver.o
+                0x000016de                _ZN11RS485DrivernwEj
  .text._ZN11RS485Driver12UART_PutcharEc
-                0x00000970       0x48 DeviceDriver/src/RS485Driver.o
-                0x00000970                _ZN11RS485Driver12UART_PutcharEc
+                0x000016e4       0x48 DeviceDriver/src/RS485Driver.o
+                0x000016e4                _ZN11RS485Driver12UART_PutcharEc
  .text._ZN11RS485Driver12Device_WriteEc
-                0x000009b8        0x4 DeviceDriver/src/RS485Driver.o
-                0x000009b8                _ZN11RS485Driver12Device_WriteEc
+                0x0000172c        0x4 DeviceDriver/src/RS485Driver.o
+                0x0000172c                _ZN11RS485Driver12Device_WriteEc
  .text._ZN11RS485Driver14UART_PutStringEPKc
-                0x000009bc       0x54 DeviceDriver/src/RS485Driver.o
-                0x000009bc                _ZN11RS485Driver14UART_PutStringEPKc
+                0x00001730       0x54 DeviceDriver/src/RS485Driver.o
+                0x00001730                _ZN11RS485Driver14UART_PutStringEPKc
  .text._ZN11RS485Driver13Device_WritesEPKc
-                0x00000a10        0x4 DeviceDriver/src/RS485Driver.o
-                0x00000a10                _ZN11RS485Driver13Device_WritesEPKc
+                0x00001784        0x4 DeviceDriver/src/RS485Driver.o
+                0x00001784                _ZN11RS485Driver13Device_WritesEPKc
  .text.__vector_9
-                0x00000a14       0x3a DeviceDriver/src/Timer_Alarm.o
-                0x00000a14                __vector_9
+                0x00001788       0x3a DeviceDriver/src/Timer_Alarm.o
+                0x00001788                __vector_9
  .text._ZN10UartDriver11Device_InitEv
-                0x00000a4e       0x3a DeviceDriver/src/UartDriver.o
-                0x00000a4e                _ZN10UartDriver11Device_InitEv
+                0x000017c2       0x3a DeviceDriver/src/UartDriver.o
+                0x000017c2                _ZN10UartDriver11Device_InitEv
  .text._ZN10UartDriverC2Ev
-                0x00000a88       0x28 DeviceDriver/src/UartDriver.o
-                0x00000a88                _ZN10UartDriverC2Ev
-                0x00000a88                _ZN10UartDriverC1Ev
+                0x000017fc       0x28 DeviceDriver/src/UartDriver.o
+                0x000017fc                _ZN10UartDriverC2Ev
+                0x000017fc                _ZN10UartDriverC1Ev
  .text._ZN10UartDrivernwEj
-                0x00000ab0        0x6 DeviceDriver/src/UartDriver.o
-                0x00000ab0                _ZN10UartDrivernwEj
+                0x00001824        0x6 DeviceDriver/src/UartDriver.o
+                0x00001824                _ZN10UartDrivernwEj
  .text._ZN10UartDriver12UART_PutcharEc
-                0x00000ab6       0x40 DeviceDriver/src/UartDriver.o
-                0x00000ab6                _ZN10UartDriver12UART_PutcharEc
+                0x0000182a       0x40 DeviceDriver/src/UartDriver.o
+                0x0000182a                _ZN10UartDriver12UART_PutcharEc
  .text._ZN10UartDriver12Device_WriteEc
-                0x00000af6        0x4 DeviceDriver/src/UartDriver.o
-                0x00000af6                _ZN10UartDriver12Device_WriteEc
+                0x0000186a        0x4 DeviceDriver/src/UartDriver.o
+                0x0000186a                _ZN10UartDriver12Device_WriteEc
  .text._ZN10UartDriver14UART_PutStringEPKc
-                0x00000afa       0x54 DeviceDriver/src/UartDriver.o
-                0x00000afa                _ZN10UartDriver14UART_PutStringEPKc
+                0x0000186e       0x54 DeviceDriver/src/UartDriver.o
+                0x0000186e                _ZN10UartDriver14UART_PutStringEPKc
  .text._ZN10UartDriver13Device_WritesEPKc
-                0x00000b4e        0x4 DeviceDriver/src/UartDriver.o
-                0x00000b4e                _ZN10UartDriver13Device_WritesEPKc
+                0x000018c2        0x4 DeviceDriver/src/UartDriver.o
+                0x000018c2                _ZN10UartDriver13Device_WritesEPKc
  .text._ZN4Ubbr10Ubbr_ValueERKj
-                0x00000b52       0x8c DeviceDriver/src/Ubbr_Calculate.o
-                0x00000b52                _ZN4Ubbr10Ubbr_ValueERKj
+                0x000018c6       0x8c DeviceDriver/src/Ubbr_Calculate.o
+                0x000018c6                _ZN4Ubbr10Ubbr_ValueERKj
  .text._Z14enc28j60ReadOphh
-                0x00000bde       0x24 Eth_Udp/SRC/enc28j60.o
-                0x00000bde                _Z14enc28j60ReadOphh
+                0x00001952       0x24 Eth_Udp/SRC/enc28j60.o
+                0x00001952                _Z14enc28j60ReadOphh
  .text._Z15enc28j60WriteOphhh
-                0x00000c02       0x16 Eth_Udp/SRC/enc28j60.o
-                0x00000c02                _Z15enc28j60WriteOphhh
+                0x00001976       0x16 Eth_Udp/SRC/enc28j60.o
+                0x00001976                _Z15enc28j60WriteOphhh
  .text._Z18enc28j60ReadBufferjPh
-                0x00000c18       0x30 Eth_Udp/SRC/enc28j60.o
-                0x00000c18                _Z18enc28j60ReadBufferjPh
+                0x0000198c       0x30 Eth_Udp/SRC/enc28j60.o
+                0x0000198c                _Z18enc28j60ReadBufferjPh
  .text._Z19enc28j60WriteBufferjPh
-                0x00000c48       0x2c Eth_Udp/SRC/enc28j60.o
-                0x00000c48                _Z19enc28j60WriteBufferjPh
+                0x000019bc       0x2c Eth_Udp/SRC/enc28j60.o
+                0x000019bc                _Z19enc28j60WriteBufferjPh
  .text._Z15enc28j60SetBankh
-                0x00000c74       0x4a Eth_Udp/SRC/enc28j60.o
-                0x00000c74                _Z15enc28j60SetBankh
+                0x000019e8       0x4a Eth_Udp/SRC/enc28j60.o
+                0x000019e8                _Z15enc28j60SetBankh
  .text._Z12enc28j60Readh
-                0x00000cbe       0x10 Eth_Udp/SRC/enc28j60.o
-                0x00000cbe                _Z12enc28j60Readh
+                0x00001a32       0x10 Eth_Udp/SRC/enc28j60.o
+                0x00001a32                _Z12enc28j60Readh
  .text._Z13enc28j60Writehh
-                0x00000cce       0x18 Eth_Udp/SRC/enc28j60.o
-                0x00000cce                _Z13enc28j60Writehh
+                0x00001a42       0x18 Eth_Udp/SRC/enc28j60.o
+                0x00001a42                _Z13enc28j60Writehh
  .text._Z16enc28j60PhyWritehj
-                0x00000ce6       0x30 Eth_Udp/SRC/enc28j60.o
-                0x00000ce6                _Z16enc28j60PhyWritehj
+                0x00001a5a       0x30 Eth_Udp/SRC/enc28j60.o
+                0x00001a5a                _Z16enc28j60PhyWritehj
  .text._Z14enc28j60clkouth
-                0x00000d16        0xa Eth_Udp/SRC/enc28j60.o
-                0x00000d16                _Z14enc28j60clkouth
+                0x00001a8a        0xa Eth_Udp/SRC/enc28j60.o
+                0x00001a8a                _Z14enc28j60clkouth
  .text._Z12enc28j60InitPh
-                0x00000d20       0xf4 Eth_Udp/SRC/enc28j60.o
-                0x00000d20                _Z12enc28j60InitPh
+                0x00001a94       0xf4 Eth_Udp/SRC/enc28j60.o
+                0x00001a94                _Z12enc28j60InitPh
  .text._Z18enc28j60PacketSendjPh
-                0x00000e14       0x5c Eth_Udp/SRC/enc28j60.o
-                0x00000e14                _Z18enc28j60PacketSendjPh
+                0x00001b88       0x5c Eth_Udp/SRC/enc28j60.o
+                0x00001b88                _Z18enc28j60PacketSendjPh
  .text._Z21enc28j60PacketReceivejPh
-                0x00000e70       0xca Eth_Udp/SRC/enc28j60.o
-                0x00000e70                _Z21enc28j60PacketReceivejPh
+                0x00001be4       0xca Eth_Udp/SRC/enc28j60.o
+                0x00001be4                _Z21enc28j60PacketReceivejPh
  .text._Z8checksumPhjh
-                0x00000f3a       0xec Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x00000f3a                _Z8checksumPhjh
+                0x00001cae       0xec Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001cae                _Z8checksumPhjh
  .text._Z19init_ip_arp_udp_tcpPhS_h
-                0x00001026       0x32 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x00001026                _Z19init_ip_arp_udp_tcpPhS_h
+                0x00001d9a       0x32 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001d9a                _Z19init_ip_arp_udp_tcpPhS_h
  .text._Z25eth_type_is_arp_and_my_ipPhj
-                0x00001058       0x4c Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x00001058                _Z25eth_type_is_arp_and_my_ipPhj
+                0x00001dcc       0x4c Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001dcc                _Z25eth_type_is_arp_and_my_ipPhj
  .text._Z24eth_type_is_ip_and_my_ipPhj
-                0x000010a4       0x54 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x000010a4                _Z24eth_type_is_ip_and_my_ipPhj
+                0x00001e18       0x54 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001e18                _Z24eth_type_is_ip_and_my_ipPhj
  .text._Z8make_ethPh
-                0x000010f8       0x1c Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x000010f8                _Z8make_ethPh
+                0x00001e6c       0x1c Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001e6c                _Z8make_ethPh
  .text._Z20fill_ip_hdr_checksumPh
-                0x00001114       0x28 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x00001114                _Z20fill_ip_hdr_checksumPh
+                0x00001e88       0x28 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001e88                _Z20fill_ip_hdr_checksumPh
  .text._Z7make_ipPh
-                0x0000113c       0x22 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x0000113c                _Z7make_ipPh
+                0x00001eb0       0x22 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001eb0                _Z7make_ipPh
  .text._Z28make_arp_answer_from_requestPh
-                0x0000115e       0x50 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x0000115e                _Z28make_arp_answer_from_requestPh
+                0x00001ed2       0x50 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001ed2                _Z28make_arp_answer_from_requestPh
  .text._Z28make_echo_reply_from_requestPhj
-                0x000011ae       0x34 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x000011ae                _Z28make_echo_reply_from_requestPhj
+                0x00001f22       0x34 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001f22                _Z28make_echo_reply_from_requestPhj
  .text._Z27make_udp_reply_from_requestPhPchj
-                0x000011e2       0x96 Eth_Udp/SRC/ip_arp_udp_tcp.o
-                0x000011e2                _Z27make_udp_reply_from_requestPhPchj
+                0x00001f56       0x96 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00001f56                _Z27make_udp_reply_from_requestPhPchj
  .text._Z8spi_initv
-                0x00001278       0x14 Eth_Udp/SRC/spi.o
-                0x00001278                _Z8spi_initv
+                0x00001fec       0x14 Eth_Udp/SRC/spi.o
+                0x00001fec                _Z8spi_initv
  .text._Z8delay_msj
-                0x0000128c       0x16 Eth_Udp/SRC/timeout.o
-                0x0000128c                _Z8delay_msj
+                0x00002000       0x16 Eth_Udp/SRC/timeout.o
+                0x00002000                _Z8delay_msj
  .text._Z9Timer_ISR8Dev_typej
-                0x000012a2       0x14 main.o
-                0x000012a2                _Z9Timer_ISR8Dev_typej
+                0x00002016       0x44 main.o
+                0x00002016                _Z9Timer_ISR8Dev_typej
+ .text._Z7ADC_ISR8Dev_typej
+                0x0000205a        0x2 main.o
+                0x0000205a                _Z7ADC_ISR8Dev_typej
  .text._Z9Set_Alarmv
-                0x000012b6       0x10 main.o
-                0x000012b6                _Z9Set_Alarmv
+                0x0000205c       0x10 main.o
+                0x0000205c                _Z9Set_Alarmv
+ .text._ZL5proc4Pv
+                0x0000206c      0x6be main.o
  .text._ZL5proc2Pv
-                0x000012c6      0x67e main.o
+                0x0000272a      0x484 main.o
  .text._ZL5proc1Pv
-                0x00001944      0x176 main.o
+                0x00002bae      0x1c4 main.o
  .text._ZL4procPv
-                0x00001aba      0x2c8 main.o
+                0x00002d72      0x3ca main.o
  .text._Z8Uart_ISR8Dev_typej
-                0x00001d82       0x10 main.o
-                0x00001d82                _Z8Uart_ISR8Dev_typej
+                0x0000313c       0x10 main.o
+                0x0000313c                _Z8Uart_ISR8Dev_typej
  .text._Z9RS485_ISR8Dev_typej
-                0x00001d92       0x10 main.o
-                0x00001d92                _Z9RS485_ISR8Dev_typej
+                0x0000314c       0x10 main.o
+                0x0000314c                _Z9RS485_ISR8Dev_typej
  .text._Z16Count_Sensor_ISR8Dev_typej
-                0x00001da2       0x10 main.o
-                0x00001da2                _Z16Count_Sensor_ISR8Dev_typej
+                0x0000315c       0x10 main.o
+                0x0000315c                _Z16Count_Sensor_ISR8Dev_typej
  .text._Z8Init_Devv
-                0x00001db2      0x10e main.o
-                0x00001db2                _Z8Init_Devv
- .text.main     0x00001ec0      0x160 main.o
-                0x00001ec0                main
+                0x0000316c      0x14a main.o
+                0x0000316c                _Z8Init_Devv
+ .text.main     0x000032b6      0x19e main.o
+                0x000032b6                main
+ .text._Z9fnCalTempf
+                0x00003454      0x160 main.o
+                0x00003454                _Z9fnCalTempf
+ .text._ZL5proc3Pv
+                0x000035b4      0x1f6 main.o
  .text.vApplicationStackOverflowHook
-                0x00002020        0x2 main.o
-                0x00002020                vApplicationStackOverflowHook
+                0x000037aa        0x2 main.o
+                0x000037aa                vApplicationStackOverflowHook
  .text.pvPortMalloc
-                0x00002022       0x66 RTOS/SRC/heap_1.o
-                0x00002022                pvPortMalloc
+                0x000037ac       0x66 RTOS/SRC/heap_1.o
+                0x000037ac                pvPortMalloc
  .text.vPortFree
-                0x00002088        0x2 RTOS/SRC/heap_1.o
-                0x00002088                vPortFree
+                0x00003812        0x2 RTOS/SRC/heap_1.o
+                0x00003812                vPortFree
  .text.vListInitialise
-                0x0000208a       0x1c RTOS/SRC/list.o
-                0x0000208a                vListInitialise
+                0x00003814       0x1c RTOS/SRC/list.o
+                0x00003814                vListInitialise
  .text.vListInitialiseItem
-                0x000020a6        0x8 RTOS/SRC/list.o
-                0x000020a6                vListInitialiseItem
+                0x00003830        0x8 RTOS/SRC/list.o
+                0x00003830                vListInitialiseItem
  .text.vListInsertEnd
-                0x000020ae       0x42 RTOS/SRC/list.o
-                0x000020ae                vListInsertEnd
+                0x00003838       0x42 RTOS/SRC/list.o
+                0x00003838                vListInsertEnd
  .text.vListInsert
-                0x000020f0       0x62 RTOS/SRC/list.o
-                0x000020f0                vListInsert
+                0x0000387a       0x62 RTOS/SRC/list.o
+                0x0000387a                vListInsert
  .text.uxListRemove
-                0x00002152       0x4c RTOS/SRC/list.o
-                0x00002152                uxListRemove
+                0x000038dc       0x4c RTOS/SRC/list.o
+                0x000038dc                uxListRemove
  .text.pxPortInitialiseStack
-                0x0000219e       0xd8 RTOS/SRC/port.o
-                0x0000219e                pxPortInitialiseStack
+                0x00003928       0xd8 RTOS/SRC/port.o
+                0x00003928                pxPortInitialiseStack
  .text.xPortStartScheduler
-                0x00002276       0x6a RTOS/SRC/port.o
-                0x00002276                xPortStartScheduler
+                0x00003a00       0x6a RTOS/SRC/port.o
+                0x00003a00                xPortStartScheduler
  .text.vPortYield
-                0x000022e0       0xb0 RTOS/SRC/port.o
-                0x000022e0                vPortYield
+                0x00003a6a       0xb0 RTOS/SRC/port.o
+                0x00003a6a                vPortYield
  .text.vPortYieldFromTick
-                0x00002390       0xb4 RTOS/SRC/port.o
-                0x00002390                vPortYieldFromTick
+                0x00003b1a       0xb4 RTOS/SRC/port.o
+                0x00003b1a                vPortYieldFromTick
  .text.__vector_12
-                0x00002444        0x4 RTOS/SRC/port.o
-                0x00002444                __vector_12
+                0x00003bce        0x4 RTOS/SRC/port.o
+                0x00003bce                __vector_12
  .text.prvCopyDataToQueue
-                0x00002448       0xbc RTOS/SRC/queue.o
+                0x00003bd2       0xbc RTOS/SRC/queue.o
  .text.prvCopyDataFromQueue
-                0x00002504       0x34 RTOS/SRC/queue.o
+                0x00003c8e       0x34 RTOS/SRC/queue.o
  .text.prvUnlockQueue
-                0x00002538       0x92 RTOS/SRC/queue.o
+                0x00003cc2       0x92 RTOS/SRC/queue.o
  .text.xQueueGenericReset
-                0x000025ca       0x72 RTOS/SRC/queue.o
-                0x000025ca                xQueueGenericReset
+                0x00003d54       0x72 RTOS/SRC/queue.o
+                0x00003d54                xQueueGenericReset
  .text.xQueueGenericCreate
-                0x0000263c       0x54 RTOS/SRC/queue.o
-                0x0000263c                xQueueGenericCreate
+                0x00003dc6       0x54 RTOS/SRC/queue.o
+                0x00003dc6                xQueueGenericCreate
  .text.xQueueGenericSend
-                0x00002690      0x124 RTOS/SRC/queue.o
-                0x00002690                xQueueGenericSend
+                0x00003e1a      0x124 RTOS/SRC/queue.o
+                0x00003e1a                xQueueGenericSend
  .text.xQueueCreateMutex
-                0x000027b4       0x30 RTOS/SRC/queue.o
-                0x000027b4                xQueueCreateMutex
+                0x00003f3e       0x30 RTOS/SRC/queue.o
+                0x00003f3e                xQueueCreateMutex
  .text.xQueueGenericReceive
-                0x000027e4      0x174 RTOS/SRC/queue.o
-                0x000027e4                xQueueGenericReceive
+                0x00003f6e      0x174 RTOS/SRC/queue.o
+                0x00003f6e                xQueueGenericReceive
  .text.prvResetNextTaskUnblockTime
-                0x00002958       0x3e RTOS/SRC/tasks.o
+                0x000040e2       0x3e RTOS/SRC/tasks.o
  .text.prvAddCurrentTaskToDelayedList
-                0x00002996       0xa8 RTOS/SRC/tasks.o
+                0x00004120       0xa8 RTOS/SRC/tasks.o
  .text.xTaskCreate
-                0x00002a3e      0x1fc RTOS/SRC/tasks.o
-                0x00002a3e                xTaskCreate
+                0x000041c8      0x1fc RTOS/SRC/tasks.o
+                0x000041c8                xTaskCreate
  .text.vTaskStartScheduler
-                0x00002c3a       0x50 RTOS/SRC/tasks.o
-                0x00002c3a                vTaskStartScheduler
+                0x000043c4       0x50 RTOS/SRC/tasks.o
+                0x000043c4                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x00002c8a        0xc RTOS/SRC/tasks.o
-                0x00002c8a                vTaskSuspendAll
+                0x00004414        0xc RTOS/SRC/tasks.o
+                0x00004414                vTaskSuspendAll
  .text.xTaskIncrementTick
-                0x00002c96      0x16e RTOS/SRC/tasks.o
-                0x00002c96                xTaskIncrementTick
+                0x00004420      0x16e RTOS/SRC/tasks.o
+                0x00004420                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x00002e04       0xf2 RTOS/SRC/tasks.o
-                0x00002e04                xTaskResumeAll
+                0x0000458e       0xf2 RTOS/SRC/tasks.o
+                0x0000458e                xTaskResumeAll
  .text.vTaskDelay
-                0x00002ef6       0x20 RTOS/SRC/tasks.o
-                0x00002ef6                vTaskDelay
+                0x00004680       0x20 RTOS/SRC/tasks.o
+                0x00004680                vTaskDelay
  .text.prvIdleTask
-                0x00002f16       0x6e RTOS/SRC/tasks.o
+                0x000046a0       0x6e RTOS/SRC/tasks.o
  .text.vTaskSwitchContext
-                0x00002f84      0x100 RTOS/SRC/tasks.o
-                0x00002f84                vTaskSwitchContext
+                0x0000470e      0x100 RTOS/SRC/tasks.o
+                0x0000470e                vTaskSwitchContext
  .text.vTaskPlaceOnEventList
-                0x00003084       0x20 RTOS/SRC/tasks.o
-                0x00003084                vTaskPlaceOnEventList
+                0x0000480e       0x20 RTOS/SRC/tasks.o
+                0x0000480e                vTaskPlaceOnEventList
  .text.xTaskRemoveFromEventList
-                0x000030a4       0x8c RTOS/SRC/tasks.o
-                0x000030a4                xTaskRemoveFromEventList
+                0x0000482e       0x8c RTOS/SRC/tasks.o
+                0x0000482e                xTaskRemoveFromEventList
  .text.vTaskSetTimeOutState
-                0x00003130       0x16 RTOS/SRC/tasks.o
-                0x00003130                vTaskSetTimeOutState
+                0x000048ba       0x16 RTOS/SRC/tasks.o
+                0x000048ba                vTaskSetTimeOutState
  .text.xTaskCheckForTimeOut
-                0x00003146       0x70 RTOS/SRC/tasks.o
-                0x00003146                xTaskCheckForTimeOut
+                0x000048d0       0x70 RTOS/SRC/tasks.o
+                0x000048d0                xTaskCheckForTimeOut
  .text.vTaskMissedYield
-                0x000031b6        0x8 RTOS/SRC/tasks.o
-                0x000031b6                vTaskMissedYield
+                0x00004940        0x8 RTOS/SRC/tasks.o
+                0x00004940                vTaskMissedYield
  .text.vTaskPriorityInherit
-                0x000031be       0xc4 RTOS/SRC/tasks.o
-                0x000031be                vTaskPriorityInherit
+                0x00004948       0xc4 RTOS/SRC/tasks.o
+                0x00004948                vTaskPriorityInherit
  .text.xTaskPriorityDisinherit
-                0x00003282       0x80 RTOS/SRC/tasks.o
-                0x00003282                xTaskPriorityDisinherit
+                0x00004a0c       0x80 RTOS/SRC/tasks.o
+                0x00004a0c                xTaskPriorityDisinherit
  .text.pvTaskIncrementMutexHeldCount
-                0x00003302       0x24 RTOS/SRC/tasks.o
-                0x00003302                pvTaskIncrementMutexHeldCount
+                0x00004a8c       0x24 RTOS/SRC/tasks.o
+                0x00004a8c                pvTaskIncrementMutexHeldCount
  .text.avr-libc.fplib
-                0x00003326        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
-                0x00003326                __subsf3
-                0x00003328                __addsf3
+                0x00004ab0        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3.o)
+                0x00004ab0                __subsf3
+                0x00004ab2                __addsf3
  .text.avr-libc.fplib
-                0x00003330       0xc0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
-                0x0000334a                __addsf3x
+                0x00004aba       0xc0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(addsf3x.o)
+                0x00004ad4                __addsf3x
  .text.avr-libc.fplib
-                0x000033f0       0x58 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
-                0x000033f0                __fixunssfsi
+                0x00004b7a        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(cmpsf2.o)
+                0x00004b7a                __nesf2
+                0x00004b7a                __eqsf2
+                0x00004b7a                __cmpsf2
+                0x00004b7a                __ltsf2
+                0x00004b7a                __lesf2
  .text.avr-libc.fplib
-                0x00003448       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
-                0x00003448                __floatunsisf
-                0x0000344c                __floatsisf
+                0x00004b82        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3.o)
+                0x00004b82                __divsf3
  .text.avr-libc.fplib
-                0x000034c2        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
-                0x000034c2                __fp_inf
+                0x00004b86       0xcc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(divsf3x.o)
+                0x00004b9c                __divsf3x
+                0x00004ba0                __divsf3_pse
  .text.avr-libc.fplib
-                0x000034ce        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
-                0x000034ce                __fp_nan
+                0x00004c52        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixsfsi.o)
+                0x00004c52                __fixsfsi
  .text.avr-libc.fplib
-                0x000034d4        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
-                0x000034d4                __fp_pscA
+                0x00004c5c       0x58 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fixunssfsi.o)
+                0x00004c5c                __fixunssfsi
  .text.avr-libc.fplib
-                0x000034e2        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
-                0x000034e2                __fp_pscB
+                0x00004cb4       0x7a c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(floatsisf.o)
+                0x00004cb4                __floatunsisf
+                0x00004cb8                __floatsisf
  .text.avr-libc.fplib
-                0x000034f0       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
-                0x000034f0                __fp_round
+                0x00004d2e       0x48 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_cmp.o)
+                0x00004d2e                __fp_cmp
  .text.avr-libc.fplib
-                0x00003512       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
-                0x00003512                __fp_split3
-                0x00003522                __fp_splitA
+                0x00004d76        0xc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_inf.o)
+                0x00004d76                __fp_inf
  .text.avr-libc.fplib
-                0x00003556        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
-                0x00003556                __fp_zero
-                0x00003558                __fp_szero
+                0x00004d82        0x6 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_nan.o)
+                0x00004d82                __fp_nan
+ .text.avr-libc.fplib
+                0x00004d88        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_pscA.o)
+                0x00004d88                __fp_pscA
+ .text.avr-libc.fplib
+                0x00004d96        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_pscB.o)
+                0x00004d96                __fp_pscB
+ .text.avr-libc.fplib
+                0x00004da4       0x22 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_round.o)
+                0x00004da4                __fp_round
+ .text.avr-libc.fplib
+                0x00004dc6       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_split3.o)
+                0x00004dc6                __fp_split3
+                0x00004dd6                __fp_splitA
+ .text.avr-libc.fplib
+                0x00004e0a        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(fp_zero.o)
+                0x00004e0a                __fp_zero
+                0x00004e0c                __fp_szero
+ .text.avr-libc.fplib
+                0x00004e18        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(gesf2.o)
+                0x00004e18                __gesf2
+                0x00004e18                __gtsf2
+ .text.avr-libc.fplib
+                0x00004e20        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3.o)
+                0x00004e20                __mulsf3
+ .text.avr-libc.fplib
+                0x00004e24       0xc2 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libm.a(mulsf3x.o)
+                0x00004e38                __mulsf3x
+                0x00004e3c                __mulsf3_pse
  .text.libgcc.div
-                0x00003564       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodsi4.o)
-                0x00003564                __udivmodsi4
+                0x00004ee6       0x44 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_udivmodsi4.o)
+                0x00004ee6                __udivmodsi4
+ .text.libgcc.mul
+                0x00004f2a       0x1e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_umulhisi3.o)
+                0x00004f2a                __umulhisi3
  .text.avr-libc
-                0x000035a8       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
-                0x000035a8                memcpy
+                0x00004f48       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(memcpy.o)
+                0x00004f48                memcpy
  .text.avr-libc
-                0x000035ba       0x5c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(sprintf.o)
-                0x000035ba                sprintf
+                0x00004f5a       0x5c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(sprintf.o)
+                0x00004f5a                sprintf
  .text.avr-libc
-                0x00003616      0x3fa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
-                0x00003616                vfprintf
+                0x00004fb6      0x3fa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(vfprintf_std.o)
+                0x00004fb6                vfprintf
  .text.avr-libc
-                0x00003a10       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
-                0x00003a10                strnlen_P
+                0x000053b0       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(strnlen_P.o)
+                0x000053b0                strnlen_P
  .text.avr-libc
-                0x00003a26       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
-                0x00003a26                strnlen
+                0x000053c6       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(strnlen.o)
+                0x000053c6                strnlen
  .text.avr-libc
-                0x00003a3c       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(fputc.o)
-                0x00003a3c                fputc
+                0x000053dc       0x78 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(fputc.o)
+                0x000053dc                fputc
  .text.avr-libc
-                0x00003ab4       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
-                0x00003ab4                __ultoa_invert
+                0x00005454       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(ultoa_invert.o)
+                0x00005454                __ultoa_invert
  .text.avr-libc
-                0x00003b70       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
-                0x00003b70                eeprom_read_byte
+                0x00005510       0x10 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+                0x00005510                eeprom_read_byte
  .text.avr-libc
-                0x00003b80       0x22 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
-                0x00003b80                eeprom_update_byte
-                0x00003b82                eeprom_update_r18
-                0x00003ba2                . = ALIGN (0x2)
+                0x00005520       0x22 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
+                0x00005520                eeprom_update_byte
+                0x00005522                eeprom_update_r18
+                0x00005542                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003ba2        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
-                0x00003ba2                _exit
-                0x00003ba2                exit
+ .fini9         0x00005542        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+                0x00005542                _exit
+                0x00005542                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1396,167 +1560,191 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003ba2        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .fini0         0x00005542        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003ba6                _etext = .
+                0x00005546                _etext = .
 
-.data           0x00800100       0xf0 load address 0x00003ba6
+.data           0x00800100      0x142 load address 0x00005546
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
  .data._ZL7wwwport
                 0x00800100        0x1 Eth_Udp/SRC/ip_arp_udp_tcp.o
- .data._ZZL5proc2PvE5mymac
+ .data._ZL5mymac
                 0x00800101        0x6 main.o
  *(.rodata)
+ .rodata        0x00800107       0x40 main.o
  *(.rodata*)
+ .rodata._ZTV3Adc
+                0x00800147       0x10 DeviceDriver/src/Adc.o
+                0x00800147                _ZTV3Adc
  .rodata._ZTV13Char_LCD2004A
-                0x00800107       0x10 DeviceDriver/src/Char_LCD2004A.o
-                0x00800107                _ZTV13Char_LCD2004A
+                0x00800157       0x10 DeviceDriver/src/Char_LCD2004A.o
+                0x00800157                _ZTV13Char_LCD2004A
  .rodata._ZTV12Count_Sensor
-                0x00800117       0x10 DeviceDriver/src/Count_Sensor.o
-                0x00800117                _ZTV12Count_Sensor
+                0x00800167       0x10 DeviceDriver/src/Count_Sensor.o
+                0x00800167                _ZTV12Count_Sensor
  .rodata._ZTV5Timer
-                0x00800127       0x10 DeviceDriver/src/per_sec_timer.o
-                0x00800127                _ZTV5Timer
+                0x00800177       0x10 DeviceDriver/src/per_sec_timer.o
+                0x00800177                _ZTV5Timer
  .rodata._ZTV11RS485Driver
-                0x00800137       0x10 DeviceDriver/src/RS485Driver.o
-                0x00800137                _ZTV11RS485Driver
+                0x00800187       0x10 DeviceDriver/src/RS485Driver.o
+                0x00800187                _ZTV11RS485Driver
  .rodata._ZTV10UartDriver
-                0x00800147       0x10 DeviceDriver/src/UartDriver.o
-                0x00800147                _ZTV10UartDriver
+                0x00800197       0x10 DeviceDriver/src/UartDriver.o
+                0x00800197                _ZTV10UartDriver
  .rodata.str1.1
-                0x00800157       0x94 main.o
-                                 0x96 (size before relaxing)
+                0x008001a7       0x96 main.o
+                                 0x98 (size before relaxing)
  .rodata.str1.1
-                0x008001eb        0x5 RTOS/SRC/tasks.o
+                0x0080023d        0x5 RTOS/SRC/tasks.o
  *(.gnu.linkonce.d*)
-                0x008001f0                . = ALIGN (0x2)
-                0x008001f0                _edata = .
-                0x008001f0                PROVIDE (__data_end, .)
+                0x00800242                . = ALIGN (0x2)
+                0x00800242                _edata = .
+                0x00800242                PROVIDE (__data_end, .)
 
-.bss            0x008001f0      0xafe
-                0x008001f0                PROVIDE (__bss_start, .)
+.bss            0x00800242      0xbcf
+                0x00800242                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.AlarmTable
-                0x008001f0       0x1e DeviceDriver/src/Alarm.o
-                0x008001f0                AlarmTable
+                0x00800242       0x1e DeviceDriver/src/Alarm.o
+                0x00800242                AlarmTable
  .bss._ZN11Dev_Manager4instE
-                0x0080020e        0x2 DeviceDriver/src/Dev_Manager.o
-                0x0080020e                _ZN11Dev_Manager4instE
+                0x00800260        0x2 DeviceDriver/src/Dev_Manager.o
+                0x00800260                _ZN11Dev_Manager4instE
  .bss._ZN11RS485Driver4instE
-                0x00800210        0x2 DeviceDriver/src/RS485Driver.o
-                0x00800210                _ZN11RS485Driver4instE
+                0x00800262        0x2 DeviceDriver/src/RS485Driver.o
+                0x00800262                _ZN11RS485Driver4instE
  .bss._ZN10UartDriver4instE
-                0x00800212        0x2 DeviceDriver/src/UartDriver.o
-                0x00800212                _ZN10UartDriver4instE
+                0x00800264        0x2 DeviceDriver/src/UartDriver.o
+                0x00800264                _ZN10UartDriver4instE
  .bss._ZL13NextPacketPtr
-                0x00800214        0x2 Eth_Udp/SRC/enc28j60.o
+                0x00800266        0x2 Eth_Udp/SRC/enc28j60.o
  .bss._ZL12Enc28j60Bank
-                0x00800216        0x1 Eth_Udp/SRC/enc28j60.o
+                0x00800268        0x1 Eth_Udp/SRC/enc28j60.o
  .bss._ZL6ipaddr
-                0x00800217        0x4 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00800269        0x4 Eth_Udp/SRC/ip_arp_udp_tcp.o
  .bss._ZL7macaddr
-                0x0080021b        0x6 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x0080026d        0x6 Eth_Udp/SRC/ip_arp_udp_tcp.o
  .bss._ZZL5proc2PvE4data
-                0x00800221       0x10 main.o
+                0x00800273       0x18 main.o
  .bss._ZZL5proc2PvE3buf
-                0x00800231       0xc9 main.o
- .bss._ZZL5proc2PvE4myip
-                0x008002fa        0x4 main.o
+                0x0080028b       0x65 main.o
+ .bss.Adc_channels
+                0x008002f0       0x10 main.o
+                0x008002f0                Adc_channels
+ .bss._ZL4myip  0x00800300        0x4 main.o
+ .bss.cls_var   0x00800304        0x1 main.o
+                0x00800304                cls_var
+ .bss.lcd_cnt   0x00800305        0x1 main.o
+                0x00800305                lcd_cnt
  .bss.chatter_flag
-                0x008002fe        0x1 main.o
-                0x008002fe                chatter_flag
- .bss.cmp_mem   0x008002ff        0x4 main.o
-                0x008002ff                cmp_mem
- .bss.mem4      0x00800303       0x4c main.o
-                0x00800303                mem4
+                0x00800306        0x1 main.o
+                0x00800306                chatter_flag
+ .bss.Ctl_LCD_Cursor
+                0x00800307        0x1 main.o
+                0x00800307                Ctl_LCD_Cursor
+ .bss.cmp_mem   0x00800308        0x4 main.o
+                0x00800308                cmp_mem
+ .bss.current_cnt_mem
+                0x0080030c       0x14 main.o
+                0x0080030c                current_cnt_mem
+ .bss.mem4      0x00800320       0x78 main.o
+                0x00800320                mem4
+ .bss.current_states_times
+                0x00800398        0x4 main.o
+                0x00800398                current_states_times
+ .bss.current_states_lookup_table
+                0x0080039c        0xa main.o
+                0x0080039c                current_states_lookup_table
  .bss.current_pressure
-                0x0080034f        0x2 main.o
-                0x0080034f                current_pressure
+                0x008003a6        0x2 main.o
+                0x008003a6                current_pressure
  .bss.current_temp
-                0x00800351        0x2 main.o
-                0x00800351                current_temp
+                0x008003a8        0x2 main.o
+                0x008003a8                current_temp
  .bss.count_number
-                0x00800353        0x2 main.o
-                0x00800353                count_number
- .bss.rsp10     0x00800355        0x8 main.o
-                0x00800355                rsp10
+                0x008003aa        0x2 main.o
+                0x008003aa                count_number
+ .bss.rsp10     0x008003ac        0x8 main.o
+                0x008003ac                rsp10
  .bss.exception
-                0x0080035d        0x5 main.o
-                0x0080035d                exception
- .bss.func10    0x00800362        0xb main.o
-                0x00800362                func10
- .bss.func04    0x0080036d        0x7 main.o
-                0x0080036d                func04
- .bss.func05    0x00800374        0x8 main.o
-                0x00800374                func05
+                0x008003b4        0x5 main.o
+                0x008003b4                exception
+ .bss.func10    0x008003b9        0xb main.o
+                0x008003b9                func10
+ .bss.func04    0x008003c4        0x7 main.o
+                0x008003c4                func04
+ .bss.func05    0x008003cb        0x8 main.o
+                0x008003cb                func05
  .bss.DataStruct
-                0x0080037c        0x8 main.o
-                0x0080037c                DataStruct
- .bss.lcd       0x00800384        0x2 main.o
-                0x00800384                lcd
- .bss.dev       0x00800386        0x2 main.o
-                0x00800386                dev
+                0x008003d3        0xa main.o
+                0x008003d3                DataStruct
+ .bss.adc       0x008003dd        0x2 main.o
+                0x008003dd                adc
+ .bss.lcd       0x008003df        0x2 main.o
+                0x008003df                lcd
+ .bss.dev       0x008003e1        0x2 main.o
+                0x008003e1                dev
  .bss.pucAlignedHeap.2069
-                0x00800388        0x2 RTOS/SRC/heap_1.o
+                0x008003e3        0x2 RTOS/SRC/heap_1.o
  .bss.xNextFreeByte
-                0x0080038a        0x2 RTOS/SRC/heap_1.o
- .bss.ucHeap    0x0080038c      0x8fc RTOS/SRC/heap_1.o
+                0x008003e5        0x2 RTOS/SRC/heap_1.o
+ .bss.ucHeap    0x008003e7      0x9c4 RTOS/SRC/heap_1.o
  .bss.uxSchedulerSuspended
-                0x00800c88        0x1 RTOS/SRC/tasks.o
+                0x00800dab        0x1 RTOS/SRC/tasks.o
  .bss.xIdleTaskHandle
-                0x00800c89        0x2 RTOS/SRC/tasks.o
+                0x00800dac        0x2 RTOS/SRC/tasks.o
  .bss.xNextTaskUnblockTime
-                0x00800c8b        0x2 RTOS/SRC/tasks.o
+                0x00800dae        0x2 RTOS/SRC/tasks.o
  .bss.uxTaskNumber
-                0x00800c8d        0x1 RTOS/SRC/tasks.o
+                0x00800db0        0x1 RTOS/SRC/tasks.o
  .bss.xNumOfOverflows
-                0x00800c8e        0x1 RTOS/SRC/tasks.o
+                0x00800db1        0x1 RTOS/SRC/tasks.o
  .bss.xYieldPending
-                0x00800c8f        0x1 RTOS/SRC/tasks.o
+                0x00800db2        0x1 RTOS/SRC/tasks.o
  .bss.uxPendedTicks
-                0x00800c90        0x1 RTOS/SRC/tasks.o
+                0x00800db3        0x1 RTOS/SRC/tasks.o
  .bss.xSchedulerRunning
-                0x00800c91        0x1 RTOS/SRC/tasks.o
+                0x00800db4        0x1 RTOS/SRC/tasks.o
  .bss.uxTopReadyPriority
-                0x00800c92        0x1 RTOS/SRC/tasks.o
+                0x00800db5        0x1 RTOS/SRC/tasks.o
  .bss.xTickCount
-                0x00800c93        0x2 RTOS/SRC/tasks.o
+                0x00800db6        0x2 RTOS/SRC/tasks.o
  .bss.uxCurrentNumberOfTasks
-                0x00800c95        0x1 RTOS/SRC/tasks.o
+                0x00800db8        0x1 RTOS/SRC/tasks.o
  .bss.xSuspendedTaskList
-                0x00800c96        0x9 RTOS/SRC/tasks.o
+                0x00800db9        0x9 RTOS/SRC/tasks.o
  .bss.uxDeletedTasksWaitingCleanUp
-                0x00800c9f        0x1 RTOS/SRC/tasks.o
+                0x00800dc2        0x1 RTOS/SRC/tasks.o
  .bss.xTasksWaitingTermination
-                0x00800ca0        0x9 RTOS/SRC/tasks.o
+                0x00800dc3        0x9 RTOS/SRC/tasks.o
  .bss.xPendingReadyList
-                0x00800ca9        0x9 RTOS/SRC/tasks.o
+                0x00800dcc        0x9 RTOS/SRC/tasks.o
  .bss.pxOverflowDelayedTaskList
-                0x00800cb2        0x2 RTOS/SRC/tasks.o
+                0x00800dd5        0x2 RTOS/SRC/tasks.o
  .bss.pxDelayedTaskList
-                0x00800cb4        0x2 RTOS/SRC/tasks.o
+                0x00800dd7        0x2 RTOS/SRC/tasks.o
  .bss.xDelayedTaskList2
-                0x00800cb6        0x9 RTOS/SRC/tasks.o
+                0x00800dd9        0x9 RTOS/SRC/tasks.o
  .bss.xDelayedTaskList1
-                0x00800cbf        0x9 RTOS/SRC/tasks.o
+                0x00800de2        0x9 RTOS/SRC/tasks.o
  .bss.pxReadyTasksLists
-                0x00800cc8       0x24 RTOS/SRC/tasks.o
+                0x00800deb       0x24 RTOS/SRC/tasks.o
  .bss.pxCurrentTCB
-                0x00800cec        0x2 RTOS/SRC/tasks.o
-                0x00800cec                pxCurrentTCB
+                0x00800e0f        0x2 RTOS/SRC/tasks.o
+                0x00800e0f                pxCurrentTCB
  *(COMMON)
-                0x00800cee                PROVIDE (__bss_end, .)
-                0x00003ba6                __data_load_start = LOADADDR (.data)
-                0x00003c96                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800e11                PROVIDE (__bss_end, .)
+                0x00005546                __data_load_start = LOADADDR (.data)
+                0x00005688                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800cee        0x0
+.noinit         0x00800e11        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800cee                _end = .
+                0x00800e11                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -1601,6 +1789,8 @@ END GROUP
  .comment       0x00000000       0x30 CommunicateProtocols/src/Modbus_rtu.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 Datastructure/src/SerialBuffer.o
+ .comment       0x00000030       0x31 Sensors/src/DFRobotHighTemperatureSensor.o
+ .comment       0x00000030       0x31 DeviceDriver/src/Adc.o
  .comment       0x00000030       0x31 DeviceDriver/src/Alarm.o
  .comment       0x00000030       0x31 DeviceDriver/src/Char_LCD2004A.o
  .comment       0x00000030       0x31 DeviceDriver/src/Count_Sensor.o
@@ -1645,231 +1835,249 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0xa10
+.debug_aranges  0x00000000      0xae0
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x78 CommunicateProtocols/src/Modbus_rtu.o
  .debug_aranges
                 0x00000078       0x70 Datastructure/src/SerialBuffer.o
  .debug_aranges
-                0x000000e8       0x48 DeviceDriver/src/Alarm.o
+                0x000000e8       0x40 Sensors/src/DFRobotHighTemperatureSensor.o
  .debug_aranges
-                0x00000130       0xd0 DeviceDriver/src/Char_LCD2004A.o
+                0x00000128       0x60 DeviceDriver/src/Adc.o
  .debug_aranges
-                0x00000200       0x58 DeviceDriver/src/Count_Sensor.o
+                0x00000188       0x48 DeviceDriver/src/Alarm.o
  .debug_aranges
-                0x00000258       0xa0 DeviceDriver/src/Dev_Manager.o
+                0x000001d0       0xd8 DeviceDriver/src/Char_LCD2004A.o
  .debug_aranges
-                0x000002f8       0x60 DeviceDriver/src/per_sec_timer.o
+                0x000002a8       0x58 DeviceDriver/src/Count_Sensor.o
  .debug_aranges
-                0x00000358       0x98 DeviceDriver/src/RS485Driver.o
+                0x00000300       0xa8 DeviceDriver/src/Dev_Manager.o
  .debug_aranges
-                0x000003f0       0x28 DeviceDriver/src/Timer_Alarm.o
+                0x000003a8       0x60 DeviceDriver/src/per_sec_timer.o
  .debug_aranges
-                0x00000418       0xa8 DeviceDriver/src/UartDriver.o
+                0x00000408       0x98 DeviceDriver/src/RS485Driver.o
  .debug_aranges
-                0x000004c0       0x20 DeviceDriver/src/Ubbr_Calculate.o
+                0x000004a0       0x28 DeviceDriver/src/Timer_Alarm.o
  .debug_aranges
-                0x000004e0       0x90 Eth_Udp/SRC/enc28j60.o
+                0x000004c8       0xa8 DeviceDriver/src/UartDriver.o
  .debug_aranges
-                0x00000570       0xa8 Eth_Udp/SRC/ip_arp_udp_tcp.o
+                0x00000570       0x20 DeviceDriver/src/Ubbr_Calculate.o
  .debug_aranges
-                0x00000618       0x20 Eth_Udp/SRC/spi.o
+                0x00000590       0x90 Eth_Udp/SRC/enc28j60.o
  .debug_aranges
-                0x00000638       0x30 Eth_Udp/SRC/timeout.o
+                0x00000620       0xa8 Eth_Udp/SRC/ip_arp_udp_tcp.o
  .debug_aranges
-                0x00000668       0x98 main.o
+                0x000006c8       0x20 Eth_Udp/SRC/spi.o
  .debug_aranges
-                0x00000700       0x38 RTOS/SRC/heap_1.o
+                0x000006e8       0x30 Eth_Udp/SRC/timeout.o
  .debug_aranges
-                0x00000738       0x40 RTOS/SRC/list.o
+                0x00000718       0xb8 main.o
  .debug_aranges
-                0x00000778       0x48 RTOS/SRC/port.o
+                0x000007d0       0x38 RTOS/SRC/heap_1.o
  .debug_aranges
-                0x000007c0       0xc8 RTOS/SRC/queue.o
+                0x00000808       0x40 RTOS/SRC/list.o
  .debug_aranges
-                0x00000888      0x148 RTOS/SRC/tasks.o
+                0x00000848       0x48 RTOS/SRC/port.o
  .debug_aranges
-                0x000009d0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+                0x00000890       0xc8 RTOS/SRC/queue.o
  .debug_aranges
-                0x000009f0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
+                0x00000958      0x148 RTOS/SRC/tasks.o
+ .debug_aranges
+                0x00000aa0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+ .debug_aranges
+                0x00000ac0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xcdbe
+.debug_info     0x00000000     0xec57
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x780 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .debug_info    0x00000780      0x9d6 CommunicateProtocols/src/Modbus_rtu.o
- .debug_info    0x00001156      0x981 Datastructure/src/SerialBuffer.o
- .debug_info    0x00001ad7      0x219 DeviceDriver/src/Alarm.o
- .debug_info    0x00001cf0     0x10ba DeviceDriver/src/Char_LCD2004A.o
- .debug_info    0x00002daa      0x497 DeviceDriver/src/Count_Sensor.o
- .debug_info    0x00003241      0x7e9 DeviceDriver/src/Dev_Manager.o
- .debug_info    0x00003a2a      0x549 DeviceDriver/src/per_sec_timer.o
- .debug_info    0x00003f73      0xb35 DeviceDriver/src/RS485Driver.o
- .debug_info    0x00004aa8      0x126 DeviceDriver/src/Timer_Alarm.o
- .debug_info    0x00004bce      0xc1d DeviceDriver/src/UartDriver.o
- .debug_info    0x000057eb      0x174 DeviceDriver/src/Ubbr_Calculate.o
- .debug_info    0x0000595f      0xc07 Eth_Udp/SRC/enc28j60.o
- .debug_info    0x00006566      0x9da Eth_Udp/SRC/ip_arp_udp_tcp.o
- .debug_info    0x00006f40       0x86 Eth_Udp/SRC/spi.o
- .debug_info    0x00006fc6      0x1a7 Eth_Udp/SRC/timeout.o
- .debug_info    0x0000716d     0x22cf main.o
- .debug_info    0x0000943c      0x1a4 RTOS/SRC/heap_1.o
- .debug_info    0x000095e0      0x2cd RTOS/SRC/list.o
- .debug_info    0x000098ad      0x263 RTOS/SRC/port.o
- .debug_info    0x00009b10     0x14b7 RTOS/SRC/queue.o
- .debug_info    0x0000afc7     0x1c9c RTOS/SRC/tasks.o
- .debug_info    0x0000cc63       0xad C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
- .debug_info    0x0000cd10       0xae C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
+ .debug_info    0x00001156      0x987 Datastructure/src/SerialBuffer.o
+ .debug_info    0x00001add      0x504 Sensors/src/DFRobotHighTemperatureSensor.o
+ .debug_info    0x00001fe1      0x575 DeviceDriver/src/Adc.o
+ .debug_info    0x00002556      0x219 DeviceDriver/src/Alarm.o
+ .debug_info    0x0000276f     0x1134 DeviceDriver/src/Char_LCD2004A.o
+ .debug_info    0x000038a3      0x4a3 DeviceDriver/src/Count_Sensor.o
+ .debug_info    0x00003d46      0x81d DeviceDriver/src/Dev_Manager.o
+ .debug_info    0x00004563      0x555 DeviceDriver/src/per_sec_timer.o
+ .debug_info    0x00004ab8      0xb41 DeviceDriver/src/RS485Driver.o
+ .debug_info    0x000055f9      0x126 DeviceDriver/src/Timer_Alarm.o
+ .debug_info    0x0000571f      0xc41 DeviceDriver/src/UartDriver.o
+ .debug_info    0x00006360      0x174 DeviceDriver/src/Ubbr_Calculate.o
+ .debug_info    0x000064d4      0xc07 Eth_Udp/SRC/enc28j60.o
+ .debug_info    0x000070db      0x9da Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_info    0x00007ab5       0x86 Eth_Udp/SRC/spi.o
+ .debug_info    0x00007b3b      0x1a7 Eth_Udp/SRC/timeout.o
+ .debug_info    0x00007ce2     0x35f3 main.o
+ .debug_info    0x0000b2d5      0x1a4 RTOS/SRC/heap_1.o
+ .debug_info    0x0000b479      0x2cd RTOS/SRC/list.o
+ .debug_info    0x0000b746      0x263 RTOS/SRC/port.o
+ .debug_info    0x0000b9a9     0x14b7 RTOS/SRC/queue.o
+ .debug_info    0x0000ce60     0x1c9c RTOS/SRC/tasks.o
+ .debug_info    0x0000eafc       0xad C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+ .debug_info    0x0000eba9       0xae C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
 
-.debug_abbrev   0x00000000     0x357b
+.debug_abbrev   0x00000000     0x3a50
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x718 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .debug_abbrev  0x00000718      0x1d1 CommunicateProtocols/src/Modbus_rtu.o
  .debug_abbrev  0x000008e9      0x2fd Datastructure/src/SerialBuffer.o
- .debug_abbrev  0x00000be6      0x10f DeviceDriver/src/Alarm.o
- .debug_abbrev  0x00000cf5      0x34f DeviceDriver/src/Char_LCD2004A.o
- .debug_abbrev  0x00001044      0x1d8 DeviceDriver/src/Count_Sensor.o
- .debug_abbrev  0x0000121c      0x307 DeviceDriver/src/Dev_Manager.o
- .debug_abbrev  0x00001523      0x239 DeviceDriver/src/per_sec_timer.o
- .debug_abbrev  0x0000175c      0x3ac DeviceDriver/src/RS485Driver.o
- .debug_abbrev  0x00001b08       0xfe DeviceDriver/src/Timer_Alarm.o
- .debug_abbrev  0x00001c06      0x415 DeviceDriver/src/UartDriver.o
- .debug_abbrev  0x0000201b       0xe8 DeviceDriver/src/Ubbr_Calculate.o
- .debug_abbrev  0x00002103      0x245 Eth_Udp/SRC/enc28j60.o
- .debug_abbrev  0x00002348      0x24b Eth_Udp/SRC/ip_arp_udp_tcp.o
- .debug_abbrev  0x00002593       0x52 Eth_Udp/SRC/spi.o
- .debug_abbrev  0x000025e5      0x113 Eth_Udp/SRC/timeout.o
- .debug_abbrev  0x000026f8      0x568 main.o
- .debug_abbrev  0x00002c60      0x11c RTOS/SRC/heap_1.o
- .debug_abbrev  0x00002d7c       0xf8 RTOS/SRC/list.o
- .debug_abbrev  0x00002e74      0x155 RTOS/SRC/port.o
- .debug_abbrev  0x00002fc9      0x261 RTOS/SRC/queue.o
- .debug_abbrev  0x0000322a      0x329 RTOS/SRC/tasks.o
- .debug_abbrev  0x00003553       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
- .debug_abbrev  0x00003567       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
+ .debug_abbrev  0x00000be6      0x1c2 Sensors/src/DFRobotHighTemperatureSensor.o
+ .debug_abbrev  0x00000da8      0x224 DeviceDriver/src/Adc.o
+ .debug_abbrev  0x00000fcc      0x10f DeviceDriver/src/Alarm.o
+ .debug_abbrev  0x000010db      0x358 DeviceDriver/src/Char_LCD2004A.o
+ .debug_abbrev  0x00001433      0x1e1 DeviceDriver/src/Count_Sensor.o
+ .debug_abbrev  0x00001614      0x307 DeviceDriver/src/Dev_Manager.o
+ .debug_abbrev  0x0000191b      0x242 DeviceDriver/src/per_sec_timer.o
+ .debug_abbrev  0x00001b5d      0x3b5 DeviceDriver/src/RS485Driver.o
+ .debug_abbrev  0x00001f12       0xfe DeviceDriver/src/Timer_Alarm.o
+ .debug_abbrev  0x00002010      0x41e DeviceDriver/src/UartDriver.o
+ .debug_abbrev  0x0000242e       0xe8 DeviceDriver/src/Ubbr_Calculate.o
+ .debug_abbrev  0x00002516      0x245 Eth_Udp/SRC/enc28j60.o
+ .debug_abbrev  0x0000275b      0x24b Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_abbrev  0x000029a6       0x52 Eth_Udp/SRC/spi.o
+ .debug_abbrev  0x000029f8      0x113 Eth_Udp/SRC/timeout.o
+ .debug_abbrev  0x00002b0b      0x62a main.o
+ .debug_abbrev  0x00003135      0x11c RTOS/SRC/heap_1.o
+ .debug_abbrev  0x00003251       0xf8 RTOS/SRC/list.o
+ .debug_abbrev  0x00003349      0x155 RTOS/SRC/port.o
+ .debug_abbrev  0x0000349e      0x261 RTOS/SRC/queue.o
+ .debug_abbrev  0x000036ff      0x329 RTOS/SRC/tasks.o
+ .debug_abbrev  0x00003a28       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+ .debug_abbrev  0x00003a3c       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
 
-.debug_line     0x00000000     0x59b9
+.debug_line     0x00000000     0x62e7
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x169 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .debug_line    0x00000169      0x343 CommunicateProtocols/src/Modbus_rtu.o
  .debug_line    0x000004ac      0x3b1 Datastructure/src/SerialBuffer.o
- .debug_line    0x0000085d      0x186 DeviceDriver/src/Alarm.o
- .debug_line    0x000009e3      0x5c6 DeviceDriver/src/Char_LCD2004A.o
- .debug_line    0x00000fa9      0x1d2 DeviceDriver/src/Count_Sensor.o
- .debug_line    0x0000117b      0x338 DeviceDriver/src/Dev_Manager.o
- .debug_line    0x000014b3      0x1e4 DeviceDriver/src/per_sec_timer.o
- .debug_line    0x00001697      0x3b3 DeviceDriver/src/RS485Driver.o
- .debug_line    0x00001a4a       0xa4 DeviceDriver/src/Timer_Alarm.o
- .debug_line    0x00001aee      0x3fc DeviceDriver/src/UartDriver.o
- .debug_line    0x00001eea       0xf0 DeviceDriver/src/Ubbr_Calculate.o
- .debug_line    0x00001fda      0x54e Eth_Udp/SRC/enc28j60.o
- .debug_line    0x00002528      0x64d Eth_Udp/SRC/ip_arp_udp_tcp.o
- .debug_line    0x00002b75       0xca Eth_Udp/SRC/spi.o
- .debug_line    0x00002c3f      0x1c0 Eth_Udp/SRC/timeout.o
- .debug_line    0x00002dff      0xa50 main.o
- .debug_line    0x0000384f      0x1bb RTOS/SRC/heap_1.o
- .debug_line    0x00003a0a      0x1e7 RTOS/SRC/list.o
- .debug_line    0x00003bf1      0x2a4 RTOS/SRC/port.o
- .debug_line    0x00003e95      0xa60 RTOS/SRC/queue.o
- .debug_line    0x000048f5      0xf9a RTOS/SRC/tasks.o
- .debug_line    0x0000588f       0x7a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
- .debug_line    0x00005909       0xb0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
+ .debug_line    0x0000085d      0x1c5 Sensors/src/DFRobotHighTemperatureSensor.o
+ .debug_line    0x00000a22      0x23e DeviceDriver/src/Adc.o
+ .debug_line    0x00000c60      0x186 DeviceDriver/src/Alarm.o
+ .debug_line    0x00000de6      0x5f1 DeviceDriver/src/Char_LCD2004A.o
+ .debug_line    0x000013d7      0x1d2 DeviceDriver/src/Count_Sensor.o
+ .debug_line    0x000015a9      0x355 DeviceDriver/src/Dev_Manager.o
+ .debug_line    0x000018fe      0x1e4 DeviceDriver/src/per_sec_timer.o
+ .debug_line    0x00001ae2      0x3b3 DeviceDriver/src/RS485Driver.o
+ .debug_line    0x00001e95       0xa4 DeviceDriver/src/Timer_Alarm.o
+ .debug_line    0x00001f39      0x3fc DeviceDriver/src/UartDriver.o
+ .debug_line    0x00002335       0xf0 DeviceDriver/src/Ubbr_Calculate.o
+ .debug_line    0x00002425      0x54e Eth_Udp/SRC/enc28j60.o
+ .debug_line    0x00002973      0x64d Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_line    0x00002fc0       0xca Eth_Udp/SRC/spi.o
+ .debug_line    0x0000308a      0x1c0 Eth_Udp/SRC/timeout.o
+ .debug_line    0x0000324a      0xf33 main.o
+ .debug_line    0x0000417d      0x1bb RTOS/SRC/heap_1.o
+ .debug_line    0x00004338      0x1e7 RTOS/SRC/list.o
+ .debug_line    0x0000451f      0x2a4 RTOS/SRC/port.o
+ .debug_line    0x000047c3      0xa60 RTOS/SRC/queue.o
+ .debug_line    0x00005223      0xf9a RTOS/SRC/tasks.o
+ .debug_line    0x000061bd       0x7a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+ .debug_line    0x00006237       0xb0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
 
-.debug_frame    0x00000000     0x1aac
+.debug_frame    0x00000000     0x1d80
  *(.debug_frame)
  .debug_frame   0x00000000      0x134 CommunicateProtocols/src/Modbus_rtu.o
  .debug_frame   0x00000134      0x15c Datastructure/src/SerialBuffer.o
- .debug_frame   0x00000290       0xd8 DeviceDriver/src/Alarm.o
- .debug_frame   0x00000368      0x210 DeviceDriver/src/Char_LCD2004A.o
- .debug_frame   0x00000578       0x94 DeviceDriver/src/Count_Sensor.o
- .debug_frame   0x0000060c      0x250 DeviceDriver/src/Dev_Manager.o
- .debug_frame   0x0000085c       0xa4 DeviceDriver/src/per_sec_timer.o
- .debug_frame   0x00000900      0x150 DeviceDriver/src/RS485Driver.o
- .debug_frame   0x00000a50       0x54 DeviceDriver/src/Timer_Alarm.o
- .debug_frame   0x00000aa4      0x170 DeviceDriver/src/UartDriver.o
- .debug_frame   0x00000c14       0x44 DeviceDriver/src/Ubbr_Calculate.o
- .debug_frame   0x00000c58      0x18c Eth_Udp/SRC/enc28j60.o
- .debug_frame   0x00000de4      0x1e8 Eth_Udp/SRC/ip_arp_udp_tcp.o
- .debug_frame   0x00000fcc       0x24 Eth_Udp/SRC/spi.o
- .debug_frame   0x00000ff0       0x44 Eth_Udp/SRC/timeout.o
- .debug_frame   0x00001034      0x174 main.o
- .debug_frame   0x000011a8       0x60 RTOS/SRC/heap_1.o
- .debug_frame   0x00001208       0x88 RTOS/SRC/list.o
- .debug_frame   0x00001290       0x74 RTOS/SRC/port.o
- .debug_frame   0x00001304      0x2f0 RTOS/SRC/queue.o
- .debug_frame   0x000015f4      0x4b8 RTOS/SRC/tasks.o
+ .debug_frame   0x00000290       0xfc Sensors/src/DFRobotHighTemperatureSensor.o
+ .debug_frame   0x0000038c       0xa4 DeviceDriver/src/Adc.o
+ .debug_frame   0x00000430       0xd8 DeviceDriver/src/Alarm.o
+ .debug_frame   0x00000508      0x234 DeviceDriver/src/Char_LCD2004A.o
+ .debug_frame   0x0000073c       0x94 DeviceDriver/src/Count_Sensor.o
+ .debug_frame   0x000007d0      0x2a8 DeviceDriver/src/Dev_Manager.o
+ .debug_frame   0x00000a78       0xa4 DeviceDriver/src/per_sec_timer.o
+ .debug_frame   0x00000b1c      0x150 DeviceDriver/src/RS485Driver.o
+ .debug_frame   0x00000c6c       0x54 DeviceDriver/src/Timer_Alarm.o
+ .debug_frame   0x00000cc0      0x170 DeviceDriver/src/UartDriver.o
+ .debug_frame   0x00000e30       0x44 DeviceDriver/src/Ubbr_Calculate.o
+ .debug_frame   0x00000e74      0x18c Eth_Udp/SRC/enc28j60.o
+ .debug_frame   0x00001000      0x1e8 Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_frame   0x000011e8       0x24 Eth_Udp/SRC/spi.o
+ .debug_frame   0x0000120c       0x44 Eth_Udp/SRC/timeout.o
+ .debug_frame   0x00001250      0x22c main.o
+ .debug_frame   0x0000147c       0x60 RTOS/SRC/heap_1.o
+ .debug_frame   0x000014dc       0x88 RTOS/SRC/list.o
+ .debug_frame   0x00001564       0x74 RTOS/SRC/port.o
+ .debug_frame   0x000015d8      0x2f0 RTOS/SRC/queue.o
+ .debug_frame   0x000018c8      0x4b8 RTOS/SRC/tasks.o
 
-.debug_str      0x00000000     0x380b
+.debug_str      0x00000000     0x3df4
  *(.debug_str)
  .debug_str     0x00000000      0x27d C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .debug_str     0x0000027d      0x5d7 CommunicateProtocols/src/Modbus_rtu.o
                                 0x656 (size before relaxing)
- .debug_str     0x00000854      0x54d Datastructure/src/SerialBuffer.o
-                                0x742 (size before relaxing)
- .debug_str     0x00000da1       0xe1 DeviceDriver/src/Alarm.o
+ .debug_str     0x00000854      0x552 Datastructure/src/SerialBuffer.o
+                                0x747 (size before relaxing)
+ .debug_str     0x00000da6      0x1c1 Sensors/src/DFRobotHighTemperatureSensor.o
+                                0x36c (size before relaxing)
+ .debug_str     0x00000f67      0x2bd DeviceDriver/src/Adc.o
+                                0x4d6 (size before relaxing)
+ .debug_str     0x00001224       0xd9 DeviceDriver/src/Alarm.o
                                 0x2bd (size before relaxing)
- .debug_str     0x00000e82      0x68b DeviceDriver/src/Char_LCD2004A.o
-                                0x8bc (size before relaxing)
- .debug_str     0x0000150d       0x96 DeviceDriver/src/Count_Sensor.o
+ .debug_str     0x000012fd      0x4bb DeviceDriver/src/Char_LCD2004A.o
+                                0x8e7 (size before relaxing)
+ .debug_str     0x000017b8       0x96 DeviceDriver/src/Count_Sensor.o
                                 0x4a5 (size before relaxing)
- .debug_str     0x000015a3       0xb5 DeviceDriver/src/Dev_Manager.o
-                                0x586 (size before relaxing)
- .debug_str     0x00001658       0x9f DeviceDriver/src/per_sec_timer.o
+ .debug_str     0x0000184e       0xb7 DeviceDriver/src/Dev_Manager.o
+                                0x597 (size before relaxing)
+ .debug_str     0x00001905       0x9f DeviceDriver/src/per_sec_timer.o
                                 0x4ae (size before relaxing)
- .debug_str     0x000016f7      0x2c2 DeviceDriver/src/RS485Driver.o
+ .debug_str     0x000019a4      0x2c2 DeviceDriver/src/RS485Driver.o
                                 0x715 (size before relaxing)
- .debug_str     0x000019b9       0x7a DeviceDriver/src/Timer_Alarm.o
+ .debug_str     0x00001c66       0x7a DeviceDriver/src/Timer_Alarm.o
                                 0x1fc (size before relaxing)
- .debug_str     0x00001a33      0x21b DeviceDriver/src/UartDriver.o
-                                0x785 (size before relaxing)
- .debug_str     0x00001c4e       0x3b DeviceDriver/src/Ubbr_Calculate.o
+ .debug_str     0x00001ce0      0x21b DeviceDriver/src/UartDriver.o
+                                0x78f (size before relaxing)
+ .debug_str     0x00001efb       0x35 DeviceDriver/src/Ubbr_Calculate.o
                                 0x247 (size before relaxing)
- .debug_str     0x00001c89      0x2cb Eth_Udp/SRC/enc28j60.o
+ .debug_str     0x00001f30      0x2cb Eth_Udp/SRC/enc28j60.o
                                 0x4ab (size before relaxing)
- .debug_str     0x00001f54      0x3e5 Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_str     0x000021fb      0x3d3 Eth_Udp/SRC/ip_arp_udp_tcp.o
                                 0x5df (size before relaxing)
- .debug_str     0x00002339       0x17 Eth_Udp/SRC/spi.o
+ .debug_str     0x000025ce       0x17 Eth_Udp/SRC/spi.o
                                 0x1b3 (size before relaxing)
- .debug_str     0x00002350       0x54 Eth_Udp/SRC/timeout.o
+ .debug_str     0x000025e5       0x54 Eth_Udp/SRC/timeout.o
                                 0x243 (size before relaxing)
- .debug_str     0x000023a4      0x459 main.o
-                               0x13b7 (size before relaxing)
- .debug_str     0x000027fd      0x14c RTOS/SRC/heap_1.o
+ .debug_str     0x00002639      0x7ad main.o
+                               0x1938 (size before relaxing)
+ .debug_str     0x00002de6      0x14c RTOS/SRC/heap_1.o
                                 0x214 (size before relaxing)
- .debug_str     0x00002949      0x13c RTOS/SRC/list.o
+ .debug_str     0x00002f32      0x13c RTOS/SRC/list.o
                                 0x2a3 (size before relaxing)
- .debug_str     0x00002a85      0x115 RTOS/SRC/port.o
+ .debug_str     0x0000306e      0x115 RTOS/SRC/port.o
                                 0x29d (size before relaxing)
- .debug_str     0x00002b9a      0x4fe RTOS/SRC/queue.o
+ .debug_str     0x00003183      0x4fe RTOS/SRC/queue.o
                                 0x7e7 (size before relaxing)
- .debug_str     0x00003098      0x773 RTOS/SRC/tasks.o
+ .debug_str     0x00003681      0x773 RTOS/SRC/tasks.o
                                 0xc82 (size before relaxing)
 
-.debug_loc      0x00000000     0x8ac9
+.debug_loc      0x00000000     0x9c1e
  *(.debug_loc)
  .debug_loc     0x00000000      0x826 CommunicateProtocols/src/Modbus_rtu.o
  .debug_loc     0x00000826      0x834 Datastructure/src/SerialBuffer.o
- .debug_loc     0x0000105a      0x12d DeviceDriver/src/Alarm.o
- .debug_loc     0x00001187      0xb79 DeviceDriver/src/Char_LCD2004A.o
- .debug_loc     0x00001d00       0x98 DeviceDriver/src/Count_Sensor.o
- .debug_loc     0x00001d98      0x5f8 DeviceDriver/src/Dev_Manager.o
- .debug_loc     0x00002390       0x98 DeviceDriver/src/per_sec_timer.o
- .debug_loc     0x00002428      0x395 DeviceDriver/src/RS485Driver.o
- .debug_loc     0x000027bd       0x89 DeviceDriver/src/Timer_Alarm.o
- .debug_loc     0x00002846      0x395 DeviceDriver/src/UartDriver.o
- .debug_loc     0x00002bdb      0x1a0 DeviceDriver/src/Ubbr_Calculate.o
- .debug_loc     0x00002d7b      0x6d0 Eth_Udp/SRC/enc28j60.o
- .debug_loc     0x0000344b      0xd62 Eth_Udp/SRC/ip_arp_udp_tcp.o
- .debug_loc     0x000041ad       0x82 Eth_Udp/SRC/timeout.o
- .debug_loc     0x0000422f      0x77a main.o
- .debug_loc     0x000049a9       0xf1 RTOS/SRC/heap_1.o
- .debug_loc     0x00004a9a      0x145 RTOS/SRC/list.o
- .debug_loc     0x00004bdf      0x2a0 RTOS/SRC/port.o
- .debug_loc     0x00004e7f     0x1cf6 RTOS/SRC/queue.o
- .debug_loc     0x00006b75     0x1f54 RTOS/SRC/tasks.o
+ .debug_loc     0x0000105a      0x561 Sensors/src/DFRobotHighTemperatureSensor.o
+ .debug_loc     0x000015bb       0xe1 DeviceDriver/src/Adc.o
+ .debug_loc     0x0000169c      0x12d DeviceDriver/src/Alarm.o
+ .debug_loc     0x000017c9      0xc2d DeviceDriver/src/Char_LCD2004A.o
+ .debug_loc     0x000023f6       0x98 DeviceDriver/src/Count_Sensor.o
+ .debug_loc     0x0000248e      0x6c3 DeviceDriver/src/Dev_Manager.o
+ .debug_loc     0x00002b51       0x98 DeviceDriver/src/per_sec_timer.o
+ .debug_loc     0x00002be9      0x395 DeviceDriver/src/RS485Driver.o
+ .debug_loc     0x00002f7e       0x89 DeviceDriver/src/Timer_Alarm.o
+ .debug_loc     0x00003007      0x395 DeviceDriver/src/UartDriver.o
+ .debug_loc     0x0000339c      0x1a0 DeviceDriver/src/Ubbr_Calculate.o
+ .debug_loc     0x0000353c      0x6d0 Eth_Udp/SRC/enc28j60.o
+ .debug_loc     0x00003c0c      0xd62 Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_loc     0x0000496e       0x82 Eth_Udp/SRC/timeout.o
+ .debug_loc     0x000049f0     0x110e main.o
+ .debug_loc     0x00005afe       0xf1 RTOS/SRC/heap_1.o
+ .debug_loc     0x00005bef      0x145 RTOS/SRC/list.o
+ .debug_loc     0x00005d34      0x2a0 RTOS/SRC/port.o
+ .debug_loc     0x00005fd4     0x1cf6 RTOS/SRC/queue.o
+ .debug_loc     0x00007cca     0x1f54 RTOS/SRC/tasks.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1889,29 +2097,31 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x9f8
+.debug_ranges   0x00000000      0xbb8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x68 CommunicateProtocols/src/Modbus_rtu.o
  .debug_ranges  0x00000068       0x78 Datastructure/src/SerialBuffer.o
- .debug_ranges  0x000000e0       0x38 DeviceDriver/src/Alarm.o
- .debug_ranges  0x00000118       0xc0 DeviceDriver/src/Char_LCD2004A.o
- .debug_ranges  0x000001d8       0x48 DeviceDriver/src/Count_Sensor.o
- .debug_ranges  0x00000220       0x90 DeviceDriver/src/Dev_Manager.o
- .debug_ranges  0x000002b0       0x50 DeviceDriver/src/per_sec_timer.o
- .debug_ranges  0x00000300       0x88 DeviceDriver/src/RS485Driver.o
- .debug_ranges  0x00000388       0x18 DeviceDriver/src/Timer_Alarm.o
- .debug_ranges  0x000003a0       0x98 DeviceDriver/src/UartDriver.o
- .debug_ranges  0x00000438       0x10 DeviceDriver/src/Ubbr_Calculate.o
- .debug_ranges  0x00000448       0x80 Eth_Udp/SRC/enc28j60.o
- .debug_ranges  0x000004c8       0xb0 Eth_Udp/SRC/ip_arp_udp_tcp.o
- .debug_ranges  0x00000578       0x10 Eth_Udp/SRC/spi.o
- .debug_ranges  0x00000588       0x20 Eth_Udp/SRC/timeout.o
- .debug_ranges  0x000005a8       0xf8 main.o
- .debug_ranges  0x000006a0       0x28 RTOS/SRC/heap_1.o
- .debug_ranges  0x000006c8       0x30 RTOS/SRC/list.o
- .debug_ranges  0x000006f8       0x38 RTOS/SRC/port.o
- .debug_ranges  0x00000730      0x118 RTOS/SRC/queue.o
- .debug_ranges  0x00000848      0x1b0 RTOS/SRC/tasks.o
+ .debug_ranges  0x000000e0       0x30 Sensors/src/DFRobotHighTemperatureSensor.o
+ .debug_ranges  0x00000110       0x50 DeviceDriver/src/Adc.o
+ .debug_ranges  0x00000160       0x38 DeviceDriver/src/Alarm.o
+ .debug_ranges  0x00000198       0xc8 DeviceDriver/src/Char_LCD2004A.o
+ .debug_ranges  0x00000260       0x48 DeviceDriver/src/Count_Sensor.o
+ .debug_ranges  0x000002a8       0x98 DeviceDriver/src/Dev_Manager.o
+ .debug_ranges  0x00000340       0x50 DeviceDriver/src/per_sec_timer.o
+ .debug_ranges  0x00000390       0x88 DeviceDriver/src/RS485Driver.o
+ .debug_ranges  0x00000418       0x18 DeviceDriver/src/Timer_Alarm.o
+ .debug_ranges  0x00000430       0x98 DeviceDriver/src/UartDriver.o
+ .debug_ranges  0x000004c8       0x10 DeviceDriver/src/Ubbr_Calculate.o
+ .debug_ranges  0x000004d8       0x80 Eth_Udp/SRC/enc28j60.o
+ .debug_ranges  0x00000558       0xb0 Eth_Udp/SRC/ip_arp_udp_tcp.o
+ .debug_ranges  0x00000608       0x10 Eth_Udp/SRC/spi.o
+ .debug_ranges  0x00000618       0x20 Eth_Udp/SRC/timeout.o
+ .debug_ranges  0x00000638      0x228 main.o
+ .debug_ranges  0x00000860       0x28 RTOS/SRC/heap_1.o
+ .debug_ranges  0x00000888       0x30 RTOS/SRC/list.o
+ .debug_ranges  0x000008b8       0x38 RTOS/SRC/port.o
+ .debug_ranges  0x000008f0      0x118 RTOS/SRC/queue.o
+ .debug_ranges  0x00000a08      0x1b0 RTOS/SRC/tasks.o
 
 .debug_macro
  *(.debug_macro)

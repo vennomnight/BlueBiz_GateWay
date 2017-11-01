@@ -134,6 +134,7 @@
             <Value>../KenelControl/inc</Value>
             <Value>../Datastructure/inc</Value>
             <Value>../DeviceDriver/inc</Value>
+            <Value>../Sensors/inc</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -159,6 +160,7 @@
             <Value>../CommunicateProtocols/inc</Value>
             <Value>../KenelControl/inc</Value>
             <Value>../Eth_Udp/INC</Value>
+            <Value>../Sensors/inc</Value>
           </ListValues>
         </avrgcccpp.compiler.directories.IncludePaths>
         <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -194,6 +196,9 @@
     <Compile Include="Datastructure\src\SerialBuffer.cpp">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="DeviceDriver\inc\Adc.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="DeviceDriver\inc\Alarm.h">
       <SubType>compile</SubType>
     </Compile>
@@ -212,6 +217,12 @@
     <Compile Include="DeviceDriver\inc\per_sec_timer.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Sensors\inc\DFRobotHighTemperatureSensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sensors\src\DFRobotHighTemperatureSensor.cpp">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="DeviceDriver\inc\PortD_Io.h">
       <SubType>compile</SubType>
     </None>
@@ -225,6 +236,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\inc\Ubbr_Calculate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DeviceDriver\src\Adc.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="DeviceDriver\src\Alarm.cpp">
@@ -344,6 +358,9 @@
     <Folder Include="Datastructure" />
     <Folder Include="CommunicateProtocols" />
     <Folder Include="Eth_Udp" />
+    <Folder Include="Sensors" />
+    <Folder Include="Sensors\inc" />
+    <Folder Include="Sensors\src" />
     <Folder Include="src" />
     <Folder Include="RTOS" />
     <Folder Include="RTOS\SRC" />

@@ -49,6 +49,9 @@ SUBDIRS :=  \
 ../Datastructure \
 ../CommunicateProtocols \
 ../Eth_Udp \
+../Sensors \
+../Sensors/inc \
+../Sensors/src \
 ../src \
 ../RTOS \
 ../RTOS/SRC
@@ -58,6 +61,8 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../CommunicateProtocols/src/Modbus_rtu.cpp \
 ../Datastructure/src/SerialBuffer.cpp \
+../Sensors/src/DFRobotHighTemperatureSensor.cpp \
+../DeviceDriver/src/Adc.cpp \
 ../DeviceDriver/src/Alarm.cpp \
 ../DeviceDriver/src/Char_LCD2004A.cpp \
 ../DeviceDriver/src/Count_Sensor.cpp \
@@ -92,6 +97,8 @@ ASM_SRCS +=
 OBJS +=  \
 CommunicateProtocols/src/Modbus_rtu.o \
 Datastructure/src/SerialBuffer.o \
+Sensors/src/DFRobotHighTemperatureSensor.o \
+DeviceDriver/src/Adc.o \
 DeviceDriver/src/Alarm.o \
 DeviceDriver/src/Char_LCD2004A.o \
 DeviceDriver/src/Count_Sensor.o \
@@ -119,6 +126,8 @@ RTOS/SRC/timers.o
 OBJS_AS_ARGS +=  \
 CommunicateProtocols/src/Modbus_rtu.o \
 Datastructure/src/SerialBuffer.o \
+Sensors/src/DFRobotHighTemperatureSensor.o \
+DeviceDriver/src/Adc.o \
 DeviceDriver/src/Alarm.o \
 DeviceDriver/src/Char_LCD2004A.o \
 DeviceDriver/src/Count_Sensor.o \
@@ -146,6 +155,8 @@ RTOS/SRC/timers.o
 C_DEPS +=  \
 CommunicateProtocols/src/Modbus_rtu.d \
 Datastructure/src/SerialBuffer.d \
+Sensors/src/DFRobotHighTemperatureSensor.d \
+DeviceDriver/src/Adc.d \
 DeviceDriver/src/Alarm.d \
 DeviceDriver/src/Char_LCD2004A.d \
 DeviceDriver/src/Count_Sensor.d \
@@ -173,6 +184,8 @@ RTOS/SRC/timers.d
 C_DEPS_AS_ARGS +=  \
 CommunicateProtocols/src/Modbus_rtu.d \
 Datastructure/src/SerialBuffer.d \
+Sensors/src/DFRobotHighTemperatureSensor.d \
+DeviceDriver/src/Adc.d \
 DeviceDriver/src/Alarm.d \
 DeviceDriver/src/Char_LCD2004A.d \
 DeviceDriver/src/Count_Sensor.d \
@@ -262,52 +275,63 @@ LINKER_SCRIPT_DEP+=
 
 
 
+
+
+
+
 CommunicateProtocols/src/%.o: ../CommunicateProtocols/src/%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Datastructure/src/%.o: ../Datastructure/src/%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Sensors/src/%.o: ../Sensors/src/%.cpp
+	@echo Building file: $<
+	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 DeviceDriver/src/%.o: ../DeviceDriver/src/%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 Eth_Udp/SRC/%.o: ../Eth_Udp/SRC/%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./%.o: .././%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 MiddleWare/SRC/%.o: ../MiddleWare/SRC/%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../inc" -I"../DeviceDriver/inc" -I"../MiddleWare/INC" -I"../Datastructure/inc" -I"../CommunicateProtocols/inc" -I"../KenelControl/inc" -I"../Eth_Udp/INC" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=c++11 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 RTOS/SRC/%.o: ../RTOS/SRC/%.c
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../KenelControl/inc" -I"../Datastructure/inc" -I"../DeviceDriver/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"../../Source/include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\include" -I"../KenelControl/inc" -I"../Datastructure/inc" -I"../DeviceDriver/inc" -I"../Sensors/inc"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\gcc\dev\atmega128a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 

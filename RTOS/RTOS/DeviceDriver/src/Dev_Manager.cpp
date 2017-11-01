@@ -107,3 +107,7 @@ ISR(INT0_vect)
 {
 	Dev_Manager::getInstance()->isr_handle[COUNT_SENSOR](COUNT_SENSOR,NULL);
 }
+ISR(ADC_vect)
+{	
+	Dev_Manager::getInstance()->isr_handle[_ADC](_ADC,ADCL+((uint16_t)ADCH << 8));
+}

@@ -56,6 +56,7 @@ public:
 	void Register_Font(char addr,const uint8_t* font);
 	void Device_Writes(const char* data);
 	void Font_Print(char addr);
+	void Lcd_Print(const char* str);
 	void* operator new(size_t size);
 	void operator delete(void* ptr);
 	

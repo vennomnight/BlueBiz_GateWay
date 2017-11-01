@@ -98,7 +98,7 @@ void UartDriver::Stop_Device() const
 	cbi(UCSR0B,RXEN0); //Stop RX
 	cbi(UCSR0B,TXEN0); //Stop TX
 }
-void UartDriver::Start_Device() const
+void UartDriver::Start_Device(uint8_t flag) const
 {
 	sbi(UCSR0B,RXEN0);
 	sbi(UCSR0B,TXEN0);

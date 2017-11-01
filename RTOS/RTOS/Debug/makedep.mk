@@ -6,6 +6,10 @@ CommunicateProtocols\src\Modbus_rtu.cpp
 
 Datastructure\src\SerialBuffer.cpp
 
+Sensors\src\DFRobotHighTemperatureSensor.cpp
+
+DeviceDriver\src\Adc.cpp
+
 DeviceDriver\src\Alarm.cpp
 
 DeviceDriver\src\Char_LCD2004A.cpp

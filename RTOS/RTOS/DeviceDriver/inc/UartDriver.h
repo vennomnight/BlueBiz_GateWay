@@ -24,7 +24,7 @@ class UartDriver : public DeviceDriveInterFace, private Ubbr
 	using Ubbr::Ubbr_Value;
 	private:
 	static const uint8_t UX1 = 0;
-	//uint16_t Uart_baudrate = 4800;
+	//uint16_t Uart_baudrate = 38400;
 	uint16_t Uart_baudrate = 14400;
 	SemaphoreHandle_t char_Mutex;
 	SemaphoreHandle_t Uart_Mutex;
@@ -41,7 +41,7 @@ class UartDriver : public DeviceDriveInterFace, private Ubbr
 	void Device_Writes(const char* data);
 	void Device_Write(char data);
 	void Stop_Device(void) const;
-	void Start_Device(void) const;
+	void Start_Device(uint8_t flag) const;
 	static const UartDriver* const getInstance();
 	
 };

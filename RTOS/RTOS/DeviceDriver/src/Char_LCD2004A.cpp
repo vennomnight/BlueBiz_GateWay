@@ -47,7 +47,7 @@ void Char_LCD2004A::delay(char delay_ms)
 	char i;
 	for(i=0;i<delay_ms;i++)
 	{
-		_delay_ms(0.5);
+		_delay_ms(0.3);
 	}
 }
 void Char_LCD2004A::Command_Set(char cmd)
@@ -69,7 +69,7 @@ void Char_LCD2004A::Data_set(char data)
 void Char_LCD2004A::Clear_Lcd(void)
 {
 	this->Command_Set(0x01);
-	delay(5);
+	delay(3);
 }
 void Char_LCD2004A::Cursor_Set(char x,char y)
 {
@@ -91,10 +91,17 @@ void Char_LCD2004A::Set_Cursor_Print(char x,char y,const char* str)
 		this->Data_set(*str++);
 	}
 }
+void Char_LCD2004A::Lcd_Print(const char* str)
+{
+	while(*str)
+	{
+		this->Data_set(*str++);
+	}
+}
 void Char_LCD2004A::Cursor_Home(void)
 {
 	this->Command_Set(0x02);
-	this->delay(5);
+	this->delay(3);
 }
 void Char_LCD2004A::Move_Display(char point)
 {

@@ -1,5 +1,5 @@
-DeviceDriver/src/PortD_Io.d DeviceDriver/src/PortD_Io.o: \
- ../DeviceDriver/src/PortD_Io.cpp ../DeviceDriver/inc/PortD_Io.h \
+DeviceDriver/src/Adc.d DeviceDriver/src/Adc.o: \
+ ../DeviceDriver/src/Adc.cpp ../DeviceDriver/inc/Adc.h \
  ../DeviceDriver/inc/DeviceDriverInterface.h \
  ../../Source/include/FreeRTOS.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
@@ -20,7 +20,7 @@ DeviceDriver/src/PortD_Io.d DeviceDriver/src/PortD_Io.o: \
  ../../Source/include/portmacro.h ../../Source/include/mpu_wrappers.h \
  ../../Source/include/semphr.h ../../Source/include/queue.h
 
-../DeviceDriver/inc/PortD_Io.h:
+../DeviceDriver/inc/Adc.h:
 
 ../DeviceDriver/inc/DeviceDriverInterface.h:
 
