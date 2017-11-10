@@ -45,6 +45,7 @@
 
 
 const char debug = 0; //처음 부팅 디버깅용 
+const uint16_t device_serial=0xF001; //이 디바이스 시리얼번호
 #define USE_ETH 1 //이더넷 사용
 #define USE_HMI 1 //HMI 사용
 
@@ -807,7 +808,30 @@ RESET_ETH:
 			make_echo_reply_from_request(buf,plen);
 			continue;
 		 }
-		 if(buf[UDP_DATA_P] == 0x01 + '0')
+		 if(buf[UDP_DATA_P] == 0x01)  //리눅스 서버용 파싱 
+		 {
+			 char temp[16] = {0};
+			 char loop = buf[UDP_DATA_P + 1];
+			 char start = 2;
+			 char num = 0;
+			 for(char i=1;i<loop+1;i++)
+			 {
+				 temp[i-1] = buf[UDP_DATA_P + (start + (i-1))];
+				 if(i % 2 == 0)
+				 {
+					 mem4[UDP_DATA0 + num] =  (( 0xff00 & temp[i-1] << 8)) | (0x00ff & temp[i-2]);
+					 num++;
+				 }
+			 }
+			  mem4[GOAL_CNT] =  (0xff00 & (buf[UDP_DATA_P + 14] << 8))| (0x00ff & buf[UDP_DATA_P + 15]);
+			  mem4[TARGET_MAX] = mem4[GOAL_CNT];
+			  mem4[TARGET_GOAL_CNT] = mem4[GOAL_CNT];
+			  mem4[WARNING_HIGH] = mem4[GOAL_CNT];
+			  mem4[TARGET_CMP] = mem4[GOAL_CNT];
+			  goto UDP_SEND;
+			 
+		 }
+		 if(buf[UDP_DATA_P] == 0x01 + '0') // 기존 라이브러리 사용 (자바용) 프로덕트 이름 시리얼번호 카운트 받음
 		 {
 			 char temp[29] = {0};
 			 char loop = buf[UDP_DATA_P + 1];
@@ -887,7 +911,7 @@ RESET_ETH:
 			 {
 				 PORTB = cbi(PORTB,4); 
 			 }
-			 static int data[12] = {0};
+			 static int data[19] = {0};
 			 data[0] = mem4[TEMP];
 			 data[1] = mem4[COUNT];
 			 data[2] = mem4[PRESSURE];
@@ -897,9 +921,16 @@ RESET_ETH:
 			 data[6] = mem4[MIN];
 			 data[7] = mem4[HOUR];
 			 data[8] = mem4[CURRENT_RUN_NUMBER];  //현재 생산 페이지
-			 data[9] = mem4[CURRENT_STATE_ON]; //혀재 생산 상태 값을 보냄.
+			 data[9] = mem4[CURRENT_STATE_ON]; //혀재 생산 상태 값을 보냄. 가동중 or 가동 아닌 상태
 			 data[10] = mem4[START_BUTTON]; //현재 시작 버튼의 상태를 보냄
-			 data[11] = mem4[CURRENT_PAGE]; //현재 시작 버튼의 상태를 보냄  
+			 data[11] = mem4[CURRENT_PAGE]; //현재 뷰 페이지 정보 
+			 data[12] = device_serial;
+			 data[13] = mem4[UDP_DATA0];
+			 data[14] = mem4[UDP_DATA1];
+			 data[15] = mem4[UDP_DATA2];
+			 data[16] = mem4[UDP_DATA3];
+			 data[17] = mem4[UDP_DATA4];
+			 data[18] = mem4[UDP_DATA5];
 			 make_udp_reply_from_request(buf,(char*)&data,sizeof(data),MYUDPPORT);
 			// memcpy(buf,data,sizeof(data));
 			 //enc28j60PacketSend(UDP_HEADER_LEN+IP_HEADER_LEN+ETH_HEADER_LEN+sizeof(data),buf);
