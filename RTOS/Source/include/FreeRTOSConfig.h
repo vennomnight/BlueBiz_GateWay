@@ -91,7 +91,7 @@
 #define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES		( 4 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 85)
-#define configTOTAL_HEAP_SIZE		( (size_t ) ( 2500) )
+#define configTOTAL_HEAP_SIZE		( (size_t ) ( 3000) )
 #define configMAX_TASK_NAME_LEN		( 8 )
 #define configUSE_TRACE_FACILITY	0
 #define configUSE_16_BIT_TICKS		1
@@ -99,14 +99,14 @@
 #define configQUEUE_REGISTRY_SIZE	0
 
 /* Co-routine definitions. */
-#define configUSE_CO_ROUTINES 		1
+#define configUSE_CO_ROUTINES 		0
 #define configMAX_CO_ROUTINE_PRIORITIES ( 2 )
 
 
 #define configUSE_MUTEXES 1
 #define configSUPPORT_DYNAMIC_ALLOCATION 1
 
-#define configCHECK_FOR_STACK_OVERFLOW           1
+#define configCHECK_FOR_STACK_OVERFLOW          0
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */

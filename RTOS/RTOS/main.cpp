@@ -48,6 +48,7 @@ const char debug = 0; //처음 부팅 디버깅용
 const uint16_t device_serial=0xF001; //이 디바이스 시리얼번호
 #define USE_ETH 1 //이더넷 사용
 #define USE_HMI 1 //HMI 사용
+#define USE_LCD 0 //lcd 사용
 
 #define PACKET_DEBUG 0 // PLC 0 으로 하고 해야함,, 
 #define USE_PLC 1 //PLC 사용 
@@ -64,7 +65,7 @@ const uint16_t device_serial=0xF001; //이 디바이스 시리얼번호
 
 
 #if USE_ETH
-#define	BUFFER_SIZE 100
+#define	BUFFER_SIZE 128
 #define MYWWWPORT 80
 #define MYUDPPORT 9999
 #endif
@@ -180,7 +181,10 @@ extern "C"
 
 }
 Dev_Manager *dev;
+#if USE_LCD
 Char_LCD2004A *lcd;
+static void int_String(char* buf, uint8_t num);
+#endif
 #if USE_ADC
 	Adc * adc;
 #endif
@@ -317,7 +321,7 @@ int main( void )
 	
 	xTaskCreate(proc,                //테스크 실행할 함수 포인터
 	"Task1",      //테스크 이름
-	200,                   //스택의 크기
+	150,                   //스택의 크기
 	sb,       // 테스크 매개 변수
 	2,                     //테스크 우선 순위
 	NULL                   //태스크 핸들
@@ -334,24 +338,25 @@ int main( void )
 		#if USE_ETH
 				xTaskCreate(proc2,                //테스크 실행할 함수 포인터
 				"Task3",      //테스크 이름
-				600,                   //스택의 크기
+				300,                   //스택의 크기
 				NULL,       // 테스크 매개 변수
 				2,                     //테스크 우선 순위0.
 				NULL                   //태스크 핸들
 				);
 		#endif
+		#if USE_LCD
 		xTaskCreate(proc4,                //테스크 실행할 함수 포인터
 				"Task4",      //테스크 이름
-				300,                   //스택의 크기
+				600,                   //스택의 크기
 				NULL,       // 테스크 매개 변수
 				2,                     //테스크 우선 순위0.
 				NULL                   //태스크 핸들
 		);
-		
+		#endif
 		#if USE_ADC
 		xTaskCreate(proc3,                //테스크 실행할 함수 포인터
 		"Task3",      //테스크 이름
-		80,                   //스택의 크기
+		150,                   //스택의 크기
 		NULL,       // 테스크 매개 변수
 		2,                     //테스크 우선 순위0.
 		NULL                   //태스크 핸들
@@ -378,7 +383,9 @@ static void System_Init()
 void Init_Dev()
 {
 	dev = new Dev_Manager();
-	lcd = new Char_LCD2004A();
+	#if USE_LCD
+		lcd = new Char_LCD2004A();
+	#endif
 	#if USE_ADC
 		adc = new Adc();
 		dev->Register_Dev(adc,_ADC);
@@ -741,15 +748,16 @@ static void proc1(void* pvParam)
 }
 
 #if USE_ETH
+static uint8_t buf[BUFFER_SIZE+1];
+//SemaphoreHandle_t eth_mutex;
 static void proc2(void* pvParam)
 {
+	//eth_mutex= xSemaphoreCreateMutex();
 RESET_ETH:
+	//xSemaphoreGive(eth_mutex);
     char led_flag = 0;
-	//lcd->Clear_Lcd();
-	//static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x24};
-	//static uint8_t myip[4] = {0,0,0,0};
 	memcpy(myip,cmp_mem,sizeof(cmp_mem));		
-	static uint8_t buf[BUFFER_SIZE+1];
+
 	uint16_t plen;
 	DDRB = 0xff;
 	PORTB = 0xff;
@@ -789,7 +797,9 @@ RESET_ETH:
 			 cls_var = 1;
 			 goto RESET_ETH;
 		 }
-		 plen = enc28j60PacketReceive(BUFFER_SIZE, buf);
+		// xSemaphoreTake(eth_mutex,100);
+			 plen = enc28j60PacketReceive(BUFFER_SIZE, buf);
+		// xSemaphoreGive(eth_mutex);
 		 if(plen==0)
 		 {
 			 goto UDP_SEND;
@@ -810,11 +820,15 @@ RESET_ETH:
 		 }
 		 if(buf[UDP_DATA_P] == 0x01)  //리눅스 서버용 파싱 
 		 {
-			 char temp[16] = {0};
-			 char loop = buf[UDP_DATA_P + 1];
-			 char start = 2;
-			 char num = 0;
-			 for(char i=1;i<loop+1;i++)
+			 uint8_t temp[16] = {0};
+			 uint8_t loop = buf[UDP_DATA_P + 1];
+			 uint8_t start = 2;
+			 uint8_t num = 0;
+			 if(loop > 12)
+			 {
+				 goto UDP_SEND;
+			 }
+			 for(uint8_t i=1;i<loop+1;i++)
 			 {
 				 temp[i-1] = buf[UDP_DATA_P + (start + (i-1))];
 				 if(i % 2 == 0)
@@ -831,7 +845,7 @@ RESET_ETH:
 			  goto UDP_SEND;
 			 
 		 }
-		 if(buf[UDP_DATA_P] == 0x01 + '0') // 기존 라이브러리 사용 (자바용) 프로덕트 이름 시리얼번호 카운트 받음
+		/* if(buf[UDP_DATA_P] == 0x01 + '0') // 기존 라이브러리 사용 (자바용) 프로덕트 이름 시리얼번호 카운트 받음
 		 {
 			 char temp[29] = {0};
 			 char loop = buf[UDP_DATA_P + 1];
@@ -900,7 +914,7 @@ RESET_ETH:
 					 num++;
 				 }
 			 }
-		 }
+		 }*/
 		 UDP_SEND:
 			 led_flag = ~led_flag;
 			 if(led_flag)
@@ -944,7 +958,7 @@ RESET_ETH:
 	  
 }
 #endif
-
+#if USE_ADC
 const float g_alfVolt[161] PROGMEM = {
 	0.26859, 0.28237, 0.29671, 0.31165, 0.32719, 0.34335, 0.36015, 0.37760, 0.39571, 0.41449,
 	0.43397, 0.45415, 0.47505, 0.49667, 0.51902, 0.54213, 0.56598, 0.59060, 0.61599, 0.64215,
@@ -1007,6 +1021,7 @@ float fnCalTemp(float lfOneVolt)
 	}
 	return lfCalTemp;
 }
+
 static void proc3(void* pvParam)
 {
 	DFRobotHighTemperature PT100(5.000);
@@ -1067,9 +1082,37 @@ static void proc3(void* pvParam)
 	}
 	
 }
+#endif
+#if USE_LCD
+static void int_String(char* buf, uint8_t num)
+{
+	uint8_t i;
+	const unsigned char DecString[] = "0123456789";
+	unsigned char a[3];
+	if(num != 0)
+	{
+		a[0] = (num / 100);
+		a[1] = (num / 10) % 10;
+		a[2] = (num % 10);
+		a[3] = 0;
+		for (i = 0; i < 3; i++)
+		{
+			buf[i] = DecString[a[i]];
+		}
+	}
+	else
+	{
+		for (i = 0; i < 3; i++)
+		{
+			buf[i] = '0';
+		}
+		a[3] = 0;
+	}
+
+}
 static void proc4(void* pvParam)
 {
-	char ip_adr1[12];
+		char ip_adr1[3];
 		 lcd->Clear_Lcd();
 		 unsigned char left_up[8]  = {0x01,0x02,0x04,0x08,0x10,0x10,0x10,0x10};
 		 unsigned char right_up[8] = {0x10,0x08,0x04,0x02,0x01,0x01,0x01,0x01};
@@ -1104,35 +1147,35 @@ static void proc4(void* pvParam)
 		}
 		lcd->Cursor_Home();
 		lcd->Device_Writes("IP :");
-		sprintf(ip_adr1,"%d",myip[0]);
+		int_String(ip_adr1,myip[0]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(".");
-		sprintf(ip_adr1,"%d",myip[1]);
+		int_String(ip_adr1,myip[1]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(".");
-		sprintf(ip_adr1,"%d",myip[2]);
+		int_String(ip_adr1,myip[2]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(".");
-		sprintf(ip_adr1,"%d",myip[3]);
+		int_String(ip_adr1,myip[3]);
 		lcd->Device_Writes(ip_adr1);
-		lcd->Set_Cursor_Print(0,1,"MAC:");
-		sprintf(ip_adr1,"%x",mymac[0]);
-		lcd->Device_Writes(ip_adr1);
-		lcd->Device_Writes(":");
-		sprintf(ip_adr1,"%x",mymac[1]);
+		/*lcd->Set_Cursor_Print(0,1,"MAC:");
+		int_String(ip_adr1,mymac[0]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(":");
-		sprintf(ip_adr1,"%x",mymac[2]);
+		int_String(ip_adr1,mymac[1]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(":");
-		sprintf(ip_adr1,"%x",mymac[3]);
+		int_String(ip_adr1,mymac[2]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(":");
-		sprintf(ip_adr1,"%x",mymac[4]);
+		int_String(ip_adr1,mymac[3]);
 		lcd->Device_Writes(ip_adr1);
 		lcd->Device_Writes(":");
-		sprintf(ip_adr1,"%x",mymac[5]);
+		int_String(ip_adr1,mymac[4]);
 		lcd->Device_Writes(ip_adr1);
+		lcd->Device_Writes(":");
+		int_String(ip_adr1,mymac[5]);
+		lcd->Device_Writes(ip_adr1);*/
 					 //char num = Ctl_LCD_Cursor % 4;
 		char cnts1 = lcd_cnt / 30;
 		char num = cnts1 % 4;
@@ -1187,6 +1230,7 @@ static void proc4(void* pvParam)
 	}
 	
 }
+#endif
 void vApplicationStackOverflowHook( TaskHandle_t xTask, signed char *pcTaskName )
 {
 

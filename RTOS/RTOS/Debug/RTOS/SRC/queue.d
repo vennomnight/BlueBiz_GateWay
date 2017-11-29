@@ -19,7 +19,7 @@ RTOS/SRC/queue.d RTOS/SRC/queue.o: ../RTOS/SRC/queue.c \
  ../../Source/include/deprecated_definitions.h \
  ../../Source/include/portmacro.h ../../Source/include/mpu_wrappers.h \
  ../../Source/include/task.h ../../Source/include/list.h \
- ../../Source/include/queue.h ../../Source/include/croutine.h
+ ../../Source/include/queue.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h:
 
@@ -68,5 +68,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 ../../Source/include/list.h:
 
 ../../Source/include/queue.h:
-
-../../Source/include/croutine.h:
