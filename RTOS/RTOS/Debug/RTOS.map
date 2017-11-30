@@ -1775,7 +1775,7 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0xe0e3
+.debug_info     0x00000000     0xe0e4
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x780 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51/crtatmega128a.o
  .debug_info    0x00000780      0x9d6 CommunicateProtocols/src/Modbus_rtu.o
@@ -1795,14 +1795,14 @@ END GROUP
  .debug_info    0x000070db      0x9da Eth_Udp/SRC/ip_arp_udp_tcp.o
  .debug_info    0x00007ab5       0x86 Eth_Udp/SRC/spi.o
  .debug_info    0x00007b3b      0x1a7 Eth_Udp/SRC/timeout.o
- .debug_info    0x00007ce2     0x2daf main.o
- .debug_info    0x0000aa91      0x1a4 RTOS/SRC/heap_1.o
- .debug_info    0x0000ac35      0x2cd RTOS/SRC/list.o
- .debug_info    0x0000af02      0x263 RTOS/SRC/port.o
- .debug_info    0x0000b165     0x11a2 RTOS/SRC/queue.o
- .debug_info    0x0000c307     0x1c81 RTOS/SRC/tasks.o
- .debug_info    0x0000df88       0xad C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
- .debug_info    0x0000e035       0xae C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
+ .debug_info    0x00007ce2     0x2db0 main.o
+ .debug_info    0x0000aa92      0x1a4 RTOS/SRC/heap_1.o
+ .debug_info    0x0000ac36      0x2cd RTOS/SRC/list.o
+ .debug_info    0x0000af03      0x263 RTOS/SRC/port.o
+ .debug_info    0x0000b166     0x11a2 RTOS/SRC/queue.o
+ .debug_info    0x0000c308     0x1c81 RTOS/SRC/tasks.o
+ .debug_info    0x0000df89       0xad C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eerd_byte.o)
+ .debug_info    0x0000e036       0xae C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.1.130/gcc/dev/atmega128a/avr51\libatmega128a.a(eeupd_byte.o)
 
 .debug_abbrev   0x00000000     0x3a50
  *(.debug_abbrev)

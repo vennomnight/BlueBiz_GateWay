@@ -24,7 +24,7 @@ class UartDriver : public DeviceDriveInterFace, private Ubbr
 	using Ubbr::Ubbr_Value;
 	private:
 	static const uint8_t UX1 = 0;
-	uint16_t Uart_baudrate = 19200;
+	uint16_t Uart_baudrate = 38400;
 	//uint16_t Uart_baudrate = 14400;
 	SemaphoreHandle_t char_Mutex;
 	SemaphoreHandle_t Uart_Mutex;

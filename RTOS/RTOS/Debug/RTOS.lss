@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 00000ab8  00000000  00000000  000047a8  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000e0e3  00000000  00000000  00005260  2**0
+  6 .debug_info   0000e0e4  00000000  00000000  00005260  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00003a50  00000000  00000000  00013343  2**0
+  7 .debug_abbrev 00003a50  00000000  00000000  00013344  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00005dfd  00000000  00000000  00016d93  2**0
+  8 .debug_line   00005dfd  00000000  00000000  00016d94  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00001ce4  00000000  00000000  0001cb90  2**2
+  9 .debug_frame  00001ce4  00000000  00000000  0001cb94  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00003cda  00000000  00000000  0001e874  2**0
+ 10 .debug_str    00003cda  00000000  00000000  0001e878  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    000092cf  00000000  00000000  0002254e  2**0
+ 11 .debug_loc    000092cf  00000000  00000000  00022552  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000b18  00000000  00000000  0002b81d  2**0
+ 12 .debug_ranges 00000b18  00000000  00000000  0002b821  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -2899,7 +2899,7 @@ void UartDriver::operator delete(void* ptr)
     161c:	31 83       	std	Z+1, r19	; 0x01
     161e:	20 83       	st	Z, r18
     1620:	20 e0       	ldi	r18, 0x00	; 0
-    1622:	3b e4       	ldi	r19, 0x4B	; 75
+    1622:	36 e9       	ldi	r19, 0x96	; 150
     1624:	33 83       	std	Z+3, r19	; 0x03
     1626:	22 83       	std	Z+2, r18	; 0x02
     1628:	20 91 de 01 	lds	r18, 0x01DE	; 0x8001de <_ZN10UartDriver4instE>
@@ -6419,7 +6419,7 @@ int main( void )
     2a74:	c2 83       	std	Z+2, r28	; 0x02
     2a76:	0e 94 19 08 	call	0x1032	; 0x1032 <Alarm_Init>
 	"Task1",      //테스크 이름
-	150,                   //스택의 크기
+	300+MAX_ENUM,                   //스택의 크기
 	sb,       // 테스크 매개 변수
 	2,                     //테스크 우선 순위
 	NULL                   //태스크 핸들
@@ -6429,28 +6429,28 @@ int main( void )
     2a7e:	f1 2c       	mov	r15, r1
     2a80:	02 e0       	ldi	r16, 0x02	; 2
     2a82:	96 01       	movw	r18, r12
-    2a84:	46 e9       	ldi	r20, 0x96	; 150
-    2a86:	50 e0       	ldi	r21, 0x00	; 0
+    2a84:	48 e6       	ldi	r20, 0x68	; 104
+    2a86:	51 e0       	ldi	r21, 0x01	; 1
     2a88:	64 ea       	ldi	r22, 0xA4	; 164
     2a8a:	71 e0       	ldi	r23, 0x01	; 1
     2a8c:	81 e1       	ldi	r24, 0x11	; 17
     2a8e:	92 e1       	ldi	r25, 0x12	; 18
 		"Task2",      //테스크 이름
-		150,                   //스택의 크기
+		200,                   //스택의 크기
 		sb1,       // 테스크 매개 변수
 		2,                     //테스크 우선 순위
 		NULL                   //태스크 핸들
 		);
     2a90:	de d6       	rcall	.+3516   	; 0x384e <xTaskCreate>
     2a92:	9e 01       	movw	r18, r28
-    2a94:	46 e9       	ldi	r20, 0x96	; 150
+    2a94:	48 ec       	ldi	r20, 0xC8	; 200
     2a96:	50 e0       	ldi	r21, 0x00	; 0
     2a98:	6a ea       	ldi	r22, 0xAA	; 170
     2a9a:	71 e0       	ldi	r23, 0x01	; 1
     2a9c:	8f e2       	ldi	r24, 0x2F	; 47
     2a9e:	91 e1       	ldi	r25, 0x11	; 17
 				"Task3",      //테스크 이름
-				300,                   //스택의 크기
+				900,                   //스택의 크기
 				NULL,       // 테스크 매개 변수
 				2,                     //테스크 우선 순위0.
 				NULL                   //태스크 핸들
@@ -6458,14 +6458,14 @@ int main( void )
     2aa0:	d6 d6       	rcall	.+3500   	; 0x384e <xTaskCreate>
     2aa2:	20 e0       	ldi	r18, 0x00	; 0
     2aa4:	30 e0       	ldi	r19, 0x00	; 0
-    2aa6:	4c e2       	ldi	r20, 0x2C	; 44
-    2aa8:	51 e0       	ldi	r21, 0x01	; 1
+    2aa6:	44 e8       	ldi	r20, 0x84	; 132
+    2aa8:	53 e0       	ldi	r21, 0x03	; 3
     2aaa:	60 eb       	ldi	r22, 0xB0	; 176
     2aac:	71 e0       	ldi	r23, 0x01	; 1
     2aae:	83 e4       	ldi	r24, 0x43	; 67
     2ab0:	9f e0       	ldi	r25, 0x0F	; 15
 		"Task3",      //테스크 이름
-		150,                   //스택의 크기
+		200,                   //스택의 크기
 		NULL,       // 테스크 매개 변수
 		2,                     //테스크 우선 순위0.
 		NULL                   //태스크 핸들
@@ -6473,7 +6473,7 @@ int main( void )
     2ab2:	cd d6       	rcall	.+3482   	; 0x384e <xTaskCreate>
     2ab4:	20 e0       	ldi	r18, 0x00	; 0
     2ab6:	30 e0       	ldi	r19, 0x00	; 0
-    2ab8:	46 e9       	ldi	r20, 0x96	; 150
+    2ab8:	48 ec       	ldi	r20, 0xC8	; 200
     2aba:	50 e0       	ldi	r21, 0x00	; 0
     2abc:	60 eb       	ldi	r22, 0xB0	; 176
     2abe:	71 e0       	ldi	r23, 0x01	; 1
