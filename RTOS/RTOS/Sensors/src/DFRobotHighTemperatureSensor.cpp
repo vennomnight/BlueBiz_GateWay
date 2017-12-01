@@ -39,6 +39,7 @@ int DFRobotHighTemperature::readTemperature(unsigned int sensorValue)     //Get 
 {
     float voltage = 0,res = 0;
     voltage = sensorValue * 0.0048828125;//_voltageRef / 1024.0;  //If your microcontroller are a 12 bit ADC, you should be change 1024 to 4096
+ //voltage = sensorValue = 0.00322265625;
 	//If you have a DS18B20 on hand, you can make a more accurate calibration.
 	//change 220.9 to 210.9 or 230.9,and you need change 2.209 to 2.109 or 2.309 at the same time to accurate calibration.
 	res =  (1800 * voltage + 220.9 * 18) / (2.209 * 18 - voltage);

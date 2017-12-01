@@ -53,6 +53,9 @@ const uint16_t device_serial=0xF001; //이 디바이스 시리얼번호
 #define PACKET_DEBUG 0 // PLC 0 으로 하고 해야함,, 
 #define USE_PLC 1 //PLC 사용 
 #define USE_ADC 1 //ADC핀 사용 // 외부 온도 센서 사용시 
+#define USE_NTC 1 //NTC온도사용
+#define USE_PT100 0//PT100 사용
+#define USE_LM35 0//LM35사용
 
 #define CHECK_ERROR 0 //에러 디버깅용
 #define USE_SYSTEM_SEC 1 // 시스템 초 사용
@@ -68,6 +71,7 @@ const uint16_t device_serial=0xF001; //이 디바이스 시리얼번호
 #define	BUFFER_SIZE 128
 #define MYWWWPORT 80
 #define MYUDPPORT 9999
+static volatile char led_flag = 0;
 #endif
 
 
@@ -109,7 +113,7 @@ enum
 	IPV4_2,
 	IPV4_3,
 	TARGET_COUNT_SENSOR,  //0 PLC 1 LOCAL
-	TEST1,
+	TARGET_TEMP_SENSOR,  //0 PLC 1 LOCAL
 	START_BUTTON,
 	STOP_BUTTON,
 	CURRENT_PAGE,
@@ -129,9 +133,9 @@ enum
 	DATE_DATA11,
 	DATE_DATA12,
 	DATE_DATA13,
-	LOCAL_TEMP_SENSOR,
-	LOCAL_PT100_SENSOR,
-	LOCAL_NTC_SENSOR,
+	//LOCAL_TEMP_SENSOR,
+	//LOCAL_PT100_SENSOR,
+	//LOCAL_NTC_SENSOR,
 	//#if USE_SYSTEM_SEC
 		//SYSTEM_SEC_CLOCK,
 	//#endif
@@ -230,7 +234,7 @@ uint8_t Ctl_LCD_Cursor = 0 ; // LCD커서
 uint8_t chatter_flag = 0; //채터링 방지 플래그 변수
 volatile uint8_t lcd_cnt = 0;//lcd 제어용 변수 
 volatile uint8_t cls_var = 0;
-static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x24};
+static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x25};
 static uint8_t myip[4] = {0,0,0,0};
 
 
@@ -338,7 +342,7 @@ int main( void )
 		#if USE_ETH
 				xTaskCreate(proc2,                //테스크 실행할 함수 포인터
 				"Task3",      //테스크 이름
-				900,                   //스택의 크기
+				650,                   //스택의 크기
 				NULL,       // 테스크 매개 변수
 				2,                     //테스크 우선 순위0.
 				NULL                   //태스크 핸들
@@ -430,6 +434,9 @@ void Timer_ISR(Dev_type Device,uint16_t Arg)
 	#if USE_SYSTEM_SEC
 		//mem4[SYSTEM_SEC_CLOCK]++;
 		current_states_times++;
+	#endif
+	#if USE_ETH
+		led_flag = ~led_flag;
 	#endif
 }
 void ADC_ISR(Dev_type Device,uint16_t Arg)
@@ -702,7 +709,10 @@ static void proc1(void* pvParam)
 				count_number = ((0xff & proc1_buff[7]) << 8) | (0xff & proc1_buff[8]);
 				current_temp = ((0xff & proc1_buff[9]) << 8) | (0xff & proc1_buff[10]);
 				current_pressure = ((0xff & proc1_buff[11]) << 8) | (0xff & proc1_buff[12]);
-				mem4[TEMP] = current_temp;
+				if(mem4[TARGET_TEMP_SENSOR] != 1)
+				{
+					mem4[TEMP] = current_temp;
+				}
 				if(mem4[TARGET_COUNT_SENSOR]) //LOCAL SENSOR 
 				{
 					Alarm_Start();
@@ -755,7 +765,7 @@ static void proc2(void* pvParam)
 	//eth_mutex= xSemaphoreCreateMutex();
 RESET_ETH:
 	//xSemaphoreGive(eth_mutex);
-    char led_flag = 0;
+    
 	memcpy(myip,cmp_mem,sizeof(cmp_mem));		
 
 	uint16_t plen;
@@ -916,7 +926,7 @@ RESET_ETH:
 			 }
 		 }*/
 		 UDP_SEND:
-			 led_flag = ~led_flag;
+			 
 			 if(led_flag)
 			 {
 				 PORTB = sbi(PORTB,4);
@@ -1024,44 +1034,57 @@ float fnCalTemp(float lfOneVolt)
 
 static void proc3(void* pvParam)
 {
-	DFRobotHighTemperature PT100(5.000);
+	#if PT100
+		DFRobotHighTemperature PT100(3.300);
+	#endif
 	uint8_t cnt = 0;
 	uint8_t seq = 0;
 	uint8_t cnt1 = 0;
 	uint8_t cnt2 = 0;
 	while(1)
 	{
-		adc->Start_Device(seq % 3);
-		uint8_t channel = ADMUX & 0x1f; 
+		if(mem4[TARGET_TEMP_SENSOR] == 1)
+		{
+			adc->Start_Device(seq % 3);
+		}
+		uint8_t channel = ADMUX & 0x1f;
 		vTaskDelay(10);
 		if(channel == 0)
 		{
+			#if USE_LM35
 			uint16_t read = ADCL+((uint16_t)ADCH << 8);
 			float temp = read * 4.8828125;
 			Adc_channels[channel] = Adc_channels[channel] + (temp / 10);
 			cnt++;
+			#endif
 		}
 		else if(channel == 1)
 		{
+			#if USE_PT100
 			uint16_t read = ADCL+((uint16_t)ADCH << 8);
 			Adc_channels[channel] +=PT100.readTemperature(read);
 			//mem4[LOCAL_PT100_SENSOR] = read;
 			cnt1++;
+			#endif
 		}
 		else if(channel == 2)
 		{
+			#if USE_NTC
 			uint16_t read = ADCL+((uint16_t)ADCH << 8);
 			Adc_channels[channel] += read;
 			cnt2++;
+			#endif
 		}
-		
-		if(cnt >= ADC_LOOP)
+		#if USE_LM35
+		if(cnt >= ADC_LOOP && mem4[TARGET_TEMP_SENSOR] == 1)
 		{
 			mem4[LOCAL_TEMP_SENSOR] = Adc_channels[0] / ADC_LOOP;
 			Adc_channels[0] = 0;
 			cnt = 0;
 		}
-		else if(cnt1 >= ADC_LOOP)
+		#endif
+		#if USE_PT100
+		if(cnt1 >= ADC_LOOP && mem4[TARGET_TEMP_SENSOR] == 1)
 		{
 			unsigned int temp = Adc_channels[1] / ADC_LOOP;
 			//int temp1 = PT100.readTemperature(temp);
@@ -1069,20 +1092,35 @@ static void proc3(void* pvParam)
 			Adc_channels[1] = 0;
 			cnt1 = 0;
 		}
-		else if(cnt2 >= ADC_LOOP)
+		#endif
+		#if USE_NTC
+		if(cnt2 >= ADC_LOOP && mem4[TARGET_TEMP_SENSOR] == 1)
 		{
 			float vin = (Adc_channels[2] / ADC_LOOP )* 0.004887;
+				//float vin = (Adc_channels[2] / ADC_LOOP )* 0.00323;
 			float temp = fnCalTemp(vin);
-			mem4[LOCAL_NTC_SENSOR] = temp * 10;
+			mem4[TEMP] = temp * 10;
 			Adc_channels[2] = 0;
-			
 			cnt2 = 0;
 		}
+		#endif
 		seq++;
 	}
 	
 }
 #endif
+
+
+
+
+
+
+
+
+
+
+
+
 #if USE_LCD
 static void int_String(char* buf, uint8_t num)
 {
