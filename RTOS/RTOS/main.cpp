@@ -226,7 +226,6 @@ int current_pressure = 0;
 //현재 카운터를 동작하는지 알 수 있는 상태 변수 
 uint8_t current_states_lookup_table[PAGE_MAX]={0};
 uint32_t current_states_times;
-
 int mem4[MAX_ENUM] = {0};  //function 10 메모리 공간
 int current_cnt_mem[PAGE_MAX] = {0}; //각 페이지별 담는 현재 카운터 수 	
 char cmp_mem[4] = {0};  //IP 주소 비교 메모리 
@@ -234,7 +233,7 @@ uint8_t Ctl_LCD_Cursor = 0 ; // LCD커서
 uint8_t chatter_flag = 0; //채터링 방지 플래그 변수
 volatile uint8_t lcd_cnt = 0;//lcd 제어용 변수 
 volatile uint8_t cls_var = 0;
-static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x25};
+static uint8_t mymac[6] = {0x54,0x55,0x58,0x10,0x00,0x24}; //25 109
 static uint8_t myip[4] = {0,0,0,0};
 
 
